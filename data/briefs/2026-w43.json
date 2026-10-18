@@ -1,0 +1,409 @@
+{
+  "week": 43,
+  "rev": "A",
+  "start": "2026-10-18",
+  "end": "2026-10-25",
+  "checked": "2026-10-17",
+  "tz": "BST",
+  "note": "Checked 17 October 2026. Times are BST until the clocks go back at 02:00 on Sunday 25 October; Sunday 25 times are GMT. Prices, stock and travel alerts can change, and kick-off times can move for TV.",
+  "qr": "https://tfgm.com/travel-updates/travel-alerts",
+  "cards": [
+    {
+      "type": "transport",
+      "sub": "Tram",
+      "priority": true,
+      "headline": "19 OCT → 01 NOV",
+      "short": "Tram shutdown",
+      "tag": "TRAM / MAJOR WORKS",
+      "title": "Two-week tram shutdown starts Monday",
+      "meter": 5,
+      "body": "No trams run on the Altrincham, Trafford Centre and Eccles lines until Sunday 1 November. East Didsbury and Airport trams terminate at Firswood, and Rochdale trams at Exchange Square. Express shuttle buses link key stops with Piccadilly, 7-day, 28-day and annual pass holders can use selected trains and buses, and Starling Bike rides of up to 20 minutes near the works are free.",
+      "when": "Mon 19 Oct → Sun 1 Nov",
+      "what": "3 lines closed · express shuttles",
+      "where": "Deansgate-Castlefield / Trafford Bar / Eccles",
+      "links": [["https://tfgm.com/tram-improvement-works/major-tram-works", "TfGM travel hub ↗"]],
+      "src": [1],
+      "mg": {
+        "kind": "route",
+        "rows": [
+          {
+            "name": "Altrincham line",
+            "stops": ["Deansgate-C", "Trafford Bar", "Old Trafford", "Stretford", "Sale", "Altrincham"],
+            "closed": [[0, 5]]
+          },
+          {
+            "name": "Eccles + Trafford Centre lines",
+            "stops": ["Cornbrook", "Pomona", "Harbour City", "Eccles"],
+            "closed": [[0, 3]]
+          },
+          {
+            "name": "Airport + East Didsbury lines",
+            "stops": ["Trafford Bar", "Firswood", "Chorlton", "St Werburgh's Rd"],
+            "closed": [[0, 1]],
+            "end": 1
+          }
+        ]
+      },
+      "mg_caption": ["DIA / TRAM-NET", "Closed ▬ · Terminus ■"],
+      "mg_alt": "Tram line diagram: Altrincham, Eccles and Trafford Centre lines closed; Airport and East Didsbury trams terminate at Firswood."
+    },
+    {
+      "type": "transport",
+      "sub": "Matchday",
+      "short": "Old Trafford matchday",
+      "tag": "EVENT / TRAVEL IMPACT",
+      "title": "Old Trafford matchday with no trams",
+      "meter": 4,
+      "body": "Manchester United host Bournemouth at 14:00 on Sunday, during the tram shutdown, so no trams serve Wharfside, Exchange Quay or Old Trafford. The Trafford Centre express shuttle bus calls at Wharfside and Imperial War Museum every 15 minutes. Expect long queues after the final whistle and busy roads around Trafford.",
+      "when": "Sun 25 Oct · 14:00 GMT kick-off",
+      "what": "Match crowds · no trams",
+      "where": "Old Trafford / Wharfside",
+      "links": [
+        ["https://tfgm.com/tram-improvement-works/major-tram-works", "Shuttle timetables ↗"],
+        ["https://www.skysports.com/share/13574076", "Fixture ↗"]
+      ],
+      "src": [1, 2],
+      "mg": {
+        "kind": "route",
+        "rows": [
+          {
+            "name": "Trams · Trafford Centre line",
+            "stops": ["Cornbrook", "Pomona", "Wharfside", "IWM"],
+            "closed": [[0, 3]]
+          },
+          {
+            "name": "Express shuttle · every 15 min",
+            "stops": ["Piccadilly", "Deansgate-C", "Wharfside", "IWM", "Village", "Trafford Ctr"],
+            "mark": 2,
+            "mark_label": "Stadium"
+          }
+        ]
+      },
+      "mg_caption": ["DIA / OT-MATCHDAY", "Sun 25 Oct"],
+      "mg_alt": "Diagram: Trafford Centre tram line closed; the express shuttle bus stops at Wharfside, nearest the stadium."
+    },
+    {
+      "type": "transport",
+      "sub": "Rail",
+      "short": "Victoria rail closures",
+      "tag": "RAIL / SUNDAY ENGINEERING",
+      "title": "Sunday rail closures around Victoria",
+      "meter": 3,
+      "body": "Engineering work closes all lines between Victoria and Stalybridge, and between Victoria and Moston. TransPennine trains to Leeds, York and Newcastle run from Piccadilly instead. Northern's Leeds trains start at Rochdale, with buses from Victoria, and there are no trains to Blackburn via Todmorden. Four early TransPennine trains skip Victoria on Monday morning.",
+      "when": "Sun 18 Oct · all day",
+      "what": "Lines closed · buses + diversions",
+      "where": "Victoria ↔ Stalybridge / Rochdale",
+      "links": [
+        ["https://www.nationalrail.co.uk/engineering-works/mcv-tp-18-oct-20261018/", "TransPennine ↗"],
+        ["https://www.nationalrail.co.uk/engineering-works/moston-18-oct-20261018/", "Northern ↗"]
+      ],
+      "src": [3, 4, 5],
+      "mg": {
+        "kind": "route",
+        "rows": [
+          {
+            "name": "TransPennine · via Victoria",
+            "stops": ["Victoria", "Ashton", "Stalybridge"],
+            "closed": [[0, 2]]
+          },
+          {
+            "name": "Northern · buses Victoria–Rochdale",
+            "stops": ["Victoria", "Moston", "Mills Hill", "Castleton", "Rochdale"],
+            "closed": [[0, 4]],
+            "end": 4
+          }
+        ]
+      },
+      "mg_caption": ["DIA / MCR-RAIL", "Sun 18 Oct"],
+      "mg_alt": "Rail diagram: Victoria to Stalybridge closed; Victoria to Rochdale replaced by buses, trains start at Rochdale."
+    },
+    {
+      "type": "transport",
+      "sub": "Road",
+      "short": "M60 J18 overnight",
+      "tag": "MOTORWAY / OVERNIGHT",
+      "title": "M60 J18 slip to the M66 shut overnight",
+      "meter": 2,
+      "body": "The clockwise exit slip at M60 junction 18, Simister Island, to the M66 northbound closes overnight from 21:00 to 06:00, Monday to Friday. The signed 7-mile diversion continues on the M62 eastbound to junction 19, then returns westbound to junction 18. The same closure repeats from 26 to 31 October.",
+      "when": "Mon 19 → Fri 23 Oct · 21:00–06:00",
+      "what": "Exit slip closed overnight",
+      "where": "M60 J18 / Simister Island",
+      "links": [
+        [
+          "https://nationalhighways.co.uk/roads-and-travel/road-projects/m60-simister-island-closures-diversions-and-speed-restrictions/",
+          "National Highways ↗"
+        ]
+      ],
+      "src": [6],
+      "mg": {
+        "kind": "junction",
+        "road": "M60",
+        "a": "J17",
+        "b": "J18",
+        "closed": "slip",
+        "slip": "M66 N",
+        "window": "21:00 → 06:00 · MON–FRI"
+      },
+      "mg_caption": ["DIA / M60-J18", "Overnight"],
+      "mg_alt": "Junction diagram: M60 clockwise exit slip at junction 18 to the M66 north is closed overnight."
+    },
+    {
+      "type": "transport",
+      "sub": "Matchday",
+      "short": "Etihad Tuesday",
+      "tag": "EVENT / TRAVEL IMPACT",
+      "title": "Champions League night at the Etihad",
+      "meter": 2,
+      "body": "Manchester City host AEK Athens at 20:00 on Tuesday. Trams keep running on the Ashton line through the works, so Etihad Campus is served, but expect busy trams and roads around the stadium before and after the game. City's travel page posts matchday updates.",
+      "when": "Tue 20 Oct · 20:00 kick-off",
+      "what": "Match crowds · trams + roads",
+      "where": "Etihad Campus · M11 3FF",
+      "links": [
+        ["https://www.mancity.com/club/travel-and-transport", "City matchday travel ↗"],
+        ["https://www.mancity.com/fixtures/mens", "Fixtures ↗"]
+      ],
+      "src": [7, 8],
+      "mg": {"kind": "week", "marks": [{"date": "2026-10-20", "label": "20:00 KO"}]},
+      "mg_caption": ["CAL / ETIHAD", "Man City v AEK Athens"],
+      "mg_alt": "Week strip with Tuesday 20 October marked, 20:00 kick-off."
+    },
+    {
+      "type": "news",
+      "sub": "Clocks",
+      "short": "Clocks go back",
+      "tag": "NATIONAL / TIME CHANGE",
+      "title": "Clocks go back on Sunday",
+      "chip": "Sun 25 Oct · 02:00",
+      "body": "British Summer Time ends at 02:00 on Sunday 25 October, when clocks go back one hour to 01:00 GMT. Phones change automatically, but check car, oven and heating timers. United's 14:00 kick-off that afternoon is GMT.",
+      "when": "Sun 25 Oct · 02:00 → 01:00",
+      "what": "BST ends · clocks back 1 hour",
+      "where": "UK-wide",
+      "links": [["https://www.gov.uk/when-do-the-clocks-change", "GOV.UK ↗"]],
+      "src": [9],
+      "mg": {
+        "kind": "clock",
+        "from": "02:00",
+        "to": "01:00",
+        "big": "−1H",
+        "lines": ["BST 02:00", "→ GMT 01:00"]
+      },
+      "mg_caption": ["DIA / CLOCK", "Last Sunday in October"],
+      "mg_alt": "Clock face showing the hour hand moving back from 2 to 1."
+    },
+    {
+      "type": "news",
+      "sub": "Council",
+      "short": "Library warm spaces",
+      "tag": "LIBRARIES / COST OF LIVING",
+      "title": "Free warm spaces in every library",
+      "chip": "Published 7 Oct",
+      "body": "Every Manchester library is a free warm space this winter, with seating, Wi-Fi, free SIM cards, newspapers and staff who can point you to support. Free hot drinks start on Monday and run until February. Chorlton, Longsight, Newton Heath and Withington libraries now open on Sundays too. Cost-of-living helpline: 0800 023 2692, weekdays 09:00–16:30.",
+      "when": "Hot drinks from Mon 19 Oct",
+      "what": "Free warm spaces + hot drinks",
+      "where": "All Manchester libraries",
+      "links": [["https://manclibraries.blog/warm-spaces-this-winter/", "Manchester Libraries ↗"]],
+      "src": [10],
+      "mg": {
+        "kind": "week",
+        "span": {"from": "2026-10-19", "to": null, "label": "Free hot drinks → Feb 2027"}
+      },
+      "mg_caption": ["CAL / WARM SPACES", "Winter 2026–27"],
+      "mg_alt": "Week strip with a bar starting Monday 19 October and continuing to February 2027."
+    },
+    {
+      "type": "news",
+      "sub": "Heritage",
+      "short": "Archives online",
+      "tag": "LIBRARIES / ARCHIVES",
+      "title": "Manchester's archives catalogue goes online",
+      "chip": "Published 7 Oct",
+      "body": "A free online catalogue now covers more than 3,000 collections from Manchester Archives and the Greater Manchester Record Office. Search by name, place, subject or reference, and book Search Room time to see originals. Archives staff run a drop-in at Central Library on Tuesday from 11:00 to 14:00.",
+      "when": "Live now · drop-in Tue 20 Oct 11:00–14:00",
+      "what": "Free online catalogue",
+      "where": "Central Library · ground floor",
+      "links": [
+        ["https://catalogue.manchester.gov.uk/", "Search the catalogue ↗"],
+        ["https://manclibraries.blog/discover-our-new-archives-catalogue/", "Announcement ↗"]
+      ],
+      "src": [11, 12],
+      "mg": {
+        "kind": "count",
+        "value": "3000+",
+        "caption": "Collections searchable",
+        "sub": "Manchester Archives + GM Record Office"
+      },
+      "mg_caption": ["IDX / ARCHIVES", "catalogue.manchester.gov.uk"],
+      "mg_alt": "Dot-matrix counter reading 3000 plus collections."
+    },
+    {
+      "type": "sale",
+      "sub": "Fashion",
+      "short": "H&M",
+      "tag": "MENSWEAR / ONLINE",
+      "title": "H&M men's sale",
+      "meter": 4,
+      "body": "H&M UK lists 584 men's sale lines. The biggest cuts include a pyjama set at £8, down from £37.99, and a Premium Selection wool-blend double-breasted jacket at £36, down from £139.99. Sizes, stock and prices change quickly.",
+      "when": "Active now",
+      "what": "584 lines · up to 79% off",
+      "where": "H&M UK online · store stock unconfirmed",
+      "links": [["https://www2.hm.com/en_gb/men/sale/view-all.html", "H&M sale ↗"]],
+      "src": [13],
+      "mg": {"kind": "bars", "was": 37.99, "now": 8.0, "item": "Pyjama set", "pct": 79},
+      "mg_caption": ["PRC / H&M", "Deepest cut found"],
+      "mg_alt": "Price bars: was £37.99, now £8.00, 79% off."
+    },
+    {
+      "type": "sale",
+      "sub": "Fashion",
+      "short": "Zara",
+      "tag": "WOMENSWEAR / ONLINE + STORES",
+      "title": "Zara special prices",
+      "meter": 3,
+      "body": "Zara UK's women's Special Prices edit is mostly autumn knitwear and tailoring. Examples include an oversize argyle jumper at £19.99, down from £45.99, and a plain knit cape at £22.99, down from £49.99. Available online and in stores; check your size locally.",
+      "when": "Available now · selected items",
+      "what": "Special Prices · up to 56% on examples",
+      "where": "Zara UK online / selected stores",
+      "links": [["https://www.zara.com/uk/en/woman-special-prices-l1314.html", "Zara special prices ↗"]],
+      "src": [14],
+      "mg": {"kind": "bars", "was": 45.99, "now": 19.99, "item": "Argyle jumper", "pct": 56},
+      "mg_caption": ["PRC / ZARA", "Deepest cut found"],
+      "mg_alt": "Price bars: was £45.99, now £19.99, 56% off."
+    },
+    {
+      "type": "sale",
+      "sub": "Tech",
+      "short": "Currys",
+      "tag": "TECH + APPLIANCES / CLEARANCE",
+      "title": "Currys clearance",
+      "meter": 2,
+      "body": "Currys lists 644 clearance items, down from 694 last week. Examples include an Acer Swift X 14 AI laptop at £1,050.97, saving £548.03, and a Sharper Image massage gun at £19.99, saving £12.98. The Central Retail Park Clearance Store on Great Ancoats Street opens from 10:00 on weekdays; check hours before going.",
+      "when": "Active now",
+      "what": "644 items · tech + appliances",
+      "where": "Online / Central Retail Park · M4 6DL",
+      "links": [
+        ["https://www.currys.co.uk/clearance", "Currys clearance ↗"],
+        [
+          "https://www.currys.co.uk/store-finder/manchester,-central-retail-park-clearance-store-1901.html",
+          "Store hours ↗"
+        ]
+      ],
+      "src": [15, 16],
+      "mg": {"kind": "count", "value": "644", "caption": "Clearance items online", "sub": "694 last week"},
+      "mg_caption": ["CNT / CURRYS", "Checked 17 Oct"],
+      "mg_alt": "Dot-matrix counter reading 644 clearance items."
+    },
+    {
+      "type": "event",
+      "sub": "Literature",
+      "short": "Literature Festival",
+      "tag": "TICKETED / FESTIVAL",
+      "title": "Literature Festival's final week",
+      "chip": "Ticketed",
+      "body": "Manchester Literature Festival ends on 25 October. Still to come: Sufiyaan Salam and Monika Radojevic at Manchester Museum on Sunday at 17:00, Lady Hale and Lara Feigel at Central Library on Wednesday at 19:00, and Karen Solie's Rylands Poetry Reading at the John Rylands Library on Thursday at 19:00.",
+      "when": "Sun 18 → Thu 22 Oct · evenings",
+      "what": "Ticketed author events",
+      "where": "Manchester Museum / Central Library / John Rylands",
+      "links": [["https://manchesterliteraturefestival.co.uk/", "Festival programme ↗"]],
+      "src": [17, 18],
+      "mg": {
+        "kind": "week",
+        "marks": [
+          {"date": "2026-10-18", "label": "17:00"},
+          {"date": "2026-10-21", "label": "19:00"},
+          {"date": "2026-10-22", "label": "19:00"}
+        ]
+      },
+      "mg_caption": ["CAL / MLF 2026", "Ends Sun 25 Oct"],
+      "mg_alt": "Week strip with Sunday 18, Wednesday 21 and Thursday 22 October marked."
+    },
+    {
+      "type": "event",
+      "sub": "Market",
+      "short": "Sale market",
+      "tag": "MARKET / TRAFFORD",
+      "title": "Sale Makers Market",
+      "chip": "Sun 18 Oct · 11:00–16:00",
+      "body": "Independent makers sell handmade food, crafts and gifts on School Road in Sale town centre. Trams still run to Sale on Sunday; the Altrincham line shutdown starts on Monday.",
+      "when": "Sun 18 Oct · 11:00–16:00",
+      "what": "Makers market",
+      "where": "School Road · Sale · M33 7XY",
+      "links": [["https://www.themakersmarket.co.uk/market/sale-12/", "Market details ↗"]],
+      "src": [19, 1],
+      "mg": {"kind": "week", "marks": [{"date": "2026-10-18", "label": "11–16"}]},
+      "mg_caption": ["CAL / MAKERS", "Sale · M33"],
+      "mg_alt": "Week strip with Sunday 18 October marked, 11:00 to 16:00."
+    },
+    {
+      "type": "event",
+      "sub": "Market",
+      "short": "MediaCityUK market",
+      "tag": "MARKET / SALFORD QUAYS",
+      "title": "MediaCityUK Makers Market",
+      "chip": "Sat 24 Oct · 10:00–17:00",
+      "body": "Local makers sell handmade food, crafts, jewellery and gifts at Quayside MediaCityUK. No trams reach MediaCityUK during the shutdown; the express shuttle bus from Piccadilly via Deansgate-Castlefield runs every 15 minutes.",
+      "when": "Sat 24 Oct · 10:00–17:00",
+      "what": "Makers market",
+      "where": "Quayside MediaCityUK · M50 3AH",
+      "links": [
+        ["https://www.themakersmarket.co.uk/market/quayside-media-city-19/", "Market details ↗"],
+        ["https://www.themakersmarket.co.uk/find-a-market/", "All markets ↗"]
+      ],
+      "src": [20, 1],
+      "mg": {"kind": "week", "marks": [{"date": "2026-10-24", "label": "10–17"}]},
+      "mg_caption": ["CAL / MAKERS", "Salford · M50"],
+      "mg_alt": "Week strip with Saturday 24 October marked, 10:00 to 17:00."
+    }
+  ],
+  "sources": [
+    [
+      "https://tfgm.com/tram-improvement-works/major-tram-works",
+      "Bee Network — major tram works, 19 October–1 November"
+    ],
+    ["https://www.skysports.com/share/13574076", "Sky Sports — Man Utd v Bournemouth, Sun 25 Oct, 2pm"],
+    [
+      "https://www.nationalrail.co.uk/engineering-works/mcv-tp-18-oct-20261018/",
+      "National Rail — no TransPennine via Victoria, Sun 18 Oct"
+    ],
+    [
+      "https://www.nationalrail.co.uk/engineering-works/moston-18-oct-20261018/",
+      "National Rail — buses Victoria–Rochdale, Sun 18 Oct"
+    ],
+    [
+      "https://www.nationalrail.co.uk/engineering-works/mcv-tp-19-oct-20261019/",
+      "National Rail — early TransPennine changes, Mon 19 Oct"
+    ],
+    [
+      "https://nationalhighways.co.uk/roads-and-travel/road-projects/m60-simister-island-closures-diversions-and-speed-restrictions/",
+      "National Highways — M60 J18 slip closures"
+    ],
+    ["https://www.mancity.com/fixtures/mens", "Manchester City — men's fixtures (AEK Athens, Tue 20 Oct)"],
+    ["https://www.mancity.com/club/travel-and-transport", "Manchester City — matchday travel"],
+    ["https://www.gov.uk/when-do-the-clocks-change", "GOV.UK — when the clocks change"],
+    [
+      "https://manclibraries.blog/warm-spaces-this-winter/",
+      "Manchester Libraries — warm spaces this winter (7 Oct)"
+    ],
+    ["https://catalogue.manchester.gov.uk/", "Manchester Archives — online catalogue"],
+    [
+      "https://manclibraries.blog/discover-our-new-archives-catalogue/",
+      "Manchester Libraries — new archives catalogue (7 Oct)"
+    ],
+    ["https://www2.hm.com/en_gb/men/sale/view-all.html", "H&M UK — men's sale"],
+    ["https://www.zara.com/uk/en/woman-special-prices-l1314.html", "Zara UK — women's Special Prices"],
+    ["https://www.currys.co.uk/clearance", "Currys — clearance listing"],
+    [
+      "https://www.currys.co.uk/store-finder/manchester,-central-retail-park-clearance-store-1901.html",
+      "Currys — Central Retail Park Clearance Store"
+    ],
+    ["https://manchesterliteraturefestival.co.uk/", "Manchester Literature Festival — 2026 programme"],
+    [
+      "https://www.manchester.ac.uk/about/news/manchester-literature-festival-returns-for-2026/",
+      "University of Manchester — MLF times and venues"
+    ],
+    ["https://www.themakersmarket.co.uk/market/sale-12/", "The Makers Market — Sale, Sun 18 Oct, 11:00–16:00"],
+    [
+      "https://www.themakersmarket.co.uk/market/quayside-media-city-19/",
+      "The Makers Market — Quayside MediaCityUK, Sat 24 Oct, 10:00–17:00"
+    ]
+  ]
+}
