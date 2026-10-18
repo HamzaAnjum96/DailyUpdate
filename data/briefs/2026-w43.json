@@ -9,6 +9,29 @@
   "qr": "https://tfgm.com/travel-updates/travel-alerts",
   "cards": [
     {
+      "type": "news",
+      "sub": "Clocks",
+      "short": "Clocks go back",
+      "tag": "NATIONAL / TIME CHANGE",
+      "title": "Clocks go back on Sunday",
+      "chip": "Sun 25 Oct · 02:00",
+      "body": "British Summer Time ends at 02:00 on Sunday 25 October, when clocks go back one hour to 01:00 GMT. Phones change automatically, but check car, oven and heating timers. United's 14:00 kick-off that afternoon is GMT.",
+      "when": "Sun 25 Oct · 02:00 → 01:00",
+      "what": "BST ends · clocks back 1 hour",
+      "where": "UK-wide",
+      "links": [["https://www.gov.uk/when-do-the-clocks-change", "GOV.UK ↗"]],
+      "src": [9],
+      "mg": {
+        "kind": "clock",
+        "from": "02:00",
+        "to": "01:00",
+        "big": "−1H",
+        "lines": ["BST 02:00", "→ GMT 01:00"]
+      },
+      "mg_caption": ["DIA / CLOCK", "Last Sunday in October"],
+      "mg_alt": "Clock face showing the hour hand moving back from 2 to 1."
+    },
+    {
       "type": "transport",
       "sub": "Tram",
       "priority": true,
@@ -166,29 +189,6 @@
       "mg": {"kind": "week", "marks": [{"date": "2026-10-20", "label": "20:00 KO"}]},
       "mg_caption": ["CAL / ETIHAD", "Man City v AEK Athens"],
       "mg_alt": "Week strip with Tuesday 20 October marked, 20:00 kick-off."
-    },
-    {
-      "type": "news",
-      "sub": "Clocks",
-      "short": "Clocks go back",
-      "tag": "NATIONAL / TIME CHANGE",
-      "title": "Clocks go back on Sunday",
-      "chip": "Sun 25 Oct · 02:00",
-      "body": "British Summer Time ends at 02:00 on Sunday 25 October, when clocks go back one hour to 01:00 GMT. Phones change automatically, but check car, oven and heating timers. United's 14:00 kick-off that afternoon is GMT.",
-      "when": "Sun 25 Oct · 02:00 → 01:00",
-      "what": "BST ends · clocks back 1 hour",
-      "where": "UK-wide",
-      "links": [["https://www.gov.uk/when-do-the-clocks-change", "GOV.UK ↗"]],
-      "src": [9],
-      "mg": {
-        "kind": "clock",
-        "from": "02:00",
-        "to": "01:00",
-        "big": "−1H",
-        "lines": ["BST 02:00", "→ GMT 01:00"]
-      },
-      "mg_caption": ["DIA / CLOCK", "Last Sunday in October"],
-      "mg_alt": "Clock face showing the hour hand moving back from 2 to 1."
     },
     {
       "type": "news",

@@ -14,6 +14,17 @@ const DEFAULT_QR = 'https://tfgm.com/travel-updates/travel-alerts';
 
 const dayMonth = (d) => `${pad2(d.getUTCDate())} ${monthAbbr(d)}`.toUpperCase();
 
+// Card numbers as runs, e.g. [1, 7, 8] → "01 · 07–08".
+function cardRuns(ids) {
+  const runs = [];
+  for (const id of ids) {
+    const last = runs.at(-1);
+    if (last && id === last[1] + 1) last[1] = id;
+    else runs.push([id, id]);
+  }
+  return runs.map(([a, b]) => (a === b ? pad2(a) : `${pad2(a)}–${pad2(b)}`)).join(' · ');
+}
+
 export function buildDeck(brief) {
   const start = parseDate(brief.start);
   const end = parseDate(brief.end);
@@ -56,12 +67,12 @@ function cover({ brief, cards, ctx, rev, range, chk, total }) {
   if (prioIndex < 0) prioIndex = 0;
   const prio = cards[prioIndex];
 
-  const contents = TYPE_ORDER.map((t) => {
+  // One row per type, in the order each type first appears in the deck.
+  const types = [...new Set(cards.map((c) => c.type))].filter((t) => TYPES[t]);
+  const contents = types.map((t) => {
     const ids = cards.flatMap((c, i) => (c.type === t ? [i + 1] : []));
-    if (!ids.length) return '';
-    const span = ids.length > 1 ? `${pad2(ids[0])}–${pad2(ids.at(-1))}` : pad2(ids[0]);
     const shorts = ids.map((i) => cards[i - 1].short ?? cards[i - 1].title).join(' · ');
-    return html`<a href="#c${pad2(ids[0])}"><span class="code">${TYPES[t].code}</span><span>${TYPES[t].section} ×${ids.length}</span><span>${span}</span><small>${shorts}</small></a>`;
+    return html`<a href="#c${pad2(ids[0])}"><span class="code">${TYPES[t].code}</span><span>${TYPES[t].section} ×${ids.length}</span><span>${cardRuns(ids)}</span><small>${shorts}</small></a>`;
   });
 
   const banner = `${CITY} W${week}`;

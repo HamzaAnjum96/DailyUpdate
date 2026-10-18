@@ -47,7 +47,7 @@ The schema is the same as the `brief.json` the original `deck.py` generator used
 | `tz` | Shown on the cover, e.g. `"BST"` |
 | `note` | Top of the source register: checked date, time zone, anything still to confirm |
 | `qr` | URL for the end-card QR code (defaults to TfGM travel alerts) |
-| `cards` | Content cards, in order: transport, news, sales, events |
+| `cards` | Content cards in deck order: usually transport, news, sales, events, but any card can lead (W43 opens with the clock change). The cover's contents list each type's card numbers, e.g. `01 · 07–08` |
 | `sources` | `[url, label]` pairs, numbered from 1 in the register |
 
 ### Card fields

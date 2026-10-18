@@ -38,17 +38,10 @@ function checkBrief(b) {
 
   const nSources = b.sources?.length ?? 0;
   const ctx = start && { start, week: b.week, serial: String(b.week).padStart(3, '0') };
-  let lastType = -1;
 
   b.cards.forEach((c, i) => {
     const at = `card ${String(i + 1).padStart(2, '0')}${c.title ? ` "${c.title}"` : ''}`;
-    if (!TYPES[c.type]) {
-      errors.push(`${at}: type "${c.type}" is not one of ${TYPE_ORDER.join(', ')}`);
-    } else {
-      const order = TYPE_ORDER.indexOf(c.type);
-      if (order < lastType) warnings.push(`${at}: ${c.type} card comes after ${TYPE_ORDER[lastType]} cards; the cover groups cards by type`);
-      lastType = Math.max(lastType, order);
-    }
+    if (!TYPES[c.type]) errors.push(`${at}: type "${c.type}" is not one of ${TYPE_ORDER.join(', ')}`);
     for (const key of ['title', 'body', 'when', 'what', 'where']) if (!isStr(c[key])) errors.push(`${at}: ${key} is required`);
     if (c.meter != null && !(Number.isInteger(c.meter) && c.meter >= 0 && c.meter <= 5)) errors.push(`${at}: meter must be 0–5`);
     if (c.meter == null && !c.chip) warnings.push(`${at}: no meter or chip`);
