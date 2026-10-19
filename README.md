@@ -22,13 +22,14 @@ assets/js/micrographics/    one file per micrographic template, plus index.js (t
 assets/js/lib/              markup escaping, dates, dot-matrix font, QR code
 assets/vendor/              qrcode-generator 2.0.4 (MIT, Kazuhiko Arase)
 scripts/check.js            validates and test-builds every brief; CI runs it before deploying
+notes/priorities.md         editorial priorities: what to check first and rank higher (not published)
 ```
 
 There is no build step: the site is static files and ES modules.
 
 ## Weekly update
 
-1. Copy last week's brief to `data/briefs/<year>-w<nn>.json` and edit it.
+1. Start with the checks in `notes/priorities.md`; they decide what leads each section. Then copy last week's brief to `data/briefs/<year>-w<nn>.json` and edit it.
 2. Add its id to the top of `data/briefs/index.json`:
    ```json
    { "briefs": ["2026-w44", "2026-w43"] }
