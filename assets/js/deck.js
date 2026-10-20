@@ -3,16 +3,28 @@
 import { monthAbbr, pad2, parseDate } from './lib/dates.js';
 import { dots, dotsWidth } from './lib/dotmatrix.js';
 import { html, raw } from './lib/markup.js';
-import { qrSvg } from './lib/qr.js';
 import { renderMicrographic } from './micrographics/index.js';
 import { TYPE_ORDER, TYPES } from './types.js';
 
 // Masthead. Change these to re-badge the deck.
 const CITY = 'MCR';
 const TITLE = 'City Ops Brief';
-const DEFAULT_QR = 'https://tfgm.com/travel-updates/travel-alerts';
 
 const dayMonth = (d) => `${pad2(d.getUTCDate())} ${monthAbbr(d)}`.toUpperCase();
+
+// The day strip in each card's header: the brief's week, Monday to Sunday.
+export const WEEKDAYS = [
+  ['mon', 'M', 'Mon'], ['tue', 'T', 'Tue'], ['wed', 'W', 'Wed'], ['thu', 'T', 'Thu'],
+  ['fri', 'F', 'Fri'], ['sat', 'S', 'Sat'], ['sun', 'S', 'Sun'],
+];
+
+function dayStrip(days = []) {
+  const on = new Set(days);
+  const names = WEEKDAYS.filter(([key]) => on.has(key)).map(([, , name]) => name);
+  const label = names.length === 7 ? 'Every day this week' : names.length ? `This week: ${names.join(', ')}` : 'Not on any day this week';
+  const blocks = WEEKDAYS.map(([key, letter]) => (on.has(key) ? html`<i class="on">${letter}</i>` : html`<i>${letter}</i>`));
+  return html`<span class="days" role="img" aria-label="${label}">${blocks}</span>`;
+}
 
 // Card numbers as runs, e.g. [1, 7, 8] → "01 · 07–08".
 function cardRuns(ids) {
@@ -125,14 +137,14 @@ function card(c, i, total, ctx) {
   const type = TYPES[c.type];
   if (!type) throw new Error(`Card ${i}: unknown type "${c.type}" (have: ${TYPE_ORDER.join(', ')})`);
   const section = `${type.section}${c.sub ? ` · ${c.sub}` : ''}`.toUpperCase();
-  const star = c.priority ? raw('<span class="star">★ PRIORITY</span> · ') : '';
+  const star = c.priority ? raw('<span class="star">★<span class="star-l"> PRIORITY</span></span>') : '';
   const links = (c.links ?? []).map(([url, label]) => html`<a class="btn" href="${url}" target="_blank" rel="noopener">${label}</a>`);
   const src = c.src?.length ? html`<span class="src">SRC ${c.src.map(pad2).join('·')}</span>` : '';
 
   return html`
 <section class="slide" id="c${pad2(i)}" data-type="${c.type}" aria-label="Card ${i} of ${total}: ${c.title}">
  <article class="card${c.priority ? ' priority' : ''}"><div class="card-in">
-  <header class="card-top"><span class="ctype"><span class="code">${type.code}</span><svg viewBox="0 0 14 14" aria-hidden="true">${raw(type.icon)}</svg>${section}</span><span>${star}<span class="ser">${ctx.serial} · </span>${pad2(i)}/${pad2(total)}</span></header>
+  <header class="card-top"><span class="ctype"><span class="code">${type.code}</span><svg viewBox="0 0 14 14" aria-hidden="true">${raw(type.icon)}</svg>${section}</span><span class="top-r">${star}${dayStrip(c.days)}</span></header>
   ${c.priority ? raw('<div class="hazard"></div>') : ''}
   ${figure(c, i, ctx)}
   <div class="card-main">
@@ -154,7 +166,7 @@ function barcode() {
   let x = 0;
   const bars = [];
   BARCODE.forEach((w, i) => {
-    if (i % 2 === 0) bars.push(html`<rect x="${x}" y="0" width="${w}" height="34" class="f-ink"/>`);
+    if (i % 2 === 0) bars.push(html`<rect x="${x}" y="0" width="${w}" height="34" class="f-paper"/>`);
     x += w;
   });
   return html`<svg class="barcode" viewBox="0 0 ${x} 34" width="${x * 2}" height="34" aria-hidden="true">${bars}</svg>`;
@@ -162,7 +174,6 @@ function barcode() {
 
 function endCard({ brief, ctx, rev, chk, total, docId }) {
   const sources = brief.sources.map(([url, label]) => html`<li><a href="${url}" target="_blank" rel="noopener">${label} ↗</a></li>`);
-  const qr = brief.qr ?? DEFAULT_QR;
   return html`
 <section class="slide" id="c${pad2(total)}" aria-label="Sources">
  <article class="card endcard"><div class="card-in">
@@ -170,7 +181,6 @@ function endCard({ brief, ctx, rev, chk, total, docId }) {
   <div class="card-main"><p class="note">${brief.note ?? ''}</p><ol class="sources">${sources}</ol></div>
   <div class="docblock">
    <div class="l"><div class="doc-k">DOC / ${CITY}</div><div class="doc-id">${docId}</div><div class="doc-v">PUBLIC / W${ctx.week} / ${rev}</div><div class="bars-box">${barcode()}</div></div>
-   <a class="r" href="${qr}" target="_blank" rel="noopener">${qrSvg(qr)}<span class="doc-k">Travel / QR</span></a>
   </div>
   <footer class="endfoot"><span>${CITY} / OPS BRIEF</span><span>END / ${ctx.serial}</span></footer>
  </div></article>

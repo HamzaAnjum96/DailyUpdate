@@ -19,8 +19,7 @@ assets/js/deck.js           cover, cards, source register, index rail (pure stri
 assets/js/nav.js            swipe, keyboard, progress bar and rail highlighting
 assets/js/types.js          card types: badge code, section name, meter label, icon
 assets/js/micrographics/    one file per micrographic template, plus index.js (the registry)
-assets/js/lib/              markup escaping, dates, dot-matrix font, QR code
-assets/vendor/              qrcode-generator 2.0.4 (MIT, Kazuhiko Arase)
+assets/js/lib/              markup escaping, dates, dot-matrix font
 scripts/check.js            validates and test-builds every brief; CI runs it before deploying
 notes/priorities.md         editorial priorities: what to check first and rank higher (not published)
 ```
@@ -47,7 +46,6 @@ The schema is the same as the `brief.json` the original `deck.py` generator used
 | `start`, `end`, `checked` | `YYYY-MM-DD`. The week runs Sunday `start` to Sunday `end`; `checked` is when the facts were verified |
 | `tz` | Shown on the cover, e.g. `"BST"` |
 | `note` | Top of the source register: checked date, time zone, anything still to confirm |
-| `qr` | URL for the end-card QR code (defaults to TfGM travel alerts) |
 | `cards` | Content cards in deck order: usually transport, news, sales, events, but any card can lead (W43 opens with the clock change). The cover's contents list each type's card numbers, e.g. `01 · 07–08` |
 | `sources` | `[url, label]` pairs, numbered from 1 in the register |
 
@@ -62,6 +60,7 @@ The schema is the same as the `brief.json` the original `deck.py` generator used
 | `tag`, `title`, `body` | `"CATEGORY / QUALIFIER"`, the headline, and 35–65 words of copy |
 | `meter` / `chip` | A 0–5 rating (`meter_label` overrides IMPACT/DEPTH), or a chip such as `"Published 7 Oct"` |
 | `when`, `what`, `where` | The stats row |
+| `days` | Days the item applies, from `mon` to `sun` of the brief's week, e.g. `["tue"]` or `["mon", "tue", "wed", "thu", "fri"]`. They're orange in the card's top-right day strip. The strip runs Monday to Sunday, so the brief's starting Sunday isn't on it |
 | `links` | `[url, label]` pairs for the footer buttons |
 | `src` | Source numbers this card relies on, e.g. `[1, 2]` |
 | `mg` | The micrographic: `{ "kind": "<template>", ...params }` |

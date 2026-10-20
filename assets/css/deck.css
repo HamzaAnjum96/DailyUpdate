@@ -2,7 +2,7 @@
   /* Layout: full-height vertical swipe deck, one trading card per screen; phone-width column centred on desktop with an index rail. */
   --page:#090909; --ink-0:#070707; --ink-1:#0b0b0b; --ink-2:#101010; --ink-3:#181818;
   --rule:#555551; --rule-2:#3a3a38; --rule-3:#62625e; --rule-4:#50504d;
-  --paper:#f4f2ec; --paper-2:#c5c3bd; --mute:#9f9d98; --qrbg:#f2f0e9; --grid:#151514; --num:#262624;
+  --paper:#f4f2ec; --paper-2:#c5c3bd; --mute:#9f9d98; --grid:#151514; --num:#262624;
   --orange:#ff5a1f; --orange-2:#ff7a49; --orange-ink:#111111;
   --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
   --mono:"IBM Plex Mono",Consolas,"Courier New",monospace;
@@ -34,6 +34,12 @@ a:focus-visible,.deck:focus-visible{outline:2px solid var(--orange);outline-offs
 .i-f{fill:var(--orange-2)}
 .hazard{flex:none;height:9px;background:repeating-linear-gradient(-45deg,var(--orange) 0 7px,var(--ink-0) 7px 14px);border-bottom:1px solid var(--rule-2)}
 .star{color:var(--orange-2)}
+
+/* day strip, top right of each card: the brief's week Monday to Sunday, orange on the days the item applies */
+.top-r{display:flex;align-items:center;gap:8px}
+.days{display:flex;gap:2px}
+.days i{display:grid;place-items:center;width:13px;height:13px;font:600 7.5px/1 var(--mono);font-style:normal;letter-spacing:0;color:var(--mute);background:var(--ink-3);border:1px solid var(--rule-2)}
+.days i.on{color:var(--orange-ink);background:var(--orange);border-color:var(--orange)}
 
 /* art window: grows into spare height (blueprint grid + outlined card number), shrinks to a floor on short screens */
 .mg{position:relative;flex:3 1 0;min-height:clamp(104px,18svh,150px);max-height:330px;display:flex;flex-direction:column;margin:0;padding:8px 10px 6px;overflow:hidden;
@@ -86,7 +92,7 @@ a:focus-visible,.deck:focus-visible{outline:2px solid var(--orange);outline-offs
 .s-hand{stroke-width:3.2;stroke-linecap:round}
 .s-arc{stroke-width:2;stroke-dasharray:3 3}
 .s-arcw{stroke-width:4}
-.f-ink{fill:var(--ink-0)} .f-hot{fill:var(--orange)} .f-paper{fill:var(--paper)} .f-off{fill:#262624} .f-none{fill:none} .f-qrbg{fill:var(--qrbg)}
+.f-ink{fill:var(--ink-0)} .f-hot{fill:var(--orange)} .f-paper{fill:var(--paper)} .f-off{fill:#262624} .f-none{fill:none}
 rect.f-hot.s-hot{fill:var(--orange)}
 circle.f-ink.s-hot{fill:var(--ink-0)}
 
@@ -127,15 +133,13 @@ circle.f-ink.s-hot{fill:var(--ink-0)}
 .sources li{counter-increment:s;display:grid;grid-template-columns:34px 1fr}
 .sources li::before{content:"[" counter(s,decimal-leading-zero) "]";color:var(--mute)}
 .sources a{color:var(--paper-2);text-decoration:underline;text-underline-offset:2px;overflow-wrap:anywhere}
-.docblock{flex:none;display:grid;grid-template-columns:1fr 124px;border-top:1px solid var(--rule-2);border-left:5px solid var(--orange);background:var(--ink-0)}
+.docblock{flex:none;border-top:1px solid var(--rule-2);border-left:5px solid var(--orange);background:var(--ink-0)}
 .docblock .l{padding:12px;min-width:0}
-.docblock .r{padding:10px;border-left:1px solid var(--rule-3);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;text-decoration:none}
 .doc-k{font:500 8px/1 var(--mono);letter-spacing:.14em;color:var(--orange-2);text-transform:uppercase}
 .doc-id{margin-top:4px;font:800 21px/1 var(--sans);letter-spacing:-.03em;color:var(--paper)}
 .doc-v{margin-top:5px;font:500 8px/1 var(--mono);letter-spacing:.11em;color:#aaa8a2}
-.bars-box{margin-top:12px;display:inline-block;padding:7px;background:var(--paper)}
+.bars-box{margin-top:12px;display:inline-block}
 .barcode{display:block;max-width:100%}
-.qr{width:88px;height:88px;border:4px solid var(--qrbg);display:block}
 .endfoot{flex:none;display:flex;justify-content:space-between;padding:9px 12px;background:var(--ink-0);border-top:1px solid #333;font:500 8px/1 var(--mono);letter-spacing:.11em;color:#aaa9a4}
 .endfoot span:last-child{color:var(--orange)}
 
@@ -159,7 +163,8 @@ circle.f-ink.s-hot{fill:var(--ink-0)}
   .keys{display:block;position:fixed;right:max(28px,calc(50% - 540px));bottom:32px;width:210px;font:500 9px/1.8 var(--mono);letter-spacing:.12em;color:var(--mute);text-transform:uppercase}
   .keys b{display:inline-block;min-width:22px;padding:1px 5px;margin-right:6px;border:1px solid var(--rule-3);color:var(--paper);text-align:center;font-weight:500}
 }
-@media (max-width:400px){.ser{display:none}}
+@media (max-width:400px){.star-l{display:none}}
+@media (max-width:360px){.days{gap:1px}.days i{width:11px;height:11px;font-size:6.5px}}
 @media (max-height:640px){.card h2{font-size:20px}.body{font-size:13px;line-height:1.5}}
 @media (prefers-reduced-motion:reduce){.deck{scroll-behavior:auto}.hint b{animation:none}}
 
