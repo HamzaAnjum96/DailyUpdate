@@ -1,11 +1,11 @@
 {
   "week": 43,
-  "rev": "A",
+  "rev": "B",
   "start": "2026-10-18",
   "end": "2026-10-25",
   "checked": "2026-10-17",
   "tz": "BST",
-  "note": "Checked 17 October 2026. Times are BST until the clocks go back at 02:00 on Sunday 25 October; Sunday 25 times are GMT. Prices, stock and travel alerts can change, and kick-off times can move for TV.",
+  "note": "Checked 17 October 2026; the Alan Turing Way and Broughton and Monsall items were checked on 20 October. Times are BST until the clocks go back at 02:00 on Sunday 25 October; Sunday 25 times are GMT. Prices, stock and travel alerts can change, and kick-off times can move for TV.",
   "cards": [
     {
       "type": "news",
@@ -70,6 +70,128 @@
       },
       "mg_caption": ["DIA / TRAM-NET", "Closed ▬ · Terminus ■"],
       "mg_alt": "Tram line diagram: Altrincham, Eccles and Trafford Centre lines closed; Airport and East Didsbury trams terminate at Firswood."
+    },
+    {
+      "type": "transport",
+      "sub": "Road",
+      "short": "Alan Turing Way",
+      "tag": "ROAD / EMERGENCY CLOSURE",
+      "title": "Alan Turing Way still shut northbound",
+      "meter": 3,
+      "body": "Alan Turing Way is closed northbound from Ashton Old Road to Grey Mare Lane. The emergency closure has been in place since March, with no reopening date. Drivers are diverted via Pin Mill Brow, Great Ancoats Street, Every Street and Ashton New Road. Allow extra time on Tuesday's match night and the Westlife nights at Co-op Live, Friday to Sunday.",
+      "when": "Since March · no end date",
+      "what": "Northbound closed · 53 diverted",
+      "where": "Ashton Old Rd to Grey Mare Lane",
+      "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+      "links": [
+        ["https://tfgm.com/getting-to-the-etihad", "Etihad travel advice ↗"],
+        ["https://tfgm.com/travel-updates/travel-alerts?active_tab=road", "Road alerts ↗"]
+      ],
+      "src": [21, 22, 23],
+      "mg": {
+        "kind": "route",
+        "rows": [
+          {
+            "name": "Alan Turing Way · northbound",
+            "stops": ["Ashton Old Rd", "Grey Mare Ln", "Ashton New Rd"],
+            "closed": [[0, 1]],
+            "mark": 2,
+            "mark_label": "Etihad Campus"
+          },
+          {
+            "name": "Diversion for drivers",
+            "stops": ["Ashton Old Rd", "Pin Mill Brow", "Gt Ancoats St", "Every St", "Ashton New Rd"]
+          }
+        ]
+      },
+      "mg_caption": ["DIA / A6010-ATW", "Until further notice"],
+      "mg_alt": "Diagram: Alan Turing Way northbound closed from Ashton Old Road to Grey Mare Lane; drivers divert via Pin Mill Brow, Great Ancoats Street, Every Street and Ashton New Road."
+    },
+    {
+      "type": "transport",
+      "sub": "Matchday",
+      "short": "Etihad Tuesday",
+      "tag": "EVENT / TRAVEL IMPACT",
+      "title": "Champions League night at the Etihad",
+      "meter": 2,
+      "body": "Manchester City host AEK Athens at 20:00 on Tuesday. Trams keep running on the Ashton line through the works, so Etihad Campus is served, but expect busy trams and roads around the stadium before and after the game. City's travel page posts matchday updates.",
+      "when": "Tue 20 Oct · 20:00 kick-off",
+      "what": "Match crowds · trams + roads",
+      "where": "Etihad Campus · M11 3FF",
+      "days": ["tue"],
+      "links": [
+        ["https://www.mancity.com/club/travel-and-transport", "City matchday travel ↗"],
+        ["https://www.mancity.com/fixtures/mens", "Fixtures ↗"]
+      ],
+      "src": [7, 8],
+      "mg": {"kind": "week", "marks": [{"date": "2026-10-20", "label": "20:00 KO"}]},
+      "mg_caption": ["CAL / ETIHAD", "Man City v AEK Athens"],
+      "mg_alt": "Week strip with Tuesday 20 October marked, 20:00 kick-off."
+    },
+    {
+      "type": "transport",
+      "sub": "Road",
+      "short": "M60 J18 overnight",
+      "tag": "MOTORWAY / OVERNIGHT",
+      "title": "M60 J18 slip to the M66 shut overnight",
+      "meter": 2,
+      "body": "The clockwise exit slip at M60 junction 18, Simister Island, to the M66 northbound closes overnight from 21:00 to 06:00, Monday to Friday. The signed 7-mile diversion continues on the M62 eastbound to junction 19, then returns westbound to junction 18. The same closure repeats from 26 to 31 October.",
+      "when": "Mon 19 → Fri 23 Oct · 21:00–06:00",
+      "what": "Exit slip closed overnight",
+      "where": "M60 J18 / Simister Island",
+      "days": ["mon", "tue", "wed", "thu", "fri"],
+      "links": [
+        [
+          "https://nationalhighways.co.uk/roads-and-travel/road-projects/m60-simister-island-closures-diversions-and-speed-restrictions/",
+          "National Highways ↗"
+        ]
+      ],
+      "src": [6],
+      "mg": {
+        "kind": "junction",
+        "road": "M60",
+        "a": "J17",
+        "b": "J18",
+        "closed": "slip",
+        "slip": "M66 N",
+        "window": "21:00 → 06:00 · MON–FRI"
+      },
+      "mg_caption": ["DIA / M60-J18", "Overnight"],
+      "mg_alt": "Junction diagram: M60 clockwise exit slip at junction 18 to the M66 north is closed overnight."
+    },
+    {
+      "type": "transport",
+      "sub": "Road",
+      "short": "Broughton + Monsall works",
+      "tag": "ROADS / UTILITY WORKS",
+      "title": "Road works in Broughton and Monsall",
+      "meter": 2,
+      "body": "SP Electricity North West is working on two streets in Broughton. Great Cheetham Street East has a one-way closure from Wednesday to Friday, then signals until 10 November. St James Road closes on Saturday and Sunday, with signals at other times. Separately, 114 buses miss stops in Monsall and on Queens Road until Friday, diverting via The Gateway and Oldham Road.",
+      "when": "Wed 21 → Sun 25 Oct",
+      "what": "Closures · 114 diverted",
+      "where": "Broughton / Monsall · Queens Road",
+      "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+      "links": [
+        [
+          "https://www.salford.gov.uk/parking-roads-and-travel/roadworks/current-roadworks-and-closures/",
+          "Salford roadworks ↗"
+        ],
+        ["https://tfgm.com/public-transport/bus/routes/114-boarshaw", "114 stops ↗"]
+      ],
+      "src": [24, 25],
+      "mg": {
+        "kind": "week",
+        "marks": [
+          {"date": "2026-10-21", "label": "1-WAY"},
+          {"date": "2026-10-22", "label": "1-WAY"},
+          {"date": "2026-10-23", "label": "1-WAY"},
+          {"date": "2026-10-24", "label": "CLOSED"},
+          {"date": "2026-10-25", "label": "CLOSED"}
+        ],
+        "span": {"from": "2026-10-13", "to": "2026-10-23", "label": "114 diverted to Fri 23"}
+      },
+      "mg_caption": ["CAL / ROAD WORKS", "Broughton · Monsall"],
+      "mg_alt": "Week strip: Wednesday to Friday marked one-way for Great Cheetham Street East, Saturday and Sunday marked closed for St James Road, and a bar to Friday for the 114 diversion."
     },
     {
       "type": "transport",
@@ -142,58 +264,6 @@
       },
       "mg_caption": ["DIA / MCR-RAIL", "Sun 18 Oct"],
       "mg_alt": "Rail diagram: Victoria to Stalybridge closed; Victoria to Rochdale replaced by buses, trains start at Rochdale."
-    },
-    {
-      "type": "transport",
-      "sub": "Road",
-      "short": "M60 J18 overnight",
-      "tag": "MOTORWAY / OVERNIGHT",
-      "title": "M60 J18 slip to the M66 shut overnight",
-      "meter": 2,
-      "body": "The clockwise exit slip at M60 junction 18, Simister Island, to the M66 northbound closes overnight from 21:00 to 06:00, Monday to Friday. The signed 7-mile diversion continues on the M62 eastbound to junction 19, then returns westbound to junction 18. The same closure repeats from 26 to 31 October.",
-      "when": "Mon 19 → Fri 23 Oct · 21:00–06:00",
-      "what": "Exit slip closed overnight",
-      "where": "M60 J18 / Simister Island",
-      "days": ["mon", "tue", "wed", "thu", "fri"],
-      "links": [
-        [
-          "https://nationalhighways.co.uk/roads-and-travel/road-projects/m60-simister-island-closures-diversions-and-speed-restrictions/",
-          "National Highways ↗"
-        ]
-      ],
-      "src": [6],
-      "mg": {
-        "kind": "junction",
-        "road": "M60",
-        "a": "J17",
-        "b": "J18",
-        "closed": "slip",
-        "slip": "M66 N",
-        "window": "21:00 → 06:00 · MON–FRI"
-      },
-      "mg_caption": ["DIA / M60-J18", "Overnight"],
-      "mg_alt": "Junction diagram: M60 clockwise exit slip at junction 18 to the M66 north is closed overnight."
-    },
-    {
-      "type": "transport",
-      "sub": "Matchday",
-      "short": "Etihad Tuesday",
-      "tag": "EVENT / TRAVEL IMPACT",
-      "title": "Champions League night at the Etihad",
-      "meter": 2,
-      "body": "Manchester City host AEK Athens at 20:00 on Tuesday. Trams keep running on the Ashton line through the works, so Etihad Campus is served, but expect busy trams and roads around the stadium before and after the game. City's travel page posts matchday updates.",
-      "when": "Tue 20 Oct · 20:00 kick-off",
-      "what": "Match crowds · trams + roads",
-      "where": "Etihad Campus · M11 3FF",
-      "days": ["tue"],
-      "links": [
-        ["https://www.mancity.com/club/travel-and-transport", "City matchday travel ↗"],
-        ["https://www.mancity.com/fixtures/mens", "Fixtures ↗"]
-      ],
-      "src": [7, 8],
-      "mg": {"kind": "week", "marks": [{"date": "2026-10-20", "label": "20:00 KO"}]},
-      "mg_caption": ["CAL / ETIHAD", "Man City v AEK Athens"],
-      "mg_alt": "Week strip with Tuesday 20 October marked, 20:00 kick-off."
     },
     {
       "type": "news",
@@ -417,6 +487,23 @@
     [
       "https://www.themakersmarket.co.uk/market/quayside-media-city-19/",
       "The Makers Market — Quayside MediaCityUK, Sat 24 Oct, 10:00–17:00"
+    ],
+    [
+      "https://tfgm.com/getting-to-the-etihad",
+      "TfGM — getting to the Etihad: Alan Turing Way closure and diversion"
+    ],
+    ["https://tfgm.com/getting-to-co-op-live-arena", "TfGM — getting to Co-op Live: Westlife, 23–25 Oct"],
+    [
+      "https://tfgm.com/travel-updates/live-departures/bus/53-pendleton?no-script=true",
+      "TfGM — 53 diversion towards Cheetham Hill"
+    ],
+    [
+      "https://www.salford.gov.uk/parking-roads-and-travel/roadworks/current-roadworks-and-closures/",
+      "Salford City Council — current roadworks and closures (16 Oct)"
+    ],
+    [
+      "https://tfgm.com/public-transport/bus/routes/114-boarshaw",
+      "TfGM — 114 route: Monsall diversion, 13–23 Oct"
     ]
   ]
 }
