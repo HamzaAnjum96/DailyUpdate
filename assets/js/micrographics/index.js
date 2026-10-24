@@ -13,6 +13,7 @@
 import * as bars from './bars.js';
 import * as clock from './clock.js';
 import * as count from './count.js';
+import * as hours from './hours.js';
 import * as junction from './junction.js';
 import * as route from './route.js';
 import * as target from './target.js';
@@ -20,7 +21,7 @@ import * as week from './week.js';
 import { raw } from '../lib/markup.js';
 
 export const templates = Object.fromEntries(
-  [route, junction, week, bars, count, clock, target].map((t) => [t.meta.kind, t]),
+  [route, junction, week, hours, bars, count, clock, target].map((t) => [t.meta.kind, t]),
 );
 
 export function renderMicrographic(mg, ctx) {

@@ -32,6 +32,7 @@ const LINE_DY = 30;
 const X_FIRST = 20;
 const X_LAST = 300;
 const MIN_H = 140;
+const NAME_CHAR_W = 5.3; // the row name is 7px with wider letter-spacing
 
 export function render({ rows = [] }) {
   const height = Math.max(MIN_H, 8 + rows.length * ROW_H);
@@ -65,8 +66,10 @@ function drawRow(row, y0) {
     if (row.mark === i) {
       out.push(svg`<circle cx="${x}" cy="${ly}" r="7.5" class="f-none s-hot"/>`);
       if (row.mark_label) {
+        // nudge the label right, off the end of the row name above it, but keep it by its stop
         const w = textWidth(row.mark_label);
-        const tx = Math.min(Math.max(x, 14 + w / 2), 306 - w / 2);
+        const nameEnd = 14 + [...String(row.name ?? '')].length * NAME_CHAR_W + 6;
+        const tx = Math.min(Math.max(x, 14 + w / 2, Math.min(nameEnd + w / 2, x + w / 2 + 8)), 306 - w / 2);
         out.push(svg`<text x="${tx}" y="${ly - 12}" text-anchor="middle" class="t-hot">${upper(row.mark_label)}</text>`);
       }
     }

@@ -19,8 +19,8 @@ jobs:
       - run: node scripts/check.js
 
   deploy:
-    # Only the default branch goes live, and only once every brief passes the check.
-    if: github.event_name != 'pull_request' && github.ref_name == github.event.repository.default_branch
+    # Only main goes live, and only once every brief passes the check.
+    if: github.event_name != 'pull_request' && github.ref_name == 'main'
     needs: check
     runs-on: ubuntu-latest
     permissions:

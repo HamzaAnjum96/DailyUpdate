@@ -16,17 +16,27 @@ export const meta = {
 };
 
 // Layout: dots are at most MAX_PITCH apart and the number fits in MAX_W, starting at TOP.
-const MAX_PITCH = 8;
+// Orange corner brackets sit PAD outside the number, with arms ARM long.
+const MAX_PITCH = 9;
 const MAX_W = 290;
-const TOP = 14;
+const TOP = 10;
+const PAD = 12;
+const ARM = 7;
 
 export function render({ value, caption = '', sub = '' }) {
   const v = String(value);
   const pitch = Math.min(MAX_PITCH, MAX_W / ([...v].length * 6 - 1));
+  const w = dotsWidth(v, pitch);
+  const x = (320 - w) / 2;
   const base = TOP + 7 * pitch;
-  return svg`${dots(v, (320 - dotsWidth(v, pitch)) / 2, TOP, pitch)}
-<text x="160" y="${base + 22}" text-anchor="middle" class="t-paper">${upper(caption)}</text>
-<text x="160" y="${base + 35}" text-anchor="middle" class="t-stop">${upper(sub)}</text>`;
+  const l = x - PAD; // bracket box: left, right, top, bottom
+  const r = x + w + PAD;
+  const t = TOP - 6;
+  const b = base + 6;
+  return svg`<path d="M${l} ${t + 7}V${t}H${l + ARM}M${r - ARM} ${t}H${r}V${t + 7}M${r} ${b - 7}V${b}H${r - ARM}M${l + ARM} ${b}H${l}V${b - 7}" class="s-hot"/>
+${dots(v, x, TOP, pitch)}
+<text x="160" y="${base + 23}" text-anchor="middle" class="t-paper">${upper(caption)}</text>
+<text x="160" y="${base + 36}" text-anchor="middle" class="t-stop">${upper(sub)}</text>`;
 }
 
 export function check({ value }) {

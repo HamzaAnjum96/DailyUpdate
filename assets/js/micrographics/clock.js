@@ -21,6 +21,7 @@ const CY = 70;
 const R = 54;
 const HAND = 32;
 const ARC_R = 42;
+const NUM_R = 37; // radius of the 12 / 3 / 6 / 9 numerals
 
 const at = (a, r) => [CX + r * Math.cos(a), CY + r * Math.sin(a)];
 
@@ -36,6 +37,10 @@ export function render({ from, to, big = '', lines = [] }) {
     const [x1, y1] = at(a, R - (i % 3 === 0 ? 9 : 5));
     const [x2, y2] = at(a, R - 2);
     out.push(svg`<path d="M${x1} ${y1}L${x2} ${y2}" class="${i % 3 === 0 ? 's-line' : 's-dim'}"/>`);
+    if (i % 3 === 0) {
+      const [nx, ny] = at(a, NUM_R);
+      out.push(svg`<text x="${nx}" y="${ny + 2.6}" text-anchor="middle" class="t-sub">${i === 0 ? 12 : i}</text>`);
+    }
   }
   const a1 = angle(from);
   const a2 = angle(to);

@@ -18,7 +18,7 @@
       "when": "Sun 25 Oct · 02:00 → 01:00",
       "what": "BST ends · clocks back 1 hour",
       "where": "UK-wide",
-      "days": ["sun"],
+      "days": ["2026-10-25"],
       "links": [["https://www.gov.uk/when-do-the-clocks-change", "GOV.UK ↗"]],
       "src": [9],
       "mg": {
@@ -44,7 +44,7 @@
       "when": "Mon 19 Oct → Sun 1 Nov",
       "what": "3 lines closed · express shuttles",
       "where": "Deansgate-Castlefield / Trafford Bar / Eccles",
-      "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+      "days": "all",
       "links": [["https://tfgm.com/tram-improvement-works/major-tram-works", "TfGM travel hub ↗"]],
       "src": [1],
       "mg": {
@@ -82,7 +82,7 @@
       "when": "Since March · no end date",
       "what": "Northbound closed · 53 diverted",
       "where": "Ashton Old Rd to Grey Mare Lane",
-      "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+      "days": "all",
       "links": [
         ["https://tfgm.com/getting-to-the-etihad", "Etihad travel advice ↗"],
         ["https://tfgm.com/travel-updates/travel-alerts?active_tab=road", "Road alerts ↗"]
@@ -118,7 +118,7 @@
       "when": "Tue 20 Oct · 20:00 kick-off",
       "what": "Match crowds · trams + roads",
       "where": "Etihad Campus · M11 3FF",
-      "days": ["tue"],
+      "days": ["2026-10-20"],
       "links": [
         ["https://www.mancity.com/club/travel-and-transport", "City matchday travel ↗"],
         ["https://www.mancity.com/fixtures/mens", "Fixtures ↗"]
@@ -139,7 +139,7 @@
       "when": "Mon 19 → Fri 23 Oct · 21:00–06:00",
       "what": "Exit slip closed overnight",
       "where": "M60 J18 / Simister Island",
-      "days": ["mon", "tue", "wed", "thu", "fri"],
+      "days": ["2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23"],
       "links": [
         [
           "https://nationalhighways.co.uk/roads-and-travel/road-projects/m60-simister-island-closures-diversions-and-speed-restrictions/",
@@ -170,7 +170,7 @@
       "when": "Wed 21 → Sun 25 Oct",
       "what": "Closures · 114 diverted",
       "where": "Broughton / Monsall · Queens Road",
-      "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+      "days": "all",
       "links": [
         [
           "https://www.salford.gov.uk/parking-roads-and-travel/roadworks/current-roadworks-and-closures/",
@@ -204,7 +204,7 @@
       "when": "Sun 25 Oct · 14:00 GMT kick-off",
       "what": "Match crowds · no trams",
       "where": "Old Trafford / Wharfside",
-      "days": ["sun"],
+      "days": ["2026-10-25"],
       "links": [
         ["https://tfgm.com/tram-improvement-works/major-tram-works", "Shuttle timetables ↗"],
         ["https://www.skysports.com/share/13574076", "Fixture ↗"]
@@ -240,7 +240,7 @@
       "when": "Sun 18 Oct · all day",
       "what": "Lines closed · buses + diversions",
       "where": "Victoria ↔ Stalybridge / Rochdale",
-      "days": ["mon"],
+      "days": ["2026-10-18", "2026-10-19"],
       "links": [
         ["https://www.nationalrail.co.uk/engineering-works/mcv-tp-18-oct-20261018/", "TransPennine ↗"],
         ["https://www.nationalrail.co.uk/engineering-works/moston-18-oct-20261018/", "Northern ↗"]
@@ -276,7 +276,7 @@
       "when": "Hot drinks from Mon 19 Oct",
       "what": "Free warm spaces + hot drinks",
       "where": "All Manchester libraries",
-      "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+      "days": "all",
       "links": [["https://manclibraries.blog/warm-spaces-this-winter/", "Manchester Libraries ↗"]],
       "src": [10],
       "mg": {
@@ -297,7 +297,7 @@
       "when": "Live now · drop-in Tue 20 Oct 11:00–14:00",
       "what": "Free online catalogue",
       "where": "Central Library · ground floor",
-      "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+      "days": "all",
       "links": [
         ["https://catalogue.manchester.gov.uk/", "Search the catalogue ↗"],
         ["https://manclibraries.blog/discover-our-new-archives-catalogue/", "Announcement ↗"]
@@ -323,7 +323,7 @@
       "when": "Active now",
       "what": "584 lines · up to 79% off",
       "where": "H&M UK online · store stock unconfirmed",
-      "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+      "days": "all",
       "links": [["https://www2.hm.com/en_gb/men/sale/view-all.html", "H&M sale ↗"]],
       "src": [13],
       "mg": {"kind": "bars", "was": 37.99, "now": 8.0, "item": "Pyjama set", "pct": 79},
@@ -341,7 +341,7 @@
       "when": "Available now · selected items",
       "what": "Special Prices · up to 56% on examples",
       "where": "Zara UK online / selected stores",
-      "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+      "days": "all",
       "links": [["https://www.zara.com/uk/en/woman-special-prices-l1314.html", "Zara special prices ↗"]],
       "src": [14],
       "mg": {"kind": "bars", "was": 45.99, "now": 19.99, "item": "Argyle jumper", "pct": 56},
@@ -359,7 +359,7 @@
       "when": "Active now",
       "what": "644 items · tech + appliances",
       "where": "Online / Central Retail Park · M4 6DL",
-      "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+      "days": "all",
       "links": [
         ["https://www.currys.co.uk/clearance", "Currys clearance ↗"],
         [
@@ -383,7 +383,7 @@
       "when": "Sun 18 → Thu 22 Oct · evenings",
       "what": "Ticketed author events",
       "where": "Manchester Museum / Central Library / John Rylands",
-      "days": ["wed", "thu"],
+      "days": ["2026-10-18", "2026-10-21", "2026-10-22"],
       "links": [["https://manchesterliteraturefestival.co.uk/", "Festival programme ↗"]],
       "src": [17, 18],
       "mg": {
@@ -408,7 +408,7 @@
       "when": "Sun 18 Oct · 11:00–16:00",
       "what": "Makers market",
       "where": "School Road · Sale · M33 7XY",
-      "days": [],
+      "days": ["2026-10-18"],
       "links": [["https://www.themakersmarket.co.uk/market/sale-12/", "Market details ↗"]],
       "src": [19, 1],
       "mg": {"kind": "week", "marks": [{"date": "2026-10-18", "label": "11–16"}]},
@@ -426,7 +426,7 @@
       "when": "Sat 24 Oct · 10:00–17:00",
       "what": "Makers market",
       "where": "Quayside MediaCityUK · M50 3AH",
-      "days": ["sat"],
+      "days": ["2026-10-24"],
       "links": [
         ["https://www.themakersmarket.co.uk/market/quayside-media-city-19/", "Market details ↗"],
         ["https://www.themakersmarket.co.uk/find-a-market/", "All markets ↗"]

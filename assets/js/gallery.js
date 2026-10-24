@@ -8,7 +8,7 @@ const startInput = document.getElementById('week-start');
 const weekNo = document.getElementById('week-no');
 
 function context() {
-  const start = parseDate(startInput.value || '2026-10-18');
+  const start = parseDate(startInput.value || '2026-10-25');
   const week = isoWeek(addDays(start, 1)); // the week is numbered by its Monday
   return { start, week, serial: String(week).padStart(3, '0') };
 }

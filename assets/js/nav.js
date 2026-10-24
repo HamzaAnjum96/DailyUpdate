@@ -1,4 +1,4 @@
-// Deck behaviour: progress bar, index rail highlight, keyboard and in-deck link navigation.
+// Deck behaviour: current-card class, progress bar, index rail highlight, keyboard and in-deck link navigation.
 export function startNav() {
   const deck = document.querySelector('.deck');
   const slides = [...document.querySelectorAll('.slide')];
@@ -9,6 +9,7 @@ export function startNav() {
 
   function set(i) {
     cur = i;
+    slides.forEach((s, k) => s.classList.toggle('now', k === i)); // starts the card's arrival animation
     segs.forEach((s, k) => (s.className = k === i ? 'now' : k < i ? 'seen' : ''));
     idx.forEach((a, k) => a.classList.toggle('now', k === i));
     try {

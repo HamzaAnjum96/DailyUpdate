@@ -44,9 +44,9 @@ The schema is the same as the `brief.json` the original `deck.py` generator used
 |---|---|
 | `week`, `rev` | ISO week number (of the Monday) and revision letter (`"A"`, then `"B"` for a corrected re-issue) |
 | `start`, `end`, `checked` | `YYYY-MM-DD`. The week runs Sunday `start` to Sunday `end`; `checked` is when the facts were verified |
-| `tz` | Shown on the cover, e.g. `"BST"` |
+| `tz` | Shown on the cover and end card, e.g. `"BST"` or `"GMT"` |
 | `note` | Top of the source register: checked date, time zone, anything still to confirm |
-| `cards` | Content cards in deck order: usually transport, news, sales, events, but any card can lead (W43 opens with the clock change). The cover's contents list each type's card numbers, e.g. `01 · 07–08` |
+| `cards` | Content cards in deck order. Any card can lead (W43 and W44 open with the clock change). The cover's contents list each type's card numbers, e.g. `01 · 04`, with look-aheads in their own row at the end |
 | `sources` | `[url, label]` pairs, numbered from 1 in the register |
 
 ### Card fields
@@ -56,11 +56,12 @@ The schema is the same as the `brief.json` the original `deck.py` generator used
 | `type` | `transport`, `news`, `sale` or `event` |
 | `sub` | Qualifier in the card header, e.g. `"Tram"` |
 | `priority`, `headline` | One card gets `"priority": true`, plus a `headline` for the cover teaser (e.g. `"19 OCT → 01 NOV"`) |
+| `ahead` | `true` for a look-ahead beyond the brief's dates: a dashed top edge, "→ AHEAD" in the header and its own row in the cover's contents |
 | `short` | Name in the cover's contents list |
-| `tag`, `title`, `body` | `"CATEGORY / QUALIFIER"`, the headline, and 35–65 words of copy |
+| `tag`, `title`, `body` | `"CATEGORY / QUALIFIER"`, the headline, and 35–65 words of plain-text copy. Full dates ("Sunday 25 October") and 24-hour times are highlighted automatically |
 | `meter` / `chip` | A 0–5 rating (`meter_label` overrides IMPACT/DEPTH), or a chip such as `"Published 7 Oct"` |
-| `when`, `what`, `where` | The stats row |
-| `days` | Days the item applies, from `mon` to `sun` of the brief's week, e.g. `["tue"]` or `["mon", "tue", "wed", "thu", "fri"]`. They're orange in the card's top-right day strip. The strip runs Monday to Sunday, so the brief's starting Sunday isn't on it |
+| `when`, `what`, `where` | The stats row. In these and the chip, any ` · ` part that says "confirm" or "TBC" gets an orange ? flag, e.g. `"Sun 25 Oct · confirm times"` |
+| `days` | When the item happens: `"all"` for the whole brief, or dates inside it, e.g. `["2026-10-25", "2026-10-28"]`. They light the card's Monday-to-Sunday day strip (top right; both Sundays of a Sunday-to-Sunday brief light S) and place a square in the cover's at-a-glance grid. `"all"` items and look-aheads are counted in the grid's heading instead |
 | `links` | `[url, label]` pairs for the footer buttons |
 | `src` | Source numbers this card relies on, e.g. `[1, 2]` |
 | `mg` | The micrographic: `{ "kind": "<template>", ...params }` |
@@ -78,7 +79,8 @@ Each card's art window is a template from `assets/js/micrographics/`, filled fro
 |---|---|---|
 | `route` | Tram, rail and bus closures, shuttles | `rows[]`: `name`, `stops[]`, `closed` `[[from, to]]`, `end`, `mark`, `mark_label` |
 | `junction` | Motorway closures | `road`, `a`, `b`, `closed` (`slip` / `clockwise` / `anticlockwise` / `both`), `slip`, `window` |
-| `week` | Dated events and matches | `marks[]` `{date, label}`, `span` `{from, to or null, label}` |
+| `week` | Dated events and matches, look-aheads | `marks[]` `{date, label, sub, n}`, `span` `{from, to or null, label}`, `ahead` `{date, label, sub}` |
+| `hours` | One time window on one day | `title`, `from`, `to`, `axis` `[first hour, last hour]`, `label`, `foot` |
 | `bars` | A sale example | `was`, `now`, `item`, `pct` |
 | `count` | One headline number | `value`, `caption`, `sub` |
 | `clock` | Clock changes and other time shifts | `from`, `to`, `big`, `lines[]` |
@@ -109,6 +111,7 @@ Then open http://localhost:8000 and http://localhost:8000/templates.html.
 ## Deploy
 
 1. In the repo, go to **Settings → Pages → Build and deployment** and set **Source** to **GitHub Actions**.
-2. Push to the default branch. `.github/workflows/pages.yml` runs `scripts/check.js`, and publishes the site only if every brief passes. Pull requests get the check only.
+2. Push to `main`. `.github/workflows/pages.yml` runs `scripts/check.js` on every push and pull request, and publishes the site from `main` only if every brief passes.
+3. In **Settings → Environments → github-pages**, the deployment branch rules must allow `main`.
 
 The site is then at `https://<user>.github.io/<repo>/`.

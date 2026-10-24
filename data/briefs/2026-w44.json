@@ -1,0 +1,257 @@
+{
+  "week": 44,
+  "rev": "B",
+  "start": "2026-10-25",
+  "end": "2026-11-01",
+  "checked": "2026-10-24",
+  "tz": "GMT",
+  "note": "Checked 24 October 2026. All times are GMT: the clocks go back at 02:00 on Sunday 25 October. Still to confirm: Halloween in the City, Co-op Live event times and the Budget statement. TfGM gives no junctions or end date for the Alan Turing Way closure. Co-op Live, Ticketmaster event pages, mancity.com, Manchester City Council and heatonpark.org.uk blocked fetching, so those items use the secondary sources listed. Kick-offs can move for TV.",
+  "cards": [
+    {
+      "type": "news",
+      "sub": "Clocks",
+      "short": "Clocks go back",
+      "tag": "NATIONAL / TIME CHANGE",
+      "title": "Clocks go back on Sunday",
+      "chip": "Sun 25 Oct · 02:00",
+      "body": "British Summer Time ends at 02:00 on Sunday 25 October, when clocks go back one hour to 01:00 GMT. Phones change automatically, but check car, oven, heating and alarm clocks. Every time in this deck is GMT, including United's 14:00 kick-off that afternoon.",
+      "when": "Sun 25 Oct · 02:00 → 01:00",
+      "what": "BST ends · clocks back 1 hour",
+      "where": "UK-wide",
+      "days": ["2026-10-25"],
+      "links": [["https://www.gov.uk/when-do-the-clocks-change", "GOV.UK ↗"]],
+      "src": [4],
+      "mg": {
+        "kind": "clock",
+        "from": "02:00",
+        "to": "01:00",
+        "big": "−1H",
+        "lines": ["BST 02:00", "→ GMT 01:00"]
+      },
+      "mg_caption": ["DIA / CLOCK", "Last Sunday in October"],
+      "mg_alt": "Clock face with the hour hand moving back from 2 to 1."
+    },
+    {
+      "type": "event",
+      "sub": "Halloween",
+      "priority": true,
+      "headline": "SUN 25 · LAST DAY",
+      "short": "Halloween in the City",
+      "tag": "FREE / FAMILY FESTIVAL",
+      "title": "MCR Monsters turn 10 at Halloween in the City",
+      "chip": "Sun 25 Oct · times to confirm",
+      "body": "Sunday is the last day of Halloween in the City, CityCo's free family festival across the central retail district. The MCR Monsters mark their 10th birthday with a rooftop monster hunt, Z-arts storytelling, Walk the Plank processions, discos, a monster bake-off and a kids' Halloween hunt. No times are published, so check the event map and FAQs before you go.",
+      "when": "Sun 25 Oct · confirm times",
+      "what": "Free family festival",
+      "where": "Central retail district",
+      "days": ["2026-10-25"],
+      "links": [["https://cityco.com/halloween-in-the-city/", "Map + FAQs ↗"]],
+      "src": [1],
+      "mg": {
+        "kind": "count",
+        "value": "10",
+        "caption": "MCR Monsters' 10th birthday",
+        "sub": "Free · last day Sun 25 Oct"
+      },
+      "mg_caption": ["CNT / MCR MONSTERS", "Final day Sunday"],
+      "mg_alt": "Dot-matrix readout of the number 10, for the MCR Monsters' 10th birthday; free, last day Sunday 25 October."
+    },
+    {
+      "type": "event",
+      "sub": "Libraries",
+      "short": "Jill Scott at Central",
+      "tag": "FREE / HALF-TERM FAMILY",
+      "title": "Meet Lioness Jill Scott at Central Library",
+      "chip": "Thu 29 Oct · 12:00–16:00",
+      "body": "Former England captain Jill Scott reads from Match Day Mix-Up! at Central Library on Thursday 29 October, then stays for a meet and greet. The free half-term afternoon also has a Footy Fairy Tales theatre show and medal-making with the National Football Museum, and families can take home a free copy of the book.",
+      "when": "Thu 29 Oct · 12:00–16:00",
+      "what": "Free drop-in · reading + crafts",
+      "where": "Central Library · St Peter's Sq",
+      "days": ["2026-10-29"],
+      "links": [
+        [
+          "https://manclibraries.blog/free-half-term-football-fun-as-british-gas-brings-lioness-jill-scott-to-manchester-central-library/",
+          "Manchester Libraries ↗"
+        ]
+      ],
+      "src": [2],
+      "mg": {
+        "kind": "hours",
+        "title": "Thu 29 Oct · Central Library",
+        "from": "12:00",
+        "to": "16:00",
+        "axis": [10, 18],
+        "label": "Open · free drop-in",
+        "foot": "Reading · meet + greet · theatre · crafts"
+      },
+      "mg_caption": ["CAL / CENTRAL LIBRARY", "Half-term"],
+      "mg_alt": "Time axis from 10:00 to 18:00 with the 12:00 to 16:00 free drop-in window highlighted."
+    },
+    {
+      "type": "news",
+      "sub": "Budget",
+      "short": "Budget Wednesday",
+      "tag": "NATIONAL / PUBLIC FINANCES",
+      "title": "The Budget is on Wednesday",
+      "chip": "Wed 28 Oct · confirm time",
+      "body": "Chancellor John Healey delivers the Budget on Wednesday 28 October. The Treasury says it will move money and power out of Westminster and into every postcode around Britain, be built on fiscal discipline and meet the government's fiscal rules. The announcement gives no time for the statement, so check GOV.UK on the day.",
+      "when": "Wed 28 Oct · confirm time",
+      "what": "Budget statement",
+      "where": "Westminster · UK-wide",
+      "days": ["2026-10-28"],
+      "links": [
+        [
+          "https://www.gov.uk/government/news/budget-to-move-power-and-money-out-of-westminster-and-into-every-postcode-around-britain",
+          "GOV.UK ↗"
+        ]
+      ],
+      "src": [3],
+      "mg": {"kind": "week", "marks": [{"date": "2026-10-28", "label": "Budget", "sub": "Time TBC"}]},
+      "mg_caption": ["CAL / HM TREASURY", "Announced 31 Jul"],
+      "mg_alt": "Week strip with Wednesday 28 October marked as Budget day."
+    },
+    {
+      "type": "transport",
+      "sub": "Road",
+      "short": "Alan Turing Way",
+      "tag": "ROAD / EVENT TRAFFIC",
+      "title": "Event days on Alan Turing Way, one side shut",
+      "meter": 3,
+      "body": "Alan Turing Way has been shut northbound between Ashton Old Road and Grey Mare Lane since 4 April, with diversions in place and no end date. Co-op Live has events on Monday, Wednesday, Thursday and Saturday, and City host Brighton on Wednesday at 19:30 and Saturday at 15:00, so those two days carry both crowds. Avoid driving: trams still serve Etihad Campus.",
+      "when": "Mon 26 · Wed 28 · Thu 29 · Sat 31",
+      "what": "Northbound shut · event crowds",
+      "where": "Alan Turing Way · Etihad Campus",
+      "days": ["2026-10-26", "2026-10-28", "2026-10-29", "2026-10-31"],
+      "links": [
+        ["https://tfgm.com/travel-updates/travel-alerts?active_tab=road", "Road alerts ↗"],
+        ["https://tfgm.com/getting-to-co-op-live-arena/", "Co-op Live travel ↗"]
+      ],
+      "src": [5, 6, 7, 8, 9, 10, 11, 12],
+      "mg": {
+        "kind": "week",
+        "marks": [
+          {"date": "2026-10-26", "label": "Arena"},
+          {"date": "2026-10-28", "label": "City", "sub": "+ Arena", "n": 2},
+          {"date": "2026-10-29", "label": "Arena"},
+          {"date": "2026-10-31", "label": "City", "sub": "+ Arena", "n": 2}
+        ],
+        "span": {"from": "2026-04-04", "to": null, "label": "Northbound shut since 4 Apr · no end date"}
+      },
+      "mg_caption": ["CAL / ALAN TURING WAY", "Event days · closure"],
+      "mg_alt": "Week strip with event days on Monday 26, Wednesday 28, Thursday 29 and Saturday 31 October, Wednesday and Saturday marked ×2 for a City match plus an arena event, over a bar showing the northbound closure running all week."
+    },
+    {
+      "type": "transport",
+      "sub": "Tram",
+      "short": "Final shutdown week",
+      "tag": "TRAM / MAJOR WORKS",
+      "title": "Final week of the tram shutdown",
+      "meter": 5,
+      "body": "No trams run on the Altrincham, Trafford Centre and Eccles lines until Sunday 1 November, and East Didsbury and Airport trams terminate at Firswood. United host Bournemouth at Old Trafford at 14:00 on Sunday, so take the Trafford Centre shuttle bus to Wharfside. Trams return from first service on Monday 2 November.",
+      "when": "To Sun 1 Nov · back Mon 2",
+      "what": "3 lines shut · shuttle buses",
+      "where": "Trafford / Eccles / Altrincham",
+      "days": "all",
+      "links": [
+        ["https://tfgm.com/tram-improvement-works/major-tram-works", "Shuttles ↗"],
+        ["https://tfgm.com/travel-updates/travel-alerts", "Live alerts ↗"]
+      ],
+      "src": [12, 13, 5],
+      "mg": {
+        "kind": "route",
+        "rows": [
+          {
+            "name": "Altrincham line",
+            "stops": ["Deansgate-C", "Trafford Bar", "Old Trafford", "Stretford", "Sale", "Altrincham"],
+            "closed": [[0, 5]]
+          },
+          {
+            "name": "Eccles + Trafford Centre lines",
+            "stops": ["Cornbrook", "Pomona", "Harbour City", "Eccles"],
+            "closed": [[0, 3]]
+          },
+          {
+            "name": "Shuttle · every 15 min",
+            "stops": ["Piccadilly", "Deansgate-C", "Wharfside", "IWM", "Village", "Trafford Ctr"],
+            "mark": 2,
+            "mark_label": "Stadium"
+          }
+        ]
+      },
+      "mg_caption": ["DIA / TRAM-NET", "Closed ▬ · Shuttle ●"],
+      "mg_alt": "Tram diagram: Altrincham, Eccles and Trafford Centre lines closed; the express shuttle calls at Wharfside, nearest the stadium."
+    },
+    {
+      "type": "event",
+      "sub": "Heaton Park",
+      "ahead": true,
+      "short": "Heaton Park fireworks",
+      "tag": "FREE / LOOK-AHEAD",
+      "title": "Heaton Park fireworks return on 7 November",
+      "chip": "Look-ahead · Sat 7 Nov",
+      "body": "Manchester City Council's free fireworks return to Heaton Park on Saturday 7 November, with reduced-noise displays at 17:00 and main displays at 20:00. Entry is free. No funfair is listed for Heaton Park, and no Heaton Park fair falls in this week's dates. Booking details are not published yet, so check nearer the night.",
+      "when": "Sat 7 Nov · 17:00 + 20:00",
+      "what": "Free fireworks · 2 displays",
+      "where": "Heaton Park · north Manchester",
+      "links": [
+        [
+          "https://www.visitmanchester.com/ideas-and-inspiration/blog/post/bonfire-night-events-in-manchester-2026/",
+          "Bonfire Night guide ↗"
+        ]
+      ],
+      "src": [14],
+      "mg": {"kind": "week", "ahead": {"date": "2026-11-07", "label": "17:00", "sub": "20:00 main"}},
+      "mg_caption": ["CAL / LOOK-AHEAD", "Next weekend"],
+      "mg_alt": "Week strip for 25 October to 1 November with an arrow to Saturday 7 November, displays at 17:00 and 20:00."
+    }
+  ],
+  "sources": [
+    ["https://cityco.com/halloween-in-the-city/", "CityCo — Halloween in the City, 24–25 Oct"],
+    [
+      "https://manclibraries.blog/free-half-term-football-fun-as-british-gas-brings-lioness-jill-scott-to-manchester-central-library/",
+      "Manchester Libraries — Jill Scott at Central Library (20 Oct)"
+    ],
+    [
+      "https://www.gov.uk/government/news/budget-to-move-power-and-money-out-of-westminster-and-into-every-postcode-around-britain",
+      "GOV.UK — Budget on Wednesday 28 October (31 Jul)"
+    ],
+    ["https://www.gov.uk/when-do-the-clocks-change", "GOV.UK — when the clocks change"],
+    [
+      "https://tfgm.com/travel-updates/travel-alerts?active_tab=road",
+      "TfGM — travel alerts: Alan Turing Way northbound one-way closure"
+    ],
+    [
+      "https://britbrief.co.uk/business/transport/sinkhole-closure-on-alan-turing-way-frustrates-locals.html",
+      "Britbrief — Alan Turing Way sinkhole closure (12 Sep, secondary)"
+    ],
+    ["https://tfgm.com/getting-to-co-op-live-arena/", "TfGM — getting to Co-op Live"],
+    [
+      "https://www.skysports.com/manchester-city-fixtures",
+      "Sky Sports — Man City fixtures (Brighton, Wed 28 + Sat 31 Oct)"
+    ],
+    [
+      "https://help.ticketmaster.co.uk/hc/en-us/articles/43218620834705-J-Cole-The-Fall-Off-Tour",
+      "Ticketmaster help — Co-op Live event, 28 + 29 Oct"
+    ],
+    [
+      "https://manchesterwire.co.uk/the-strokes-announce-huge-manchester-headline-show/",
+      "Manchester Wire — Co-op Live event, Mon 26 Oct"
+    ],
+    [
+      "https://manchesterwire.co.uk/manic-street-preachers-suede-bring-a-special-co-headline-show-to-manchester/",
+      "Manchester Wire — Co-op Live event, Sat 31 Oct"
+    ],
+    [
+      "https://tfgm.com/tram-improvement-works/major-tram-works",
+      "Bee Network — major tram works, 19 October–1 November"
+    ],
+    [
+      "https://www.skysports.com/manchester-united-fixtures",
+      "Sky Sports — Man Utd fixtures (Bournemouth, Sun 25 Oct, 2pm)"
+    ],
+    [
+      "https://www.visitmanchester.com/ideas-and-inspiration/blog/post/bonfire-night-events-in-manchester-2026/",
+      "Visit Manchester — Bonfire Night 2026 (Heaton Park, Sat 7 Nov)"
+    ]
+  ]
+}

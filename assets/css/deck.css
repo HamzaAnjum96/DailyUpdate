@@ -21,13 +21,17 @@ a:focus-visible,.deck:focus-visible{outline:2px solid var(--orange);outline-offs
 /* trading-card frame: outer rule, 5px margin, inner hairline, orange corner ticks */
 .card{position:relative;width:100%;max-width:440px;height:100%;max-height:860px;align-self:center;padding:5px;background:var(--ink-2);border:1px solid var(--rule);border-top:4px solid var(--orange)}
 .card.priority{border-color:var(--orange)}
+/* look-ahead: perforated top edge, as if torn from next week's sheet */
+.card.ahead{border-top:4px dashed var(--orange)}
+.card.ahead .chip{border-style:dashed}
 .card-in{position:relative;height:100%;display:flex;flex-direction:column;min-height:0;border:1px solid var(--rule-2);background:var(--ink-2);overflow:hidden}
 .card-in::before,.card-in::after{content:"";position:absolute;width:10px;height:10px;border:2px solid var(--orange);z-index:2;pointer-events:none}
 .card-in::before{left:-1px;bottom:-1px;border-width:0 0 2px 2px}
 .card-in::after{right:-1px;bottom:-1px;border-width:0 2px 2px 0}
 
 .card-top{flex:none;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 9px;background:var(--ink-0);border-bottom:1px solid var(--rule-2);font:500 9px/1.2 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);font-variant-numeric:tabular-nums}
-.ctype{display:flex;align-items:center;gap:7px;color:var(--paper)}
+.ctype{display:flex;align-items:center;gap:7px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--paper)}
+.card-top > span:last-child{flex:none;white-space:nowrap}
 .code{background:var(--orange);color:var(--orange-ink);padding:3px 5px;font-weight:700;letter-spacing:.1em}
 .ctype svg{width:13px;height:13px}
 .i-s{fill:none;stroke:var(--orange-2);stroke-width:1.6}
@@ -73,13 +77,19 @@ a:focus-visible,.deck:focus-visible{outline:2px solid var(--orange);outline-offs
 .src{margin-left:auto;font:500 8px/1 var(--mono);letter-spacing:.12em;color:var(--mute)}
 
 /* svg micrographic classes: every shape gets an explicit fill */
-.mg text,.mini text{font-family:var(--mono);font-size:7.5px;letter-spacing:.08em;fill:var(--mute)}
+.mg text,.mini text,.glance text{font-family:var(--mono);font-size:7.5px;letter-spacing:.08em;fill:var(--mute)}
 .mg .t-name{fill:var(--orange-2);font-size:7px;letter-spacing:.14em}
 .mg .t-stop{fill:var(--mute)} .mg .t-paper{fill:var(--paper)} .mg .t-hot{fill:var(--orange-2)} .mg .t-ink{fill:var(--orange-ink)}
 .mg .t-big{font-family:var(--sans);font-weight:800;font-size:30px;letter-spacing:-.03em;fill:var(--paper)}
 .mg .t-pct{font-family:var(--sans);font-weight:800;font-size:40px;letter-spacing:-.04em;fill:var(--orange)}
 .mg .t-date{font-family:var(--sans);font-weight:800;font-size:17px;letter-spacing:-.02em;fill:var(--paper)}
 .mg .t-date.t-ink{fill:var(--orange-ink)}
+.mg .t-sub,.glance .t-sub{font-size:6.5px;letter-spacing:.1em;fill:var(--paper-2)}
+.mg .t-wkd,.glance .t-wkd{fill:var(--paper-2)}
+.glance .t-gd{font-family:var(--sans);font-weight:800;font-size:12px;letter-spacing:-.02em;fill:var(--mute)}
+.glance .t-gd.on{fill:var(--paper)}
+.mg .t-n{font-size:6.5px;font-weight:700;letter-spacing:.04em;fill:var(--orange-ink)}
+.s-lead{stroke-width:1;stroke-dasharray:1.5 1.5}
 .s-line{fill:none;stroke:var(--paper-2);stroke-width:2}
 .s-stop{stroke:var(--paper-2);stroke-width:1.4}
 .s-dim{fill:none;stroke:var(--rule-3);stroke-width:1}
@@ -92,9 +102,14 @@ a:focus-visible,.deck:focus-visible{outline:2px solid var(--orange);outline-offs
 .s-hand{stroke-width:3.2;stroke-linecap:round}
 .s-arc{stroke-width:2;stroke-dasharray:3 3}
 .s-arcw{stroke-width:4}
-.f-ink{fill:var(--ink-0)} .f-hot{fill:var(--orange)} .f-paper{fill:var(--paper)} .f-off{fill:#262624} .f-none{fill:none}
+.f-ink{fill:var(--ink-0)} .f-wkd{fill:#141413} .f-hot{fill:var(--orange)} .f-paper{fill:var(--paper)} .f-off{fill:#262624} .f-none{fill:none}
 rect.f-hot.s-hot{fill:var(--orange)}
 circle.f-ink.s-hot{fill:var(--ink-0)}
+
+/* copy accents: times and dates in paper white; '?' flags anything still to confirm
+   (the flag has no space after it, so it never wraps away from its first word) */
+.body .hl{font-weight:600;color:var(--paper);font-variant-numeric:tabular-nums}
+.tbc::before{content:"?";display:inline-block;min-width:1.4em;margin-right:.4em;background:var(--orange);color:var(--orange-ink);font:700 .9em/1.35 var(--mono);text-align:center;vertical-align:.05em}
 
 /* cover */
 .mast{flex:none;display:flex;align-items:center;gap:12px;padding:12px;background:var(--ink-0);border-bottom:1px solid #4a4a46}
@@ -121,6 +136,16 @@ circle.f-ink.s-hot{fill:var(--ink-0)}
 .contents a span:nth-child(3){font-weight:500;font-size:9px;letter-spacing:.12em;color:var(--mute);font-variant-numeric:tabular-nums}
 .contents a small{grid-column:2 / 4;font:500 9.5px/1.5 var(--mono);letter-spacing:.03em;text-transform:none;color:var(--mute)}
 .contents a:hover span:nth-child(2){color:var(--orange-2)}
+.contents a.ahead .code{background:none;color:var(--orange-2);box-shadow:inset 0 0 0 1px var(--orange)}
+/* at a glance: the brief's days, one square per dated item, coloured by type */
+.glance{display:flex;flex-direction:column;gap:6px}
+.glance-k{display:flex;justify-content:space-between;gap:8px;font:500 8px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--orange)}
+.glance-k span:last-child{color:var(--mute)}
+.glance svg{display:block;width:100%;height:auto}
+.glance-key{display:flex;align-items:center;gap:5px;font:500 7.5px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.glance-key i{width:7px;height:7px;margin-left:9px}
+.glance-key i:first-child{margin-left:0}
+.k-evt{background:var(--orange)} .k-nws{background:var(--paper)} .k-sal{box-shadow:inset 0 0 0 1.5px var(--paper-2)} .k-trn{box-shadow:inset 0 0 0 1.5px var(--orange)}
 .hint{flex:none;display:flex;justify-content:space-between;align-items:center;padding:9px 12px;background:var(--ink-0);border-top:1px solid var(--rule-2);font:500 9px/1 var(--mono);letter-spacing:.14em;color:var(--mute);text-transform:uppercase}
 .hint b{color:var(--orange);font-weight:600;display:inline-block;animation:nudge 1.6s ease-in-out infinite}
 @keyframes nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
@@ -133,13 +158,16 @@ circle.f-ink.s-hot{fill:var(--ink-0)}
 .sources li{counter-increment:s;display:grid;grid-template-columns:34px 1fr}
 .sources li::before{content:"[" counter(s,decimal-leading-zero) "]";color:var(--mute)}
 .sources a{color:var(--paper-2);text-decoration:underline;text-underline-offset:2px;overflow-wrap:anywhere}
-.docblock{flex:none;border-top:1px solid var(--rule-2);border-left:5px solid var(--orange);background:var(--ink-0)}
-.docblock .l{padding:12px;min-width:0}
+/* doc block: ID text | vertical barcode strip on the right edge, like a shipping label */
+.docblock{flex:none;display:grid;grid-template-columns:minmax(0,1fr) auto;border-top:1px solid var(--rule-2);border-left:5px solid var(--orange);background:var(--ink-0)}
+.docblock .l{padding:12px;min-width:0;display:flex;flex-direction:column}
 .doc-k{font:500 8px/1 var(--mono);letter-spacing:.14em;color:var(--orange-2);text-transform:uppercase}
-.doc-id{margin-top:4px;font:800 21px/1 var(--sans);letter-spacing:-.03em;color:var(--paper)}
-.doc-v{margin-top:5px;font:500 8px/1 var(--mono);letter-spacing:.11em;color:#aaa8a2}
-.bars-box{margin-top:12px;display:inline-block}
-.barcode{display:block;max-width:100%}
+.doc-id{margin-top:6px;font:800 clamp(16px,4.6vw,21px)/1 var(--sans);letter-spacing:-.03em;color:var(--paper);white-space:nowrap}
+.doc-v{margin-top:6px;font:500 8px/1.5 var(--mono);letter-spacing:.11em;color:#aaa8a2;text-transform:uppercase}
+.doc-v + .doc-v{margin-top:auto;padding-top:8px;border-top:1px solid var(--rule-2);color:var(--mute)}
+.vbar{display:flex;gap:4px;padding:10px 10px 10px 11px;border-left:1px solid var(--rule-3)}
+.barcode{display:block;width:24px;height:100%}
+.vbar span{writing-mode:vertical-rl;font:600 7.5px/1 var(--mono);letter-spacing:.16em;color:var(--paper-2);text-align:center}
 .endfoot{flex:none;display:flex;justify-content:space-between;padding:9px 12px;background:var(--ink-0);border-top:1px solid #333;font:500 8px/1 var(--mono);letter-spacing:.11em;color:#aaa9a4}
 .endfoot span:last-child{color:var(--orange)}
 
@@ -166,7 +194,25 @@ circle.f-ink.s-hot{fill:var(--ink-0)}
 @media (max-width:400px){.star-l{display:none}}
 @media (max-width:360px){.days{gap:1px}.days i{width:11px;height:11px;font-size:6.5px}}
 @media (max-height:640px){.card h2{font-size:20px}.body{font-size:13px;line-height:1.5}}
+@media (max-height:820px){.mast{padding:9px 12px}.hero{padding:10px 14px 9px}.hero-word{font-size:clamp(42px,12vw,52px)}.range{margin-top:7px}.cover-main{gap:9px;padding:10px 12px}.prio{grid-template-columns:58px 1fr;padding:8px}.prio svg{width:58px;height:58px}.prio .when{font-size:17px}.contents a{padding:7px 4px 7px 0}.contents a small{line-height:1.4}}
+@media (max-height:700px){.glance{display:none}}
 @media (prefers-reduced-motion:reduce){.deck{scroll-behavior:auto}.hint b{animation:none}}
+
+/* arrival: when a card becomes current, a scan line sweeps the art window, closures march and the meter charges */
+@media (prefers-reduced-motion:no-preference){
+  .mg::after{content:"";position:absolute;left:0;right:0;top:-40px;height:40px;z-index:2;pointer-events:none;opacity:0;
+    background:linear-gradient(rgba(255,90,31,0),rgba(255,90,31,.13));border-bottom:1px solid rgba(255,90,31,.75)}
+  .slide.now .mg::after{animation:sweep .95s cubic-bezier(.3,.6,.4,1) .08s 1 both}
+  @keyframes sweep{0%{top:-40px;opacity:1}80%{opacity:.85}100%{top:100%;opacity:0}}
+  .slide.now .s-closed{animation:march7 .9s linear infinite}
+  .slide.now .s-flow{animation:march5 .8s linear infinite}
+  @keyframes march7{to{stroke-dashoffset:-7}}
+  @keyframes march5{to{stroke-dashoffset:-5}}
+  .slide.now .pip.on{animation:charge .3s ease-out both}
+  .slide.now .pip:nth-child(3){animation-delay:.07s} .slide.now .pip:nth-child(4){animation-delay:.14s}
+  .slide.now .pip:nth-child(5){animation-delay:.21s} .slide.now .pip:nth-child(6){animation-delay:.28s}
+  @keyframes charge{from{background:var(--rule-2)}}
+}
 
 /* page shell: the deck is rendered into #app from data/briefs/*.json */
 #app{height:100%}

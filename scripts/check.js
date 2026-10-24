@@ -8,16 +8,35 @@
 import { readdir, readFile } from 'node:fs/promises';
 import { basename, dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { buildDeck, WEEKDAYS } from '../assets/js/deck.js';
-import { parseDate } from '../assets/js/lib/dates.js';
+import { buildDeck } from '../assets/js/deck.js';
+import { daysBetween, isoDate, parseDate } from '../assets/js/lib/dates.js';
 import { checkMicrographic } from '../assets/js/micrographics/index.js';
 import { TYPE_ORDER, TYPES } from '../assets/js/types.js';
 
 const BRIEFS = join(dirname(fileURLToPath(import.meta.url)), '..', 'data', 'briefs');
 
-const DAY_KEYS = WEEKDAYS.map(([key]) => key);
 const isStr = (v) => typeof v === 'string' && v.trim() !== '';
 const isPair = (v) => Array.isArray(v) && v.length === 2 && isStr(v[0]) && isStr(v[1]);
+
+// days: "all", or a list of YYYY-MM-DD dates inside the brief. Look-ahead cards need none.
+function checkDays(c, at, start, end, errors, warnings) {
+  if (c.ahead && c.days == null) return;
+  if (c.days === 'all') return;
+  if (c.days == null) return void warnings.push(`${at}: no days, so its day strip is blank`);
+  if (!Array.isArray(c.days)) return void errors.push(`${at}: days must be "all" or a list of YYYY-MM-DD dates`);
+  if (new Set(c.days).size !== c.days.length) errors.push(`${at}: days has repeats`);
+  for (const iso of c.days) {
+    try {
+      const d = parseDate(iso);
+      if (!c.ahead && start && end && (daysBetween(start, d) < 0 || daysBetween(d, end) < 0)) {
+        errors.push(`${at}: day ${iso} is outside the brief (${isoDate(start)} to ${isoDate(end)})`);
+      }
+    } catch (e) {
+      errors.push(`${at}: ${e.message}`);
+    }
+  }
+  if (!c.days.length && !c.ahead) warnings.push(`${at}: days is empty, so nothing is orange in its day strip`);
+}
 
 function checkBrief(b) {
   const errors = [];
@@ -25,10 +44,12 @@ function checkBrief(b) {
 
   if (!Number.isInteger(b.week)) errors.push('week must be a whole number');
   let start;
+  let end;
   for (const key of ['start', 'end', 'checked']) {
     try {
       const d = parseDate(b[key]);
       if (key === 'start') start = d;
+      if (key === 'end') end = d;
     } catch (e) {
       errors.push(`${key}: ${e.message}`);
     }
@@ -44,13 +65,7 @@ function checkBrief(b) {
     const at = `card ${String(i + 1).padStart(2, '0')}${c.title ? ` "${c.title}"` : ''}`;
     if (!TYPES[c.type]) errors.push(`${at}: type "${c.type}" is not one of ${TYPE_ORDER.join(', ')}`);
     for (const key of ['title', 'body', 'when', 'what', 'where']) if (!isStr(c[key])) errors.push(`${at}: ${key} is required`);
-    if (c.days == null) {
-      warnings.push(`${at}: no days, so its day strip is blank`);
-    } else if (!(Array.isArray(c.days) && c.days.every((d) => DAY_KEYS.includes(d)) && new Set(c.days).size === c.days.length)) {
-      errors.push(`${at}: days must be a list of ${DAY_KEYS.join(', ')} with no repeats`);
-    } else if (!c.days.length) {
-      warnings.push(`${at}: days is empty, so nothing is orange in its Mon–Sun strip`);
-    }
+    checkDays(c, at, start, end, errors, warnings);
     if (c.meter != null && !(Number.isInteger(c.meter) && c.meter >= 0 && c.meter <= 5)) errors.push(`${at}: meter must be 0–5`);
     if (c.meter == null && !c.chip) warnings.push(`${at}: no meter or chip`);
     if (c.links && !(Array.isArray(c.links) && c.links.every(isPair))) errors.push(`${at}: links must be [url, label] pairs`);
