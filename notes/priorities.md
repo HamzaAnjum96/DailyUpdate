@@ -94,6 +94,19 @@ Area: Cheetham Hill and Cheetham (M8), Crumpsall, Strangeways and Red Bank, Brou
 - **Cheetham Cultural Festival**, every year in mid-October (2026: 15–18 Oct). https://www.facebook.com/CheethamFest and the Jewish Museum's listings.
 - **Crowds that affect travel**, at the Etihad, Co-op Live, the AO Arena (by Strangeways and Red Bank) and the Christmas markets. https://tfgm.com/plan-a-journey/events
 
+## Sales and markets
+
+Only sales and markets that aren't normally on: a set start and end, and big enough that people plan around them. If nothing qualifies, the brief runs without a sale card.
+
+- **In:** Black Friday and Boxing Day sales, the Christmas markets, seasonal or one-off markets (festive, night, makers' and festival markets), and dated closing-down or opening sales at big stores.
+- **Out:** always-on or rolling sales and clearance pages (an H&M or Zara sale, Currys clearance), voucher-code round-ups, undated "up to X% off" offers, and regular weekly or monthly markets unless this edition is different (a festive special, a new site).
+- Take sale dates and discounts only from the retailer's or organiser's own announcement. Deal sites and press round-ups are leads, not sources. Count early-access days only when the retailer publishes them.
+- A seasonal market that opens after the brief's dates goes in as a look-ahead the week before it opens, then as a dated card in its opening week.
+
+Check:
+- https://tfgm.com/plan-a-journey/events (Christmas markets dates, other big events)
+- https://tfgm.com/manchester-christmas-markets (dates and travel; points to the council's page for sites and hours, which blocks fetching)
+
 ## Known dates
 
 Checked 19 Oct 2026. These are leads: re-verify each one before it goes on a card, and prune past dates.
@@ -111,3 +124,5 @@ Checked 19 Oct 2026. These are leads: re-verify each one before it goes on a car
 - Museum of Transport: Halloween Sat 31 Oct; Buses by Twilight Sat 14 Nov; Christmas Weekend 12–13 Dec.
 - Irish World Heritage Centre: Charlie and the Bhoys, Sat 7 Nov, 19:30 (18+).
 - Heaton Park: fireworks Sat 7 Nov (17:00 and 20:00); Northern Lights 19 Nov – 31 Dec; MoRun Sun 22 Nov; Run Heaton Park Sun 29 Nov.
+- Christmas Markets (checked 24 Oct): Fri 6 Nov – Tue 22 Dec, more than 210 stalls on 10 city-centre sites, including the new Lincoln Square. Albert Square, Cathedral Gardens and the Cathedral Gardens ice rink stay open to Sun 3 Jan. Christmas Parade Sun 6 Dec. Opening hours not yet confirmed.
+- Black Friday Fri 27 Nov, Cyber Monday Mon 30 Nov. As of 24 Oct no retailer has announced its dates, so there's nothing to card yet.

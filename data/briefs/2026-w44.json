@@ -5,7 +5,7 @@
   "end": "2026-11-01",
   "checked": "2026-10-24",
   "tz": "GMT",
-  "note": "Checked 24 October 2026. All times are GMT: the clocks go back at 02:00 on Sunday 25 October. Still to confirm: Halloween in the City, Co-op Live event times and the Budget statement. TfGM gives no junctions or end date for the Alan Turing Way closure. Co-op Live, Ticketmaster event pages, mancity.com, Manchester City Council and heatonpark.org.uk blocked fetching, so those items use the secondary sources listed. Kick-offs can move for TV.",
+  "note": "Checked 24 October 2026. All times are GMT: the clocks go back at 02:00 on Sunday 25 October. Still to confirm: Halloween in the City, Co-op Live event times, the Budget statement and Christmas Markets opening hours. TfGM gives no junctions or end date for the Alan Turing Way closure. Co-op Live, Ticketmaster event pages, mancity.com, Manchester City Council and heatonpark.org.uk blocked fetching, so those items use the secondary sources listed. Kick-offs can move for TV.",
   "cards": [
     {
       "type": "news",
@@ -182,6 +182,30 @@
       "mg_alt": "Tram diagram: Altrincham, Eccles and Trafford Centre lines closed; the express shuttle calls at Wharfside, nearest the stadium."
     },
     {
+      "type": "sale",
+      "sub": "Market",
+      "ahead": true,
+      "short": "Christmas Markets",
+      "tag": "MARKET / LOOK-AHEAD",
+      "title": "Christmas Markets open on 6 November",
+      "chip": "Look-ahead · Fri 6 Nov · confirm hours",
+      "body": "Manchester's Christmas Markets open on Friday 6 November, with more than 210 stalls across 10 city-centre sites, including a new one at Lincoln Square. Most close on Tuesday 22 December, but Albert Square and Cathedral Gardens, with its ice rink, stay open until Sunday 3 January. TfGM says city roads get much busier through November and December, so public transport may be quicker.",
+      "when": "Fri 6 Nov → Tue 22 Dec",
+      "what": "210+ stalls · 10 sites",
+      "where": "City centre · Albert Sq and more",
+      "links": [
+        ["https://tfgm.com/manchester-christmas-markets", "TfGM travel ↗"],
+        [
+          "https://www.manchestersfinest.com/christmas/manchester-christmas-markets-to-return-across-10-city-centre-locations-for-2026/",
+          "Sites + dates ↗"
+        ]
+      ],
+      "src": [15, 16],
+      "mg": {"kind": "week", "ahead": {"date": "2026-11-06", "label": "Opens", "sub": "To 22 Dec"}},
+      "mg_caption": ["CAL / LOOK-AHEAD", "Fri after this week"],
+      "mg_alt": "Week strip for 25 October to 1 November with an arrow to Friday 6 November, when the Christmas Markets open; most sites run to 22 December."
+    },
+    {
       "type": "event",
       "sub": "Heaton Park",
       "ahead": true,
@@ -252,6 +276,14 @@
     [
       "https://www.visitmanchester.com/ideas-and-inspiration/blog/post/bonfire-night-events-in-manchester-2026/",
       "Visit Manchester — Bonfire Night 2026 (Heaton Park, Sat 7 Nov)"
+    ],
+    [
+      "https://tfgm.com/manchester-christmas-markets",
+      "TfGM — Manchester Christmas Markets, 6 November – 22 December 2026"
+    ],
+    [
+      "https://www.manchestersfinest.com/christmas/manchester-christmas-markets-to-return-across-10-city-centre-locations-for-2026/",
+      "Manchester's Finest — Christmas Markets sites and dates (11 Sep, secondary)"
     ]
   ]
 }

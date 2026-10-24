@@ -173,7 +173,7 @@ function cover({ brief, cards, ctx, days, rev, range, chk, tz, total, briefs, se
   const types = [...new Set(cards.filter((c) => !c.ahead).map((c) => c.type))].filter((t) => TYPES[t]);
   const contents = types.map((t) => row(cards.flatMap((c, i) => (c.type === t && !c.ahead ? [i + 1] : [])), TYPES[t].code, TYPES[t].section));
   const aheadIds = cards.flatMap((c, i) => (c.ahead ? [i + 1] : []));
-  if (aheadIds.length) contents.push(row(aheadIds, TYPES[cards[aheadIds[0] - 1].type].code, 'Look-ahead', 'ahead'));
+  if (aheadIds.length) contents.push(row(aheadIds, '→', 'Look-ahead', 'ahead'));
 
   const banner = `${CITY} W${week}`;
   const pitch = 4;
