@@ -63,7 +63,7 @@ The schema is the same as the `brief.json` the original `deck.py` generator used
 | `short` | Name in the cover's contents list |
 | `tag`, `title`, `body` | `"CATEGORY / QUALIFIER"`, the headline, and 35–65 words of plain-text copy. Full dates ("Sunday 25 October") and 24-hour times are highlighted automatically |
 | `meter` / `chip` | A 0–5 rating (`meter_label` overrides IMPACT/DEPTH), or a chip such as `"Published 7 Oct"` |
-| `when`, `what`, `where` | The stats row. In these and the chip, any ` · ` part that says "confirm" or "TBC" gets an orange ? flag, e.g. `"Sun 25 Oct · confirm times"` |
+| `when`, `what`, `where` | The stats row. When a detail isn't known yet, say what to confirm here and in the chip, e.g. `"Sun 25 Oct · confirm times"`, and label the link that has it (`"Confirm times ↗"`). Don't explain in the body that it isn't published |
 | `days` | When the item happens: `"all"` for the whole brief, or dates inside it, e.g. `["2026-10-25", "2026-10-28"]`. They light the card's Monday-to-Sunday day strip (top right; both Sundays of a Sunday-to-Sunday brief light S) and place a square in the cover's at-a-glance grid. `"all"` items and look-aheads are counted in the grid's heading instead |
 | `links` | `[url, label]` pairs for the footer buttons |
 | `src` | Source numbers this card relies on, e.g. `[1, 2]` |

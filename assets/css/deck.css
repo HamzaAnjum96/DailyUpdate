@@ -106,10 +106,8 @@ a:focus-visible,.deck:focus-visible{outline:2px solid var(--orange);outline-offs
 rect.f-hot.s-hot{fill:var(--orange)}
 circle.f-ink.s-hot{fill:var(--ink-0)}
 
-/* copy accents: times and dates in paper white; '?' flags anything still to confirm
-   (the flag has no space after it, so it never wraps away from its first word) */
+/* copy accents: times and dates in paper white */
 .body .hl{font-weight:600;color:var(--paper);font-variant-numeric:tabular-nums}
-.tbc::before{content:"?";display:inline-block;min-width:1.4em;margin-right:.4em;background:var(--orange);color:var(--orange-ink);font:700 .9em/1.35 var(--mono);text-align:center;vertical-align:.05em}
 
 /* cover */
 .mast{flex:none;display:flex;align-items:center;gap:12px;padding:12px;background:var(--ink-0);border-bottom:1px solid #4a4a46}

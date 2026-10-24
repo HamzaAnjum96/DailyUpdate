@@ -56,10 +56,6 @@ function accent(text) {
   return html`${out}`;
 }
 
-// Chips and stats: any " · " segment that still needs confirming gets the "?" flag.
-const flag = (text) =>
-  html`${String(text ?? '').split(' · ').map((part, i) => [i ? ' · ' : '', /confirm|\btbc\b/i.test(part) ? html`<span class="tbc">${part}</span>` : part])}`;
-
 // Card numbers as runs, e.g. [1, 7, 8] → "01 · 07–08".
 function cardRuns(ids) {
   const runs = [];
@@ -220,7 +216,7 @@ function rating(c) {
     const pips = Array.from({ length: 5 }, (_, k) => raw(k < v ? '<i class="pip on"></i>' : '<i class="pip"></i>'));
     return html`<div class="meter"><b>${c.meter_label ?? TYPES[c.type].meter}</b>${pips}<em>${v}/5</em></div>`;
   }
-  return c.chip ? html`<span class="chip">${flag(c.chip)}</span>` : '';
+  return c.chip ? html`<span class="chip">${c.chip}</span>` : '';
 }
 
 function card(c, i, total, ctx, days) {
@@ -248,7 +244,7 @@ function card(c, i, total, ctx, days) {
    ${rating(c)}
    <p class="body">${accent(c.body)}</p>
   </div>
-  <dl class="stats"><div><dt>When</dt><dd>${flag(c.when)}</dd></div><div><dt>What</dt><dd>${flag(c.what)}</dd></div><div><dt>Where</dt><dd>${flag(c.where)}</dd></div></dl>
+  <dl class="stats"><div><dt>When</dt><dd>${c.when}</dd></div><div><dt>What</dt><dd>${c.what}</dd></div><div><dt>Where</dt><dd>${c.where}</dd></div></dl>
   <footer class="card-foot">${links}${src}</footer>
  </div></article>
 </section>`;

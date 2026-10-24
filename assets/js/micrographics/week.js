@@ -8,7 +8,7 @@ export const meta = {
   name: 'Week strip',
   use: 'Dated events and matches, things that start this week and carry on, and look-aheads.',
   params: {
-    marks: 'Days to highlight: [{ "date": "YYYY-MM-DD", "label": "19:00", "sub": "Time TBC", "n": 2 }]. "label" up to 8 characters; "sub" is a smaller second line; "n" puts a ×n badge on the day.',
+    marks: 'Days to highlight: [{ "date": "YYYY-MM-DD", "label": "19:00", "sub": "Confirm time", "n": 2 }]. "label" up to 8 characters; "sub" is a smaller second line; "n" puts a ×n badge on the day.',
     span: 'Optional bar: { "from": "YYYY-MM-DD", "to": "YYYY-MM-DD" or null, "label": "…" }. It gets an arrow at either end that runs past the week.',
     ahead: 'Optional look-ahead: { "date": "YYYY-MM-DD", "label": "17:00", "sub": "20:00 main" }. The week shrinks to make room for that later date, linked by an arrow.',
   },

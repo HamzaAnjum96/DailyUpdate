@@ -39,13 +39,13 @@
       "short": "Halloween in the City",
       "tag": "FREE / FAMILY FESTIVAL",
       "title": "MCR Monsters turn 10 at Halloween in the City",
-      "chip": "Sun 25 Oct · times to confirm",
-      "body": "Sunday is the last day of Halloween in the City, CityCo's free family festival across the central retail district. The MCR Monsters mark their 10th birthday with a rooftop monster hunt, Z-arts storytelling, Walk the Plank processions, discos, a monster bake-off and a kids' Halloween hunt. No times are published, so check the event map and FAQs before you go.",
+      "chip": "Sun 25 Oct · confirm times",
+      "body": "Sunday is the last day of Halloween in the City, CityCo's free family festival across the central retail district. The MCR Monsters mark their 10th birthday with a rooftop monster hunt, Z-arts storytelling, Walk the Plank processions, discos, a monster bake-off and a kids' Halloween hunt.",
       "when": "Sun 25 Oct · confirm times",
       "what": "Free family festival",
       "where": "Central retail district",
       "days": ["2026-10-25"],
-      "links": [["https://cityco.com/halloween-in-the-city/", "Map + FAQs ↗"]],
+      "links": [["https://cityco.com/halloween-in-the-city/", "Confirm times ↗"]],
       "src": [1],
       "mg": {
         "kind": "count",
@@ -94,7 +94,7 @@
       "tag": "NATIONAL / PUBLIC FINANCES",
       "title": "The Budget is on Wednesday",
       "chip": "Wed 28 Oct · confirm time",
-      "body": "Chancellor John Healey delivers the Budget on Wednesday 28 October. The Treasury says it will move money and power out of Westminster and into every postcode around Britain, be built on fiscal discipline and meet the government's fiscal rules. The announcement gives no time for the statement, so check GOV.UK on the day.",
+      "body": "Chancellor John Healey delivers the Budget on Wednesday 28 October. The Treasury says it will move money and power out of Westminster and into every postcode around Britain, be built on fiscal discipline and meet the government's fiscal rules.",
       "when": "Wed 28 Oct · confirm time",
       "what": "Budget statement",
       "where": "Westminster · UK-wide",
@@ -106,7 +106,7 @@
         ]
       ],
       "src": [3],
-      "mg": {"kind": "week", "marks": [{"date": "2026-10-28", "label": "Budget", "sub": "Time TBC"}]},
+      "mg": {"kind": "week", "marks": [{"date": "2026-10-28", "label": "Budget", "sub": "Confirm time"}]},
       "mg_caption": ["CAL / HM TREASURY", "Announced 31 Jul"],
       "mg_alt": "Week strip with Wednesday 28 October marked as Budget day."
     },
@@ -194,11 +194,8 @@
       "what": "210+ stalls · 10 sites",
       "where": "City centre · Albert Sq and more",
       "links": [
-        ["https://tfgm.com/manchester-christmas-markets", "TfGM travel ↗"],
-        [
-          "https://www.manchestersfinest.com/christmas/manchester-christmas-markets-to-return-across-10-city-centre-locations-for-2026/",
-          "Sites + dates ↗"
-        ]
+        ["https://www.manchester.gov.uk/christmas/christmasmarkets", "Confirm hours ↗"],
+        ["https://tfgm.com/manchester-christmas-markets", "TfGM travel ↗"]
       ],
       "src": [15, 16],
       "mg": {"kind": "week", "ahead": {"date": "2026-11-06", "label": "Opens", "sub": "To 22 Dec"}},
@@ -213,7 +210,7 @@
       "tag": "FREE / LOOK-AHEAD",
       "title": "Heaton Park fireworks return on 7 November",
       "chip": "Look-ahead · Sat 7 Nov",
-      "body": "Manchester City Council's free fireworks return to Heaton Park on Saturday 7 November, with reduced-noise displays at 17:00 and main displays at 20:00. Entry is free. No funfair is listed for Heaton Park, and no Heaton Park fair falls in this week's dates. Booking details are not published yet, so check nearer the night.",
+      "body": "Manchester City Council's free fireworks return to Heaton Park on Saturday 7 November. The 17:00 display is a reduced-noise, low-impact show for young children and people with SEND, and the main show follows at 20:00. Lantern parades run before the main displays. Wythenshawe Park and Platt Fields Park have the same times.",
       "when": "Sat 7 Nov · 17:00 + 20:00",
       "what": "Free fireworks · 2 displays",
       "where": "Heaton Park · north Manchester",
