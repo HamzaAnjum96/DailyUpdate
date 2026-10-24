@@ -101,10 +101,24 @@ export function check({ rows }) {
   if (!Array.isArray(rows) || !rows.length) return ['rows must be a non-empty array'];
   if (rows.length > 3) errs.push(`${rows.length} rows; the figure fits 3`);
   rows.forEach((row, r) => {
-    const k = row.stops?.length ?? 0;
+    if (!row || typeof row !== 'object' || Array.isArray(row)) {
+      errs.push(`rows[${r}] must be an object`);
+      return;
+    }
+    if (typeof row.name !== 'string' || !row.name.trim()) errs.push(`rows[${r}].name is required`);
+    if (!Array.isArray(row.stops) || !row.stops.every((stop) => typeof stop === 'string' && stop.trim())) {
+      errs.push(`rows[${r}].stops must be an array of non-empty stop names`);
+      return;
+    }
+    const k = row.stops.length;
     if (k < 2) errs.push(`rows[${r}] needs at least 2 stops`);
     if (k > 7) errs.push(`rows[${r}] has ${k} stops; labels collide past 7`);
-    for (const range of row.closed ?? []) {
+    if (row.closed != null && !Array.isArray(row.closed)) errs.push(`rows[${r}].closed must be an array of [from, to] pairs`);
+    for (const range of Array.isArray(row.closed) ? row.closed : []) {
+      if (!Array.isArray(range) || range.length !== 2) {
+        errs.push(`rows[${r}].closed entries must be [from, to] pairs`);
+        continue;
+      }
       const [a, b] = range;
       if (!(Number.isInteger(a) && Number.isInteger(b) && a >= 0 && a < b && b < k)) {
         errs.push(`rows[${r}].closed ${JSON.stringify(range)} must be [from, to] with 0 <= from < to <= ${k - 1}`);

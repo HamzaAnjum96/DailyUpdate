@@ -29,14 +29,19 @@ export function render({ was, now, item = '', pct }) {
 <text x="${X0}" y="30" class="t-stop">WAS ${money(was)}</text>
 <rect x="${X0}" y="35" width="${W}" height="15" class="f-ink s-dim"/>
 <text x="${X0}" y="70" class="t-hot">NOW ${money(now)}</text>
-<rect x="${X0}" y="75" width="${Math.max(2, (W * now) / was)}" height="15" class="f-hot"/>
+<rect x="${X0}" y="75" width="${Math.max(2, W * (now / was))}" height="15" class="f-hot"/>
 <path d="M${X0} 104H${X0 + W}M${X0} 100V108M${X0 + W} 100V108" class="s-dim"/>
 <text x="${X0}" y="120" class="t-stop">£0</text>
 <text x="${X0 + W}" y="120" text-anchor="end" class="t-stop">${money(was)}</text>`;
 }
 
-export function check({ was, now }) {
-  if (!(Number(was) > 0 && Number(now) >= 0)) return ['was and now must be prices (was > 0)'];
-  if (Number(now) > Number(was)) return ['now is higher than was'];
-  return [];
+export function check({ was, now, pct }) {
+  const errors = [];
+  if (!(Number.isFinite(was) && was > 0 && Number.isFinite(now) && now >= 0)) {
+    errors.push('was and now must be finite prices (was > 0, now >= 0)');
+  } else if (now > was) {
+    errors.push('now is higher than was');
+  }
+  if (pct != null && !(Number.isFinite(pct) && pct >= 0 && pct <= 100)) errors.push('pct must be a number from 0 to 100');
+  return errors;
 }

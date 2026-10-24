@@ -18,9 +18,11 @@
  <p class="g-k"><a href="./">← City Ops Brief</a></p>
  <h1>Micrographic templates</h1>
  <p class="g-intro">A card's art window is one of these templates filled from its <code>"mg"</code> object. Edit the params to try changes, then paste the object into a card in <code>data/briefs/*.json</code>. Each template's drawing code and layout constants are in <code>assets/js/micrographics/&lt;kind&gt;.js</code>.</p>
- <label class="g-week">Week strip starts <input type="date" id="week-start" value="2026-10-18"> <span id="week-no"></span></label>
+ <label class="g-week" for="week-start">Week strip starts (Sunday) <input type="date" id="week-start" value="2026-10-18" required aria-describedby="week-error"> <span id="week-no"></span></label>
+ <p class="g-msg err" id="week-error" role="status" aria-atomic="true"></p>
 </header>
 <main class="g-grid" id="templates"></main>
+<noscript><p class="load-error">Enable JavaScript to preview and edit the micrographic templates.</p></noscript>
 <script>
   // Browsers block module scripts on file:// pages, so say how to preview instead.
   if (location.protocol === 'file:') document.getElementById('templates').innerHTML = '<div class="load-error"><b>Serve this folder to preview</b>Run <code>python3 -m http.server</code> in the repo and open http://localhost:8000/templates.html.</div>';

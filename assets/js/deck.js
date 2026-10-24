@@ -37,7 +37,7 @@ function cardRuns(ids) {
   return runs.map(([a, b]) => (a === b ? pad2(a) : `${pad2(a)}–${pad2(b)}`)).join(' · ');
 }
 
-export function buildDeck(brief) {
+export function buildDeck(brief, { briefs = [], selectedId } = {}) {
   const start = parseDate(brief.start);
   const end = parseDate(brief.end);
   const checked = parseDate(brief.checked);
@@ -52,7 +52,7 @@ export function buildDeck(brief) {
   const title = `${TITLE} W${week}`;
 
   const slides = [
-    cover({ brief, cards, ctx, rev, range, chk, total }),
+    cover({ brief, cards, ctx, rev, range, chk, total, briefs, selectedId }),
     ...cards.map((c, i) => card(c, i + 1, total, ctx)),
     endCard({ brief, ctx, rev, chk, total, docId: `${CITY}-${yymmdd}-W${week}` }),
   ];
@@ -68,11 +68,18 @@ export function buildDeck(brief) {
 <aside class="index" aria-label="All cards"><p>${CITY} / W${week} / ${range}</p><ol>${index}</ol></aside>
 <div class="keys" aria-hidden="true"><div><b>↓</b>Next card</div><div><b>↑</b>Previous</div><div><b>⇱</b>Home / End</div></div>
 <main class="deck" tabindex="0" aria-label="${title}">${slides}
-</main>`;
+</main>
+<nav class="deck-controls" aria-label="Card navigation">
+ <a href="#c00">Cover</a>
+ <button type="button" data-step="-1" aria-label="Previous card">←</button>
+ <output class="card-position" aria-live="polite" aria-atomic="true">Cover</output>
+ <button type="button" data-step="1" aria-label="Next card">→</button>
+ <a href="#c${pad2(total)}">Sources</a>
+</nav>`;
   return { title, html: String(page) };
 }
 
-function cover({ brief, cards, ctx, rev, range, chk, total }) {
+function cover({ brief, cards, ctx, rev, range, chk, total, briefs, selectedId }) {
   const { week, start } = ctx;
   const end = parseDate(brief.end);
   let prioIndex = cards.findIndex((c) => c.priority);
@@ -92,7 +99,7 @@ function cover({ brief, cards, ctx, rev, range, chk, total }) {
   const target = renderMicrographic({ kind: 'target' }, ctx);
 
   return html`
-<section class="slide" id="c00" aria-label="Cover">
+<section class="slide" id="c00" tabindex="-1" aria-label="Cover">
  <article class="card cover"><div class="card-in">
   <header class="card-top"><span class="ctype">${CITY} / CITY OPS</span><span>S/N ${ctx.serial} / ${rev}</span></header>
   <div class="mast"><span class="arrow" aria-hidden="true">↘</span><div><h1>${TITLE}</h1><p>${CITY} / W${week} / ${range}</p></div><div class="stamp">${CITY}<br>OPS<br>${start.getUTCFullYear()}</div></div>
@@ -100,10 +107,11 @@ function cover({ brief, cards, ctx, rev, range, chk, total }) {
    <div><p class="eyebrow">W${week} / Field brief</p><p class="hero-word">${CITY}<br>W${week}</p><p class="range">${range} ${end.getUTCFullYear()}</p></div>
    <div class="hero-r"><svg viewBox="0 0 ${dotsWidth(banner, pitch)} ${7 * pitch}" role="img" aria-label="${banner}">${dots(banner, 0, 0, pitch, CITY.length + 1)}</svg><div class="meta">LOC: ${CITY}<br>PUBLIC<br>CHK: ${chk} / ${brief.tz ?? 'BST'}</div></div>
   </div>
-  <div class="cover-main">
+  <div class="cover-main" tabindex="0" role="region" aria-label="Priority and contents">
    <a class="prio" href="#c${pad2(prioIndex + 1)}"><svg viewBox="0 0 ${target.width} ${target.height}" aria-hidden="true" class="mini">${target.svg}</svg>
     <div><div class="lab">★ Priority signal / ${prio.sub || TYPES[prio.type].section}</div><div class="when">${prio.headline ?? prio.when}</div><div class="what">${prio.title}</div></div></a>
    <nav class="contents" aria-label="Deck contents">${contents}</nav>
+   ${briefs.length > 1 ? html`<label class="brief-picker" for="brief-select">Choose a brief<select id="brief-select">${briefs.map((id) => html`<option value="${id}"${id === selectedId ? raw(' selected') : ''}>${id.toUpperCase()}</option>`)}</select></label>` : ''}
   </div>
   <footer class="hint"><span><b aria-hidden="true">↑</b> Swipe up</span><span>${total} cards</span></footer>
  </div></article>
@@ -142,12 +150,12 @@ function card(c, i, total, ctx) {
   const src = c.src?.length ? html`<span class="src">SRC ${c.src.map(pad2).join('·')}</span>` : '';
 
   return html`
-<section class="slide" id="c${pad2(i)}" data-type="${c.type}" aria-label="Card ${i} of ${total}: ${c.title}">
+<section class="slide" id="c${pad2(i)}" tabindex="-1" data-type="${c.type}" aria-label="Card ${i} of ${total}: ${c.title}">
  <article class="card${c.priority ? ' priority' : ''}"><div class="card-in">
   <header class="card-top"><span class="ctype"><span class="code">${type.code}</span><svg viewBox="0 0 14 14" aria-hidden="true">${raw(type.icon)}</svg>${section}</span><span class="top-r">${star}${dayStrip(c.days)}</span></header>
   ${c.priority ? raw('<div class="hazard"></div>') : ''}
   ${figure(c, i, ctx)}
-  <div class="card-main">
+  <div class="card-main" tabindex="0" role="region" aria-label="${c.title}">
    <p class="tag">${c.tag ?? ''}</p>
    <h2>${c.title}</h2>
    ${rating(c)}
@@ -175,10 +183,10 @@ function barcode() {
 function endCard({ brief, ctx, rev, chk, total, docId }) {
   const sources = brief.sources.map(([url, label]) => html`<li><a href="${url}" target="_blank" rel="noopener">${label} ↗</a></li>`);
   return html`
-<section class="slide" id="c${pad2(total)}" aria-label="Sources">
+<section class="slide" id="c${pad2(total)}" tabindex="-1" aria-label="Sources">
  <article class="card endcard"><div class="card-in">
   <header class="card-top"><span class="ctype"><span class="code">SRC</span>Source register</span><span>Checked ${chk}</span></header>
-  <div class="card-main"><p class="note">${brief.note ?? ''}</p><ol class="sources">${sources}</ol></div>
+  <div class="card-main" tabindex="0" role="region" aria-label="Source register"><p class="note">${brief.note ?? ''}</p><ol class="sources">${sources}</ol></div>
   <div class="docblock">
    <div class="l"><div class="doc-k">DOC / ${CITY}</div><div class="doc-id">${docId}</div><div class="doc-v">PUBLIC / W${ctx.week} / ${rev}</div><div class="bars-box">${barcode()}</div></div>
   </div>

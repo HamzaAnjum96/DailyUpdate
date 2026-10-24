@@ -24,8 +24,9 @@ export const templates = Object.fromEntries(
 );
 
 export function renderMicrographic(mg, ctx) {
-  const t = templates[mg?.kind];
-  if (!t) throw new Error(`Unknown micrographic kind "${mg?.kind}" (have: ${Object.keys(templates).join(', ')})`);
+  const errors = checkMicrographic(mg, ctx);
+  if (errors.length) throw new Error(`Invalid micrographic: ${errors.join('; ')}`);
+  const t = templates[mg.kind];
   const out = t.render(mg, ctx);
   const res = typeof out === 'string' ? { svg: raw(out) } : 'svg' in out ? out : { svg: out };
   const { svg, width = 320, height = 140 } = res;
@@ -33,7 +34,16 @@ export function renderMicrographic(mg, ctx) {
 }
 
 export function checkMicrographic(mg, ctx) {
+  if (!mg || typeof mg !== 'object' || Array.isArray(mg)) return ['micrographic must be an object'];
+  if (typeof mg.kind !== 'string') return ['kind must be a string'];
+  if (!Object.hasOwn(templates, mg.kind)) {
+    return [`unknown kind "${mg.kind}" (have: ${Object.keys(templates).join(', ')})`];
+  }
   const t = templates[mg?.kind];
-  if (!t) return [`unknown kind "${mg?.kind}" (have: ${Object.keys(templates).join(', ')})`];
-  return t.check ? t.check(mg, ctx) : [];
+  try {
+    return t.check ? t.check(mg, ctx) : [];
+  } catch (err) {
+    // The editor and CLI should show a diagnostic even for malformed template data.
+    return [`invalid parameters: ${err.message}`];
+  }
 }

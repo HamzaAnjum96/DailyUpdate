@@ -5,9 +5,14 @@
   "type": "module",
   "scripts": {
     "check": "node scripts/check.js",
-    "serve": "python3 -m http.server 8000"
+    "serve": "python3 -m http.server 8000",
+    "test": "node --test tests/*.test.js",
+    "test:browser": "playwright test"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1"
   }
 }

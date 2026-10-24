@@ -13,11 +13,14 @@
 <script type="module" src="assets/js/main.js"></script>
 </head>
 <body>
-<div id="app"></div>
+<div id="app" aria-busy="true"><div class="load-error" role="status">Loading the latest brief…</div></div>
 <script>
   // Browsers block module scripts and fetch() on file:// pages, so say how to preview instead.
-  if (location.protocol === 'file:') document.getElementById('app').innerHTML = '<div class="load-error"><b>Serve this folder to preview</b>Run <code>python3 -m http.server</code> in the repo and open http://localhost:8000.</div>';
+  if (location.protocol === 'file:') {
+    document.getElementById('app').removeAttribute('aria-busy');
+    document.getElementById('app').innerHTML = '<div class="load-error"><b>Serve this folder to preview</b>Run <code>python3 -m http.server</code> in the repo and open http://localhost:8000.</div>';
+  }
 </script>
-<noscript><div class="load-error"><b>JavaScript needed</b>The deck is built in the browser from data/briefs/*.json.</div></noscript>
+<noscript><style>#app{display:none}</style><div class="load-error"><b>JavaScript needed</b>The deck is built in the browser from data/briefs/*.json.</div></noscript>
 </body>
 </html>

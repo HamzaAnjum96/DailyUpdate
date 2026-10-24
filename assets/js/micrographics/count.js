@@ -30,10 +30,13 @@ export function render({ value, caption = '', sub = '' }) {
 }
 
 export function check({ value }) {
+  if (!(typeof value === 'string' || (typeof value === 'number' && Number.isFinite(value)))) {
+    return ['value must be a string or finite number'];
+  }
   const v = String(value ?? '');
   const bad = [...v.toUpperCase()].filter((ch) => !(ch in GLYPHS));
   const errs = [];
-  if (!v) errs.push('value is required');
+  if (!v.trim()) errs.push('value is required');
   if (bad.length) errs.push(`value has characters with no dot-matrix glyph: ${bad.join(' ')}`);
   if ([...v].length > 6) errs.push(`value "${v}" is over 6 characters`);
   return errs;
