@@ -65,13 +65,16 @@ export function render({ title = '', from, to, axis, label = '', foot = '' }) {
   return svg`${out}`;
 }
 
-export function check({ from, to, axis }) {
-  const ok = (v) => /^\d{1,2}:\d{2}$/.test(String(v));
-  if (!ok(from) || !ok(to)) return ['from and to must be "HH:MM"'];
+export function check({ title, from, to, axis, label, foot }) {
+  const ok = (t) => typeof t === 'string' && /^(?:[01]?\d|2[0-3]):[0-5]\d$/.test(t);
+  if (!ok(from) || !ok(to)) return ['from and to must be valid 24-hour times (HH:MM)'];
   const errs = [];
   if (hoursOf(to) <= hoursOf(from)) errs.push('to must be after from');
-  if (axis && !(Array.isArray(axis) && axis.length === 2 && axis[0] <= hoursOf(from) && axis[1] >= hoursOf(to))) {
-    errs.push('axis must be [first hour, last hour] around the window');
+  const axisOk = Array.isArray(axis) && axis.length === 2 && axis.every(Number.isInteger)
+    && axis[0] >= 0 && axis[1] <= 24 && axis[0] <= hoursOf(from) && axis[1] >= hoursOf(to);
+  if (axis != null && !axisOk) errs.push('axis must be [first hour, last hour]: whole hours from 0 to 24 around the window');
+  for (const [key, value] of Object.entries({ title, label, foot })) {
+    if (value != null && typeof value !== 'string') errs.push(`${key} must be a string`);
   }
   return errs;
 }

@@ -14,7 +14,7 @@ export const meta = {
   },
   example: {
     kind: 'week',
-    marks: [{ date: '2026-10-26', label: 'Arena' }, { date: '2026-10-28', label: 'City', sub: '+ Arena', n: 2 }],
+    marks: [{ date: '2026-10-19', label: 'Arena' }, { date: '2026-10-21', label: 'City', sub: '+ Arena', n: 2 }],
     span: { from: '2026-04-04', to: null, label: 'Northbound shut since 4 Apr · no end date' },
   },
 };
@@ -95,34 +95,52 @@ export function render({ marks = [], span, ahead }, ctx) {
 
 export function check({ marks = [], span, ahead }, ctx) {
   const errs = [];
-  const offset = (iso) => daysBetween(ctx.start, parseDate(iso));
-  const attempt = (what, fn) => {
-    try {
-      fn();
-    } catch (e) {
-      errs.push(`${what}: ${e.message}`);
-    }
+  if (!(ctx?.start instanceof Date) || !Number.isFinite(ctx.start.getTime())) return ['week needs a valid start date'];
+  if (!Array.isArray(marks)) return ['marks must be an array'];
+  const seen = new Set();
+  const inStrip = (iso) => {
+    const i = daysBetween(ctx.start, parseDate(iso));
+    return i >= 0 && i < DAYS;
   };
   for (const m of marks) {
-    attempt(`mark ${m.date}`, () => {
-      const i = offset(m.date);
-      if (i < 0 || i >= DAYS) errs.push(`mark ${m.date} is outside the strip (${isoDate(ctx.start)} + ${DAYS - 1} days)`);
-    });
-    if ((m.label ?? '').length > 8) errs.push(`mark ${m.date} label "${m.label}" is over 8 characters`);
-    if (m.n != null && !(Number.isInteger(m.n) && m.n > 1)) errs.push(`mark ${m.date} n must be a whole number above 1`);
+    if (!m || typeof m !== 'object' || Array.isArray(m)) {
+      errs.push('each mark must be an object with a date and optional label');
+      continue;
+    }
+    try {
+      if (!inStrip(m.date)) errs.push(`mark ${m.date} is outside the strip (${isoDate(ctx.start)} + ${DAYS - 1} days)`);
+      if (seen.has(m.date)) errs.push(`mark ${m.date} is repeated; combine its labels into one mark`);
+      seen.add(m.date);
+      if (m.label != null && typeof m.label !== 'string') errs.push(`mark ${m.date} label must be a string`);
+      else if ((m.label ?? '').length > 8) errs.push(`mark ${m.date} label "${m.label}" is over 8 characters`);
+      if (m.sub != null && typeof m.sub !== 'string') errs.push(`mark ${m.date} sub must be a string`);
+      if (m.n != null && !(Number.isInteger(m.n) && m.n > 1)) errs.push(`mark ${m.date} n must be a whole number above 1`);
+    } catch (e) {
+      errs.push(e.message);
+    }
   }
-  if (span) {
-    attempt('span', () => {
-      parseDate(span.from);
-      if (span.to) parseDate(span.to);
-    });
+  if (span != null) {
+    if (typeof span !== 'object' || Array.isArray(span)) return [...errs, 'span must be an object'];
+    try {
+      const from = parseDate(span.from);
+      const to = span.to == null ? null : parseDate(span.to);
+      if (to && to < from) errs.push('span.to must be on or after span.from');
+      if (from > addDays(ctx.start, DAYS - 1) || (to && to < ctx.start)) errs.push('span must overlap the week strip');
+      if (span.label != null && typeof span.label !== 'string') errs.push('span.label must be a string');
+    } catch (e) {
+      errs.push(`span: ${e.message}`);
+    }
   }
-  if (ahead) {
-    attempt('ahead', () => {
-      if (offset(ahead.date) < DAYS) errs.push(`ahead date ${ahead.date} must fall after the strip`);
-    });
-    if (span) errs.push('use either a span or an ahead date, not both');
+  if (ahead != null) {
+    if (typeof ahead !== 'object' || Array.isArray(ahead)) return [...errs, 'ahead must be an object'];
+    try {
+      if (daysBetween(ctx.start, parseDate(ahead.date)) < DAYS) errs.push(`ahead date ${ahead.date} must fall after the strip`);
+    } catch (e) {
+      errs.push(`ahead: ${e.message}`);
+    }
+    for (const key of ['label', 'sub']) if (ahead[key] != null && typeof ahead[key] !== 'string') errs.push(`ahead.${key} must be a string`);
+    if (span != null) errs.push('use either a span or an ahead date, not both');
   }
-  if (!marks.length && !span && !ahead) errs.push('needs marks, a span or an ahead date');
+  if (!marks.length && span == null && ahead == null) errs.push('needs marks, a span or an ahead date');
   return errs;
 }

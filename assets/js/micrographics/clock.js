@@ -63,7 +63,10 @@ export function render({ from, to, big = '', lines = [] }) {
   return svg`${out}`;
 }
 
-export function check({ from, to }) {
-  const ok = (t) => /^\d{1,2}:\d{2}$/.test(String(t));
-  return ok(from) && ok(to) ? [] : ['from and to must be "HH:MM"'];
+export function check({ from, to, lines = [] }) {
+  const ok = (t) => typeof t === 'string' && /^(?:[01]?\d|2[0-3]):[0-5]\d$/.test(t);
+  const errors = ok(from) && ok(to) ? [] : ['from and to must be valid 24-hour times (HH:MM)'];
+  if (!Array.isArray(lines) || !lines.every((line) => typeof line === 'string')) errors.push('lines must be an array of strings');
+  else if (lines.length > 4) errors.push('lines fits at most 4 lines');
+  return errors;
 }

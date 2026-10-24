@@ -9,97 +9,22 @@ import { readdir, readFile } from 'node:fs/promises';
 import { basename, dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildDeck } from '../assets/js/deck.js';
-import { daysBetween, isoDate, parseDate } from '../assets/js/lib/dates.js';
-import { checkMicrographic } from '../assets/js/micrographics/index.js';
-import { TYPE_ORDER, TYPES } from '../assets/js/types.js';
+import { validateBrief, validateBriefIndex } from '../assets/js/lib/validation.js';
+import { renderMicrographic } from '../assets/js/micrographics/index.js';
+import { parseDate } from '../assets/js/lib/dates.js';
 
 const BRIEFS = join(dirname(fileURLToPath(import.meta.url)), '..', 'data', 'briefs');
-
-const isStr = (v) => typeof v === 'string' && v.trim() !== '';
-const isPair = (v) => Array.isArray(v) && v.length === 2 && isStr(v[0]) && isStr(v[1]);
-
-// days: "all", or a list of YYYY-MM-DD dates inside the brief. Look-ahead cards need none.
-function checkDays(c, at, start, end, errors, warnings) {
-  if (c.ahead && c.days == null) return;
-  if (c.days === 'all') return;
-  if (c.days == null) return void warnings.push(`${at}: no days, so its day strip is blank`);
-  if (!Array.isArray(c.days)) return void errors.push(`${at}: days must be "all" or a list of YYYY-MM-DD dates`);
-  if (new Set(c.days).size !== c.days.length) errors.push(`${at}: days has repeats`);
-  for (const iso of c.days) {
-    try {
-      const d = parseDate(iso);
-      if (!c.ahead && start && end && (daysBetween(start, d) < 0 || daysBetween(d, end) < 0)) {
-        errors.push(`${at}: day ${iso} is outside the brief (${isoDate(start)} to ${isoDate(end)})`);
-      }
-    } catch (e) {
-      errors.push(`${at}: ${e.message}`);
-    }
-  }
-  if (!c.days.length && !c.ahead) warnings.push(`${at}: days is empty, so nothing is orange in its day strip`);
-}
-
-function checkBrief(b) {
-  const errors = [];
-  const warnings = [];
-
-  if (!Number.isInteger(b.week)) errors.push('week must be a whole number');
-  let start;
-  let end;
-  for (const key of ['start', 'end', 'checked']) {
-    try {
-      const d = parseDate(b[key]);
-      if (key === 'start') start = d;
-      if (key === 'end') end = d;
-    } catch (e) {
-      errors.push(`${key}: ${e.message}`);
-    }
-  }
-  if (start && start.getUTCDay() !== 0) warnings.push('start is not a Sunday; the week strip begins on the start date');
-  if (!Array.isArray(b.sources) || !b.sources.every(isPair)) errors.push('sources must be a list of [url, label] pairs');
-  if (!Array.isArray(b.cards) || !b.cards.length) return { errors: [...errors, 'cards must be a non-empty list'], warnings };
-
-  const nSources = b.sources?.length ?? 0;
-  const ctx = start && { start, week: b.week, serial: String(b.week).padStart(3, '0') };
-
-  b.cards.forEach((c, i) => {
-    const at = `card ${String(i + 1).padStart(2, '0')}${c.title ? ` "${c.title}"` : ''}`;
-    if (!TYPES[c.type]) errors.push(`${at}: type "${c.type}" is not one of ${TYPE_ORDER.join(', ')}`);
-    for (const key of ['title', 'body', 'when', 'what', 'where']) if (!isStr(c[key])) errors.push(`${at}: ${key} is required`);
-    checkDays(c, at, start, end, errors, warnings);
-    if (c.meter != null && !(Number.isInteger(c.meter) && c.meter >= 0 && c.meter <= 5)) errors.push(`${at}: meter must be 0–5`);
-    if (c.meter == null && !c.chip) warnings.push(`${at}: no meter or chip`);
-    if (c.links && !(Array.isArray(c.links) && c.links.every(isPair))) errors.push(`${at}: links must be [url, label] pairs`);
-    for (const s of c.src ?? []) {
-      if (!(Number.isInteger(s) && s >= 1 && s <= nSources)) errors.push(`${at}: src ${s} is not a source number (1–${nSources})`);
-    }
-    if (c.mg) {
-      if (ctx) for (const p of checkMicrographic(c.mg, ctx)) errors.push(`${at}: mg (${c.mg.kind}): ${p}`);
-      if (!(Array.isArray(c.mg_caption) && c.mg_caption.length === 2)) warnings.push(`${at}: mg_caption should be [left, right]`);
-      if (!isStr(c.mg_alt)) warnings.push(`${at}: mg_alt (screen-reader description) is missing`);
-    } else {
-      warnings.push(`${at}: no micrographic`);
-    }
-  });
-
-  const priority = b.cards.filter((c) => c.priority).length;
-  if (priority > 1) errors.push(`${priority} priority cards; there should be one`);
-  if (priority === 0) warnings.push('no priority card; the cover will tease card 01');
-
-  if (!errors.length) {
-    try {
-      buildDeck(b);
-    } catch (e) {
-      errors.push(`build failed: ${e.message}`);
-    }
-  }
-  return { errors, warnings };
-}
+// Inspect geometry only: names such as "Infinity Bridge" are valid SVG text.
+const SVG_GEOMETRY = /\b(?:x|y|x1|y1|x2|y2|cx|cy|r|rx|ry|width|height|viewBox|d|points|transform|stroke-width)\s*=\s*["']([^"']*)["']/g;
 
 async function main() {
   let files = process.argv.slice(2);
   let failed = false;
   if (!files.length) {
-    const { briefs } = JSON.parse(await readFile(join(BRIEFS, 'index.json'), 'utf8'));
+    const index = JSON.parse(await readFile(join(BRIEFS, 'index.json'), 'utf8'));
+    const { errors } = validateBriefIndex(index);
+    if (errors.length) throw new Error(`index.json: ${errors.join('; ')}`);
+    const { briefs } = index;
     files = briefs.map((id) => join(BRIEFS, `${id}.json`));
     const listed = new Set(briefs.map((id) => `${id}.json`));
     for (const f of await readdir(BRIEFS)) {
@@ -117,9 +42,33 @@ async function main() {
       failed = true;
       continue;
     }
-    const { errors, warnings } = checkBrief(brief);
+    const { errors, warnings } = validateBrief(brief, { id: basename(file, '.json') });
+    if (!errors.length) {
+      try {
+        // buildDeck deliberately drops broken figures in the browser. Test them
+        // directly here so a render failure cannot silently pass the deploy gate.
+        const ctx = { start: parseDate(brief.start), week: brief.week, serial: String(brief.week).padStart(3, '0') };
+        for (const [i, card] of brief.cards.entries()) {
+          if (card.mg) {
+            try {
+              const graphic = renderMicrographic(card.mg, ctx);
+              const invalidGeometry = [...String(graphic.svg).matchAll(SVG_GEOMETRY)]
+                .some(([, value]) => /NaN|Infinity/.test(value));
+              if (![graphic.width, graphic.height].every((value) => Number.isFinite(value) && value > 0) || invalidGeometry) {
+                throw new Error('non-finite or invalid SVG geometry');
+              }
+            } catch (e) {
+              errors.push(`card ${String(i + 1).padStart(2, '0')}: micrographic render failed: ${e.message}`);
+            }
+          }
+        }
+        if (!errors.length) buildDeck(brief);
+      } catch (e) {
+        errors.push(`build failed: ${e.message}`);
+      }
+    }
     const mark = errors.length ? '✗' : '✓';
-    console.log(`${mark} ${basename(file)}: W${brief.week}, ${brief.cards?.length ?? 0} cards, ${brief.sources?.length ?? 0} sources`);
+    console.log(`${mark} ${basename(file)}: W${brief?.week ?? "?"}, ${brief?.cards?.length ?? 0} cards, ${brief?.sources?.length ?? 0} sources`);
     for (const e of errors) console.log(`    error: ${e}`);
     for (const w of warnings) console.log(`    warning: ${w}`);
     failed ||= errors.length > 0;
@@ -127,4 +76,7 @@ async function main() {
   process.exit(failed ? 1 : 0);
 }
 
-main();
+main().catch((error) => {
+  console.error(`✗ ${error.message}`);
+  process.exitCode = 1;
+});

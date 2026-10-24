@@ -10,13 +10,18 @@ body.gallery{height:auto;min-height:100%;overflow:auto}
 .g-intro{max-width:72ch;margin:12px 0 0;font-size:14px;line-height:1.55;color:var(--paper-2)}
 .g-week{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:16px;font:500 9px/1 var(--mono);letter-spacing:.14em;color:var(--mute);text-transform:uppercase}
 .g-week input{font:500 12px/1 var(--mono);color:var(--paper);background:var(--ink-0);border:1px solid var(--rule-3);padding:6px 8px;color-scheme:dark}
+.g-week input:focus-visible,.g-reset:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
 .g-week span{color:var(--orange-2)}
+.g-head #week-error{margin-top:8px}
 
 .g-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,400px),1fr));gap:20px;max-width:1360px;margin:0 auto;padding:16px 16px 48px}
 .g-tpl{padding:5px;background:var(--ink-2);border:1px solid var(--rule);border-top:4px solid var(--orange);min-width:0}
 .g-in{display:flex;flex-direction:column;height:100%;border:1px solid var(--rule-2)}
+.g-title{margin:0;font:inherit;text-align:right;overflow-wrap:anywhere}
 .g-tpl .mg{flex:none;height:clamp(170px,46vw,210px);max-height:none}
 .g-tpl .mg.tall{height:clamp(210px,56vw,250px)}
+.g-tpl .mg figcaption{flex-wrap:wrap;overflow-wrap:anywhere}
+.g-tpl .mg figcaption span{min-width:0}
 .g-body{display:flex;flex-direction:column;gap:10px;padding:12px 14px 14px}
 .g-use{margin:0;font-size:13.5px;line-height:1.5;color:var(--paper-2)}
 .g-params{margin:0;display:grid;grid-template-columns:auto 1fr;gap:5px 12px;font:500 10px/1.5 var(--mono);color:var(--paper-2)}
@@ -25,6 +30,9 @@ body.gallery{height:auto;min-height:100%;overflow:auto}
 .g-label{font:500 8px/1 var(--mono);letter-spacing:.14em;color:var(--mute);text-transform:uppercase}
 .g-tpl textarea{display:block;width:100%;min-height:72px;margin-top:6px;padding:10px;resize:vertical;font:500 11px/1.55 var(--mono);color:var(--paper);background:var(--ink-0);border:1px solid var(--rule-2);tab-size:2}
 .g-tpl textarea:focus-visible{outline:2px solid var(--orange);outline-offset:-1px}
+.g-tpl textarea[aria-invalid="true"],.g-week input[aria-invalid="true"]{border-color:var(--orange)}
+.g-reset{align-self:flex-start;min-height:36px;padding:8px 10px;border:1px solid var(--rule-3);color:var(--paper);background:var(--ink-0);font:500 10px/1.4 var(--mono);cursor:pointer}
+.g-reset:hover{border-color:var(--orange);color:var(--orange-2)}
 .g-msg{margin:0;min-height:1.5em;font:500 10px/1.5 var(--mono);color:var(--mute)}
 .g-msg.warn{color:var(--orange-2)}
 .g-msg.err{color:var(--orange)}

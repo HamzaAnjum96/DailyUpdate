@@ -5,6 +5,8 @@ The weekly Manchester brief (transport, news, sales, events) as a swipeable trad
 - **Deck:** `index.html` shows the newest brief. `index.html?brief=2026-w43` shows a given week, and `#c05` jumps to a card.
 - **Templates:** `templates.html` renders every micrographic template from editable JSON, so you can try changes before putting them in a brief.
 
+Swipe or scroll through the cards, use the persistent Previous/Next buttons, or press ↑/↓, Page Up/Page Down, J/K, Home/End. The Cover and Sources controls are always available. Keyboard controls respect editable fields and scrollable card text. When multiple weeks are available, the cover includes a brief picker. An unknown brief URL shows an error with a link back to the latest week.
+
 ## Layout
 
 ```
@@ -16,11 +18,12 @@ assets/css/deck.css         Industrial Black card styles (deck.css tokens are sh
 assets/css/templates.css    gallery-only styles
 assets/js/main.js           entry: fetch → buildDeck → startNav
 assets/js/deck.js           cover, cards, source register, index rail (pure string building)
-assets/js/nav.js            swipe, keyboard, progress bar and rail highlighting
+assets/js/nav.js            scroll, keyboard, button and deep-link navigation
 assets/js/types.js          card types: badge code, section name, meter label, icon
 assets/js/micrographics/    one file per micrographic template, plus index.js (the registry)
-assets/js/lib/              markup escaping, dates, dot-matrix font
+assets/js/lib/              shared validation, markup escaping, dates, dot-matrix font
 scripts/check.js            validates and test-builds every brief; CI runs it before deploying
+tests/                      Node regression tests and Playwright browser tests
 notes/priorities.md         editorial priorities: what to check first and rank higher (not published)
 ```
 
@@ -33,7 +36,7 @@ There is no build step: the site is static files and ES modules.
    ```json
    { "briefs": ["2026-w44", "2026-w43"] }
    ```
-3. Run `npm run check` (or `node scripts/check.js`). It reports anything that would break or mislead: bad dates, a source number that doesn't exist, a week-strip date outside the week, an unknown template, more than one priority card.
+3. Run `npm run check` (or `node scripts/check.js`). It rejects impossible dates, mismatched ISO weeks and filenames, invalid source references, unsafe URLs, invalid graphic parameters, and multiple priority cards. The archive must contain unique `YYYY-wNN` ids, newest first. Dates run Sunday to the following Sunday; the filename uses the ISO year and week of the Monday (which can differ from Sunday's calendar year at New Year). Checks validate structure and rendering, so source claims still need editorial verification.
 4. Commit and push. Older weeks stay available at `?brief=<id>`.
 
 The schema is the same as the `brief.json` the original `deck.py` generator used, so existing briefs drop straight in.
@@ -86,7 +89,7 @@ Each card's art window is a template from `assets/js/micrographics/`, filled fro
 | `clock` | Clock changes and other time shifts | `from`, `to`, `big`, `lines[]` |
 | `target` | Cover ornament (no params) | |
 
-`templates.html` lists every param with a working example you can edit live.
+`templates.html` lists every param with a working example you can edit live. Invalid edits clear the preview and show a field error. **Reset example** restores that template's original parameters. The shared week-start date must be a Sunday.
 
 **Adapting a template.** Each file has the same parts: `meta` (name, use, param docs, example), a block of layout constants (positions, sizes, spacing) and `render(params, ctx)`, which returns SVG written as a template literal:
 
@@ -108,10 +111,29 @@ python3 -m http.server 8000     # or: npx serve .
 
 Then open http://localhost:8000 and http://localhost:8000/templates.html.
 
+## Test changes
+
+Use Node.js 22 or later (the deployed site itself has no runtime dependencies). Install the locked development tools once:
+
+```sh
+npm ci
+npx playwright install chromium
+```
+
+Run the validation, unit regressions, and browser suite:
+
+```sh
+npm run check
+npm test
+npm run test:browser
+```
+
+Playwright starts the local Python server automatically and reuses an existing server on port 8000 outside CI. Python 3 is required. To use an installed Chromium instead of downloading a browser, run `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:browser`. The browser suite covers deep links, controls, fetch/data failures, archive selection, mobile and landscape layouts, and template editing. Failed browser tests retain traces in `test-results/`.
+
 ## Deploy
 
 1. In the repo, go to **Settings → Pages → Build and deployment** and set **Source** to **GitHub Actions**.
-2. Push to `main`. `.github/workflows/pages.yml` runs `scripts/check.js` on every push and pull request, and publishes the site from `main` only if every brief passes.
+2. Push to `main`. `.github/workflows/pages.yml` runs brief validation, unit tests and Chromium browser tests on every push and pull request, and publishes the site from `main` only if all pass. Failed browser tests are attached to the workflow run as an artifact. Editorial notes, development tools and tests are excluded from the deployed files.
 3. In **Settings → Environments → github-pages**, the deployment branch rules must allow `main`.
 
 The site is then at `https://<user>.github.io/<repo>/`.
