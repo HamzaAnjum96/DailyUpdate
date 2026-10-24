@@ -58,22 +58,36 @@ export function render({ marks = [], span }, ctx) {
 
 export function check({ marks = [], span }, ctx) {
   const errs = [];
+  if (!(ctx?.start instanceof Date) || !Number.isFinite(ctx.start.getTime())) return ['week needs a valid start date'];
+  if (!Array.isArray(marks)) return ['marks must be an array'];
+  const seen = new Set();
   const inStrip = (iso) => {
     const i = daysBetween(ctx.start, parseDate(iso));
     return i >= 0 && i < DAYS;
   };
   for (const m of marks) {
+    if (!m || typeof m !== 'object' || Array.isArray(m)) {
+      errs.push('each mark must be an object with a date and optional label');
+      continue;
+    }
     try {
       if (!inStrip(m.date)) errs.push(`mark ${m.date} is outside the strip (${isoDate(ctx.start)} + ${DAYS - 1} days)`);
-      if ((m.label ?? '').length > 8) errs.push(`mark ${m.date} label "${m.label}" is over 8 characters`);
+      if (seen.has(m.date)) errs.push(`mark ${m.date} is repeated; combine its labels into one mark`);
+      seen.add(m.date);
+      if (m.label != null && typeof m.label !== 'string') errs.push(`mark ${m.date} label must be a string`);
+      else if ((m.label ?? '').length > 8) errs.push(`mark ${m.date} label "${m.label}" is over 8 characters`);
     } catch (e) {
       errs.push(e.message);
     }
   }
-  if (span) {
+  if (span != null) {
+    if (typeof span !== 'object' || Array.isArray(span)) return [...errs, 'span must be an object'];
     try {
-      parseDate(span.from);
-      if (span.to) parseDate(span.to);
+      const from = parseDate(span.from);
+      const to = span.to == null ? null : parseDate(span.to);
+      if (to && to < from) errs.push('span.to must be on or after span.from');
+      if (from > addDays(ctx.start, DAYS - 1) || (to && to < ctx.start)) errs.push('span must overlap the week strip');
+      if (span.label != null && typeof span.label !== 'string') errs.push('span.label must be a string');
     } catch (e) {
       errs.push(`span: ${e.message}`);
     }
