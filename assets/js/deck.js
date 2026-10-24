@@ -261,7 +261,7 @@ function barcode() {
   let y = 0;
   const bars = [];
   BARCODE.forEach((h, i) => {
-    if (i % 2 === 0) bars.push(html`<rect x="0" y="${y}" width="34" height="${h}" class="f-paper"/>`);
+    if (i % 2 === 0) bars.push(html`<rect x="0" y="${y}" width="34" height="${h}"/>`);
     y += h;
   });
   return html`<svg class="barcode" viewBox="0 0 34 ${y}" preserveAspectRatio="none" aria-hidden="true">${bars}</svg>`;

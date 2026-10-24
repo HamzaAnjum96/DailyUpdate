@@ -165,9 +165,11 @@ circle.f-ink.s-hot{fill:var(--ink-0)}
 .doc-id{margin-top:6px;font:800 clamp(16px,4.6vw,21px)/1 var(--sans);letter-spacing:-.03em;color:var(--paper);white-space:nowrap}
 .doc-v{margin-top:6px;font:500 8px/1.5 var(--mono);letter-spacing:.11em;color:#aaa8a2;text-transform:uppercase}
 .doc-v + .doc-v{margin-top:auto;padding-top:8px;border-top:1px solid var(--rule-2);color:var(--mute)}
-.vbar{display:flex;gap:4px;padding:10px 10px 10px 11px;border-left:1px solid var(--rule-3)}
+/* barcode: pure white bars and ID on a transparent strip, so the black doc block shows through */
+.vbar{display:flex;gap:4px;padding:10px 10px 10px 11px;border-left:1px solid var(--rule-3);background:transparent}
 .barcode{display:block;width:24px;height:100%}
-.vbar span{writing-mode:vertical-rl;font:600 7.5px/1 var(--mono);letter-spacing:.16em;color:var(--paper-2);text-align:center}
+.barcode rect{fill:#fff}
+.vbar span{writing-mode:vertical-rl;font:600 7.5px/1 var(--mono);letter-spacing:.16em;color:#fff;text-align:center}
 .endfoot{flex:none;display:flex;justify-content:space-between;padding:9px 12px;background:var(--ink-0);border-top:1px solid #333;font:500 8px/1 var(--mono);letter-spacing:.11em;color:#aaa9a4}
 .endfoot span:last-child{color:var(--orange)}
 
