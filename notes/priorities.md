@@ -109,20 +109,21 @@ Check:
 
 ## Known dates
 
-Checked 19 Oct 2026. These are leads: re-verify each one before it goes on a card, and prune past dates.
+Checked 2 Nov 2026. These are leads: re-verify each one before it goes on a card, and prune past dates.
 
+- Bury Old Road closed Mon 2 Nov 20:00 – Mon 23 Nov; the 135 and 97 are diverted. The 135 misses stops from St Monica's High School and Heaton Park tram stop to Walker Avenue (Kirkhams). TfGM gives no diversion route yet.
+- Crescent Road, Crumpsall: closed for repairs until Wed 31 Mar 2027 (no longer 19 Oct). The 41, 52, 53, 94 and 151 stay diverted; the 41 misses the Abraham Moss Centre stops.
 - Alan Turing Way: northbound closure near the Etihad since Sat 4 Apr 2026, until further notice; the 53 is diverted.
-- Queens Road / Monsall Road roadworks until Fri 23 Oct; the 114 is diverted.
-- Great Cheetham Street East (A6010, Broughton): one-way closure 21–23 Oct, with signals until 10 Nov.
-- Crescent Road, Crumpsall closure due to end 19 Oct. Check that the 41, 52, 53, 94 and 151 are back on their usual route.
+- Great Cheetham Street East (A6010, Broughton): signals until 10 Nov.
 - Bury New Road, Prestwich: the stop opposite the Red Lion is closed until 9 Nov.
-- M60 J18 Simister Island: the clockwise exit slip to the M66 northbound is closed overnight 21:00–06:00, Mon 26 – Sat 31 Oct.
-- Trams 19 Oct – 1 Nov (major works): Queens Road keeps Bury–Ashton all day plus Bury–Etihad at peak. Altrincham–Bury and Trafford Centre–Crumpsall don't run.
-- Trams 2–4 Nov: Bury–Altrincham trams divert via Exchange Square; change for Shudehill or Market Street.
-- Lifts: the Bury-bound lift at Heaton Park is being replaced (since 29 Jul); the Besses o' th' Barn lift is out from 19 Oct.
-- Etihad: City v Brighton on Wed 28 Oct and Sat 31 Oct. Co-op Live has gigs on most nights 23–31 Oct.
-- Museum of Transport: Halloween Sat 31 Oct; Buses by Twilight Sat 14 Nov; Christmas Weekend 12–13 Dec.
-- Irish World Heritage Centre: Charlie and the Bhoys, Sat 7 Nov, 19:30 (18+).
-- Heaton Park: fireworks Sat 7 Nov (17:00 and 20:00); Northern Lights 19 Nov – 31 Dec; MoRun Sun 22 Nov; Run Heaton Park Sun 29 Nov.
-- Christmas Markets (checked 24 Oct): Fri 6 Nov – Tue 22 Dec, more than 210 stalls on 10 city-centre sites, including the new Lincoln Square. Albert Square, Cathedral Gardens and the Cathedral Gardens ice rink stay open to Sun 3 Jan. Christmas Parade Sun 6 Dec. Opening hours not yet confirmed.
-- Black Friday Fri 27 Nov, Cyber Monday Mon 30 Nov. As of 24 Oct no retailer has announced its dates, so there's nothing to card yet.
+- Victoria station: 59, 97, 98, 99 and others diverted away from the station until 31 Dec.
+- M60 J18 Simister Island: clockwise link to the M66 north shut overnight 21:00–06:00 to Tue 10 Nov; M66 northbound J4–J3 shut overnight Mon 9 Nov; the clockwise link to the M66 north again Fri 13 – Sun 15 Nov.
+- Lifts: Heaton Park Bury-bound lift being replaced (since 29 Jul); Besses o' th' Barn and Monsall lifts out (from 2 Nov).
+- Trams: the 19 Oct – 1 Nov works are finished and TfGM says no further tram changes are planned after the 2–4 Nov Exchange Square diversion.
+- Etihad: City v Fulham Sat 21 Nov 12:30. Old Trafford: check United fixtures each week (Sky Sports).
+- Co-op Live: Muse 12–13 Nov, Paul Heaton 14 Nov, Myles Smith 15 Nov, Enter Shikari 19 Nov, Good Charlotte 20 Nov, Hits Radio Live 21 Nov, Don Toliver 22 Nov. AO Arena: Noah Kahan 9–10 Nov, Gladiators 14–15 Nov (TfGM events page).
+- Museum of Transport: Buses by Twilight Sat 14 Nov (10:00–18:30, heritage bus 89 via Queens Road); Christmas Weekend 12–13 Dec.
+- Heaton Park: Northern Lights 19 Nov – 31 Dec; MoRun Sun 22 Nov; Run Heaton Park Sun 29 Nov.
+- Christmas Markets: Fri 6 Nov – Tue 22 Dec, more than 210 stalls on 10 sites; Albert Square and Cathedral Gardens to Sun 3 Jan. Christmas Parade Sun 6 Dec. Opening hours still not published on a fetchable page (manchester.gov.uk blocks fetching).
+- Black Friday Fri 27 Nov, Cyber Monday Mon 30 Nov. As of 2 Nov no retailer announcement could be verified (currys.co.uk blocks fetching), so there's nothing to card yet.
+- Unreachable on 2 Nov: Manchester Jewish Museum (503) and myf.org.uk (bot check). Try again next week.

@@ -1,0 +1,724 @@
+{
+  "week": 45,
+  "rev": "A",
+  "start": "2026-11-01",
+  "end": "2026-11-08",
+  "checked": "2026-11-02",
+  "tz": "GMT",
+  "note": "Checked 2 November 2026. All times are GMT. Still to confirm: the 135 and 97 diversion route, Remembrance Sunday service and road times, Christmas Markets opening hours and arena event times. Manchester City Council, Currys, Manchester Jewish Museum and MYF pages could not be fetched, so the Christmas Markets sites come from the secondary source listed. Kick-offs can move for TV.",
+  "cards": [
+    {
+      "type": "transport",
+      "sub": "Bus",
+      "priority": true,
+      "headline": "02 NOV → 23 NOV",
+      "short": "Bury Old Rd · 135",
+      "tag": "BUS / ROAD CLOSURE",
+      "title": "Bury Old Road closed, 135 diverted to 23 Nov",
+      "meter": 4,
+      "body": "Bury Old Road is closed from 20:00 on Monday 2 November until Monday 23 November, and the 135 and 97 are on diversion. The 135 doesn't call at stops from St Monica's High School and Heaton Park tram stop to Walker Avenue in Kirkhams. Bury line trams from Heaton Park and Prestwich are the nearest alternative.",
+      "when": "Mon 2 → Mon 23 Nov",
+      "what": "135 + 97 diverted · stops shut",
+      "where": "Bury Old Rd · Heaton Pk–Kirkhams",
+      "days": "all",
+      "links": [
+        [
+          "https://tfgm.com/travel-updates/live-departures/bus/135-piccadilly-gardens?no-script=true",
+          "135 stops ↗"
+        ],
+        [
+          "https://tfgm.com/travel-updates/travel-alerts?active_tab=bus",
+          "Confirm diversion ↗"
+        ]
+      ],
+      "src": [
+        1,
+        2,
+        3
+      ],
+      "mg": {
+        "kind": "route",
+        "rows": [
+          {
+            "name": "135 · Bury Old Road",
+            "stops": [
+              "Cheetham Hill",
+              "St Monica's",
+              "Heaton Pk",
+              "Heywood Rd",
+              "Walker Ave",
+              "Whitefield"
+            ],
+            "closed": [
+              [
+                1,
+                4
+              ]
+            ],
+            "mark": 2,
+            "mark_label": "Tram"
+          }
+        ]
+      },
+      "mg_caption": [
+        "DIA / 135",
+        "Stops not served ▬"
+      ],
+      "mg_alt": "Route diagram of the 135 on Bury Old Road: stops from St Monica's High School through Heaton Park tram stop to Walker Avenue are not served."
+    },
+    {
+      "type": "transport",
+      "sub": "Bus",
+      "short": "Piccadilly Gdns",
+      "tag": "BUS / CITY CENTRE",
+      "title": "Piccadilly Gardens shut to buses Mon–Tue",
+      "meter": 3,
+      "body": "Portland Street and Piccadilly Gardens are closed on Monday 2 and Tuesday 3 November while a leaking water pipe is repaired. More than 20 bus routes are diverted, including the 41, 42, 43, 86 and 142, plus Free bus 1 and 2. Bus tickets are valid on Metrolink between Victoria and Piccadilly and on Northern between Deansgate and Piccadilly.",
+      "when": "Mon 2 + Tue 3 Nov",
+      "what": "20+ bus routes diverted",
+      "where": "Portland St · Piccadilly Gdns",
+      "days": [
+        "2026-11-02",
+        "2026-11-03"
+      ],
+      "links": [
+        [
+          "https://tfgm.com/piccadilly-gardens-disruption",
+          "Diversions ↗"
+        ]
+      ],
+      "src": [
+        4
+      ],
+      "mg": {
+        "kind": "count",
+        "value": "20+",
+        "caption": "Bus routes diverted",
+        "sub": "Mon 2 + Tue 3 Nov · water main repair"
+      },
+      "mg_caption": [
+        "CNT / PICCADILLY GDNS",
+        "Tickets valid on tram"
+      ],
+      "mg_alt": "Dot-matrix readout of 20+, the number of bus routes diverted away from Piccadilly Gardens on Monday 2 and Tuesday 3 November."
+    },
+    {
+      "type": "transport",
+      "sub": "Tram",
+      "short": "Tram diversion",
+      "tag": "TRAM / CITY CENTRE",
+      "title": "City-centre tram diversion until Wednesday",
+      "meter": 2,
+      "body": "Until the end of service on Wednesday 4 November, Bury–Altrincham and Victoria–Airport trams divert via Exchange Square, so change trams to reach Shudehill or Market Street. Normal service resumes on Thursday 5 November. The Trafford Bar to Deansgate-Castlefield works are finished, and trams are running again on every line they closed.",
+      "when": "To end of service Wed 4 Nov",
+      "what": "2 lines via Exchange Square",
+      "where": "Victoria → St Peter's Square",
+      "days": [
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-04"
+      ],
+      "links": [
+        [
+          "https://tfgm.com/city-centre-works-november",
+          "TfGM details ↗"
+        ],
+        [
+          "https://tfgm.com/travel-updates/travel-alerts?active_tab=tram",
+          "Live alerts ↗"
+        ]
+      ],
+      "src": [
+        5,
+        6
+      ],
+      "mg": {
+        "kind": "route",
+        "rows": [
+          {
+            "name": "Bury–Altrincham · usual",
+            "stops": [
+              "Victoria",
+              "Shudehill",
+              "Market St",
+              "St Peter's Sq"
+            ],
+            "closed": [
+              [
+                0,
+                3
+              ]
+            ]
+          },
+          {
+            "name": "To Wed 4 Nov · diverted",
+            "stops": [
+              "Victoria",
+              "Exchange Sq",
+              "St Peter's Sq"
+            ],
+            "mark": 1,
+            "mark_label": "Via"
+          }
+        ]
+      },
+      "mg_caption": [
+        "DIA / TRAM-NET",
+        "Skipped ▬ · Via ○"
+      ],
+      "mg_alt": "Tram diagram: the usual Victoria, Shudehill, Market Street, St Peter's Square route is skipped; trams run Victoria, Exchange Square, St Peter's Square until Wednesday 4 November."
+    },
+    {
+      "type": "transport",
+      "sub": "Road",
+      "short": "M60 overnight",
+      "tag": "MOTORWAY / OVERNIGHT",
+      "title": "M60 J19–J18 anticlockwise shut overnight",
+      "meter": 2,
+      "body": "The M60 anticlockwise closes between junctions 19 and 18 from 21:00 to 06:00 on Wednesday 4 and Thursday 5 November. The diversion runs along the A576 Middleton Road, the A6044 and the A56 Bury New Road to junction 17. The clockwise link to the M66 north is also shut overnight until Tuesday 10 November; use the junction 18 roundabout.",
+      "when": "Wed 4 + Thu 5 · 21:00–06:00",
+      "what": "Anticlockwise J19–J18 shut",
+      "where": "M60 J18–J19 · Simister Island",
+      "days": [
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-07",
+        "2026-11-08"
+      ],
+      "links": [
+        [
+          "https://nationalhighways.co.uk/roads-and-travel/road-projects/m60-simister-island-closures-diversions-and-speed-restrictions/",
+          "National Highways ↗"
+        ]
+      ],
+      "src": [
+        7
+      ],
+      "mg": {
+        "kind": "junction",
+        "road": "M60",
+        "a": "J18",
+        "b": "J19",
+        "closed": "anticlockwise",
+        "window": "21:00 → 06:00 · WED + THU"
+      },
+      "mg_caption": [
+        "DIA / M60-J18",
+        "Overnight"
+      ],
+      "mg_alt": "Motorway diagram: the M60 anticlockwise carriageway between junctions 19 and 18 closed overnight on Wednesday and Thursday."
+    },
+    {
+      "type": "transport",
+      "sub": "Bus",
+      "short": "Crescent Rd",
+      "tag": "BUS / LONG-RUNNING DIVERSION",
+      "title": "Crescent Road closure now runs to March",
+      "meter": 2,
+      "body": "Crescent Road in Crumpsall stays closed for repairs until Wednesday 31 March 2027, so the 41, 52, 53, 94 and 151 stay on diversion. The 41 doesn't call at the Abraham Moss Centre, Humphrey Street, Ash Tree Road or Crumpsall Park stops on Crescent Road and Ash Tree Road.",
+      "when": "To Wed 31 Mar 2027",
+      "what": "5 bus routes diverted",
+      "where": "Crescent Rd · Crumpsall",
+      "days": "all",
+      "links": [
+        [
+          "https://tfgm.com/travel-updates/live-departures/bus/41-middleton?no-script=true",
+          "41 stops ↗"
+        ],
+        [
+          "https://tfgm.com/travel-updates/travel-alerts?active_tab=bus",
+          "Bus alerts ↗"
+        ]
+      ],
+      "src": [
+        8,
+        3
+      ],
+      "mg": {
+        "kind": "week",
+        "span": {
+          "from": "2026-07-20",
+          "to": null,
+          "label": "Closed since 20 Jul · to 31 Mar 2027"
+        }
+      },
+      "mg_caption": [
+        "CAL / CRESCENT ROAD",
+        "41 · 52 · 53 · 94 · 151"
+      ],
+      "mg_alt": "Week strip with a bar running through the whole week and beyond, for the Crescent Road closure from 20 July 2026 to 31 March 2027."
+    },
+    {
+      "type": "transport",
+      "sub": "Rail",
+      "short": "Sheffield trains",
+      "tag": "RAIL / ENGINEERING WORKS",
+      "title": "Manchester–Sheffield trains diverted Sat–Sun",
+      "meter": 3,
+      "body": "Engineering work near Sheffield changes trains between Manchester and Sheffield on Saturday 7 and Sunday 8 November. TransPennine Express trains divert via Huddersfield. Northern trains run between Manchester Piccadilly and Grindleford only, with replacement buses between Sheffield and Bamford, where you change. Replacement buses may be busy, so allow extra time.",
+      "when": "Sat 7 + Sun 8 Nov",
+      "what": "TPE via Huddersfield · buses",
+      "where": "Piccadilly ↔ Sheffield",
+      "days": [
+        "2026-11-07",
+        "2026-11-08"
+      ],
+      "links": [
+        [
+          "https://www.nationalrail.co.uk/engineering-works/bamford-7-nov-20261107/",
+          "National Rail ↗"
+        ]
+      ],
+      "src": [
+        9
+      ],
+      "mg": {
+        "kind": "route",
+        "rows": [
+          {
+            "name": "Northern · Hope Valley",
+            "stops": [
+              "Sheffield",
+              "Grindleford",
+              "Bamford",
+              "Piccadilly"
+            ],
+            "closed": [
+              [
+                0,
+                1
+              ]
+            ],
+            "mark": 2,
+            "mark_label": "Change"
+          },
+          {
+            "name": "TPE · diverted",
+            "stops": [
+              "Sheffield",
+              "Huddersfield",
+              "Piccadilly"
+            ],
+            "mark": 1,
+            "mark_label": "Via"
+          }
+        ]
+      },
+      "mg_caption": [
+        "DIA / RAIL",
+        "No trains ▬ · bus to Bamford"
+      ],
+      "mg_alt": "Rail diagram: no Northern trains between Grindleford and Sheffield, with a change to buses at Bamford; TransPennine Express runs via Huddersfield."
+    },
+    {
+      "type": "transport",
+      "sub": "Events",
+      "short": "Busy weekend",
+      "tag": "ROADS / EVENT CROWDS",
+      "title": "Markets, fireworks and arenas fill the weekend",
+      "meter": 2,
+      "body": "TfGM expects a very busy weekend. The Christmas Markets open on Friday, when Co-op Live and the AO Arena both have events. Saturday brings the park fireworks and two more arena nights, and Sunday has Remembrance, United at home and Co-op Live again. Alan Turing Way stays shut northbound by the Etihad, so public transport may be quicker.",
+      "when": "Fri 6 → Sun 8 Nov",
+      "what": "Markets · fireworks · 5 arenas",
+      "where": "City centre · Etihad Campus",
+      "days": [
+        "2026-11-06",
+        "2026-11-07",
+        "2026-11-08"
+      ],
+      "links": [
+        [
+          "https://tfgm.com/plan-a-journey/events",
+          "TfGM events ↗"
+        ],
+        [
+          "https://tfgm.com/travel-updates/travel-alerts?active_tab=road",
+          "Road alerts ↗"
+        ]
+      ],
+      "src": [
+        12,
+        13,
+        14,
+        16
+      ],
+      "mg": {
+        "kind": "week",
+        "marks": [
+          {
+            "date": "2026-11-06",
+            "label": "Markets",
+            "n": 3
+          },
+          {
+            "date": "2026-11-07",
+            "label": "Parks",
+            "n": 3
+          },
+          {
+            "date": "2026-11-08",
+            "label": "United",
+            "n": 2
+          }
+        ],
+        "span": {
+          "from": "2026-04-04",
+          "to": null,
+          "label": "Alan Turing Way northbound shut since 4 Apr"
+        }
+      },
+      "mg_caption": [
+        "CAL / EVENT CROWDS",
+        "Fri to Sun"
+      ],
+      "mg_alt": "Week strip with Friday 6, Saturday 7 and Sunday 8 November marked for the Christmas Markets, park fireworks, arena events and United, over a bar for the Alan Turing Way closure."
+    },
+    {
+      "type": "news",
+      "sub": "Remembrance",
+      "short": "Remembrance Sunday",
+      "tag": "CIVIC / BUS + TRAM CHANGES",
+      "title": "Remembrance Sunday changes buses and trams",
+      "chip": "Sun 8 Nov · confirm times",
+      "body": "The Service of Remembrance is at St Peter's Square on Sunday 8 November. TfGM says many buses will divert in the city centre and across Greater Manchester, and the tram service pattern will change. Members of the Armed Forces travel free on trams and Bee Network buses on Sunday 8 and Wednesday 11 November.",
+      "when": "Sun 8 Nov · confirm times",
+      "what": "Bus diversions · tram changes",
+      "where": "St Peter's Sq · GM-wide",
+      "days": [
+        "2026-11-08"
+      ],
+      "links": [
+        [
+          "https://tfgm.com/remembrance-sunday",
+          "Confirm times ↗"
+        ]
+      ],
+      "src": [
+        15
+      ],
+      "mg": {
+        "kind": "week",
+        "marks": [
+          {
+            "date": "2026-11-08",
+            "label": "Service",
+            "sub": "Confirm times"
+          }
+        ]
+      },
+      "mg_caption": [
+        "CAL / REMEMBRANCE",
+        "Free travel for Forces"
+      ],
+      "mg_alt": "Week strip with Sunday 8 November marked for the Service of Remembrance."
+    },
+    {
+      "type": "sale",
+      "sub": "Market",
+      "short": "Christmas Markets",
+      "tag": "MARKET / CITY CENTRE",
+      "title": "Christmas Markets open on Friday",
+      "chip": "Fri 6 Nov · confirm hours",
+      "body": "Manchester's Christmas Markets open on Friday 6 November, with more than 210 stalls across 10 city-centre sites, including new food and drink stalls at Lincoln Square. Most close on Tuesday 22 December, but Albert Square and Cathedral Gardens stay open until Sunday 3 January. Skate Manchester's rink opens on Friday and the Albert Square wheel on Saturday.",
+      "when": "Fri 6 Nov → Tue 22 Dec",
+      "what": "210+ stalls · 10 sites",
+      "where": "Albert Sq · Lincoln Sq + 8 more",
+      "days": [
+        "2026-11-06",
+        "2026-11-07",
+        "2026-11-08"
+      ],
+      "links": [
+        [
+          "https://www.manchester.gov.uk/christmas/christmasmarkets",
+          "Confirm hours ↗"
+        ],
+        [
+          "https://tfgm.com/manchester-christmas-markets",
+          "TfGM travel ↗"
+        ]
+      ],
+      "src": [
+        16,
+        17,
+        18
+      ],
+      "mg": {
+        "kind": "week",
+        "marks": [
+          {
+            "date": "2026-11-06",
+            "label": "Opens",
+            "sub": "Confirm hours"
+          }
+        ],
+        "span": {
+          "from": "2026-11-06",
+          "to": null,
+          "label": "Most sites to 22 Dec"
+        }
+      },
+      "mg_caption": [
+        "CAL / CHRISTMAS MARKETS",
+        "Opening week"
+      ],
+      "mg_alt": "Week strip with Friday 6 November marked as opening day and a bar running on past the week to 22 December."
+    },
+    {
+      "type": "event",
+      "sub": "Heaton Park",
+      "short": "Heaton Park fireworks",
+      "tag": "FREE / FIREWORKS",
+      "title": "Free fireworks at Heaton Park on Saturday",
+      "chip": "Sat 7 Nov · 17:00 + 20:00",
+      "body": "Manchester City Council's free fireworks are at Heaton Park, Wythenshawe Park and Platt Fields Park on Saturday 7 November. The 17:00 display is reduced-noise, for young children and people with SEND, and the main show at 20:00 follows lantern parades. The 135 doesn't stop at Heaton Park this month, and the Bury-bound lift at Heaton Park tram stop is out.",
+      "when": "Sat 7 Nov · 17:00 + 20:00",
+      "what": "Free · 2 displays + lanterns",
+      "where": "Heaton Park · north Manchester",
+      "days": [
+        "2026-11-07"
+      ],
+      "links": [
+        [
+          "https://www.visitmanchester.com/ideas-and-inspiration/blog/post/bonfire-night-events-in-manchester-2026/",
+          "Bonfire Night guide ↗"
+        ],
+        [
+          "https://tfgm.com/bonfire-night-events-2026",
+          "TfGM travel ↗"
+        ]
+      ],
+      "src": [
+        19,
+        13,
+        1,
+        6
+      ],
+      "mg": {
+        "kind": "week",
+        "marks": [
+          {
+            "date": "2026-11-07",
+            "label": "17:00",
+            "sub": "20:00 main"
+          }
+        ]
+      },
+      "mg_caption": [
+        "CAL / FIREWORKS",
+        "Heaton · Wythenshawe · Platt Flds"
+      ],
+      "mg_alt": "Week strip with Saturday 7 November marked: displays at 17:00 and 20:00."
+    },
+    {
+      "type": "event",
+      "sub": "Football",
+      "short": "United at home ×2",
+      "tag": "FOOTBALL / OLD TRAFFORD",
+      "title": "United host Roma and Aston Villa",
+      "chip": "Tue 3 · 20:00 + Sun 8 · 16:30",
+      "body": "United host Roma in the Champions League at 20:00 on Tuesday 3 November and Aston Villa in the Premier League at 16:30 on Sunday 8 November. Trams are running again on the lines the October works closed. City are away all week, at RB Leipzig on Wednesday and Nottingham Forest on Saturday. Kick-offs can move for TV.",
+      "when": "Tue 3 · 20:00 / Sun 8 · 16:30",
+      "what": "Champions League + PL",
+      "where": "Old Trafford",
+      "days": [
+        "2026-11-03",
+        "2026-11-08"
+      ],
+      "links": [
+        [
+          "https://tfgm.com/getting-to-old-trafford",
+          "Getting there ↗"
+        ],
+        [
+          "https://www.skysports.com/manchester-united-fixtures",
+          "Fixtures ↗"
+        ]
+      ],
+      "src": [
+        10,
+        12,
+        5,
+        11
+      ],
+      "mg": {
+        "kind": "week",
+        "marks": [
+          {
+            "date": "2026-11-03",
+            "label": "20:00",
+            "sub": "Roma"
+          },
+          {
+            "date": "2026-11-08",
+            "label": "16:30",
+            "sub": "Villa"
+          }
+        ]
+      },
+      "mg_caption": [
+        "CAL / OLD TRAFFORD",
+        "City away all week"
+      ],
+      "mg_alt": "Week strip with Tuesday 3 November marked 20:00 Roma and Sunday 8 November marked 16:30 Villa."
+    },
+    {
+      "type": "event",
+      "sub": "Music",
+      "short": "Irish Centre gig",
+      "tag": "TICKETED / 18+",
+      "title": "Charlie and the Bhoys at the Irish Centre",
+      "chip": "Sat 7 Nov · 19:30",
+      "body": "Charlie and the Bhoys play the Irish World Heritage Centre on Saturday 7 November at 19:30. Tickets cost £20 each plus a booking fee from Tickets Scotland, and the night is strictly 18+. The centre is at 1 Irish Town Way, Cheetham Hill, M8 0AE.",
+      "when": "Sat 7 Nov · 19:30",
+      "what": "Live music · £20 + fee · 18+",
+      "where": "Irish World Heritage Centre · M8",
+      "days": [
+        "2026-11-07"
+      ],
+      "links": [
+        [
+          "https://iwhc.com/events/charlie-and-the-bhoys-event-7th-november/",
+          "Event details ↗"
+        ]
+      ],
+      "src": [
+        20
+      ],
+      "mg": {
+        "kind": "count",
+        "value": "£20",
+        "caption": "Per ticket + booking fee",
+        "sub": "Sat 7 Nov · 19:30 · 18+"
+      },
+      "mg_caption": [
+        "PRC / IWHC",
+        "Irish Town Way"
+      ],
+      "mg_alt": "Dot-matrix readout of £20, the ticket price before booking fee, for Saturday 7 November at 19:30."
+    },
+    {
+      "type": "event",
+      "sub": "Museum",
+      "ahead": true,
+      "short": "Buses by Twilight",
+      "tag": "MUSEUM / LOOK-AHEAD",
+      "title": "Buses by Twilight at the Museum of Transport",
+      "chip": "Look-ahead · Sat 14 Nov",
+      "body": "The Museum of Transport on Boyle Street, Cheetham, stays open until 18:30 on Saturday 14 November for Buses by Twilight, with buses running into the early evening. Standard admission applies. Free heritage bus 89 runs every 30 minutes from 14:30, calling at Queens Road tram stop and Central Park, and heritage bus 5 links the museum with the city centre.",
+      "when": "Sat 14 Nov · 10:00–18:30",
+      "what": "Late opening · heritage buses",
+      "where": "Museum of Transport · M8 8UW",
+      "links": [
+        [
+          "https://motgm.uk/events-themed.html",
+          "Museum events ↗"
+        ]
+      ],
+      "src": [
+        21
+      ],
+      "mg": {
+        "kind": "week",
+        "ahead": {
+          "date": "2026-11-14",
+          "label": "10:00",
+          "sub": "To 18:30"
+        }
+      },
+      "mg_caption": [
+        "CAL / LOOK-AHEAD",
+        "Next Saturday"
+      ],
+      "mg_alt": "Week strip for 1 to 8 November with an arrow to Saturday 14 November, open 10:00 to 18:30."
+    }
+  ],
+  "sources": [
+    [
+      "https://tfgm.com/travel-updates/live-departures/bus/135-piccadilly-gardens?no-script=true",
+      "TfGM — 135 from Piccadilly Gardens: Bury Old Road closure, 2–23 Nov"
+    ],
+    [
+      "https://tfgm.com/travel-updates/live-departures/bus/135-bury?no-script=true",
+      "TfGM — 135 from Bury: stops not served"
+    ],
+    [
+      "https://tfgm.com/travel-updates/travel-alerts?active_tab=bus",
+      "TfGM — bus alerts: Bury Old Road (135, 97), Crescent Road (41, 52, 53, 94, 151)"
+    ],
+    [
+      "https://tfgm.com/piccadilly-gardens-disruption",
+      "TfGM — Portland Street and Piccadilly Gardens closure, 2–3 Nov"
+    ],
+    [
+      "https://tfgm.com/city-centre-works-november",
+      "TfGM — city-centre tram changes, 2–4 Nov"
+    ],
+    [
+      "https://tfgm.com/travel-updates/travel-alerts?active_tab=tram",
+      "TfGM — tram alerts: Exchange Square diversion and lifts"
+    ],
+    [
+      "https://nationalhighways.co.uk/roads-and-travel/road-projects/m60-simister-island-closures-diversions-and-speed-restrictions/",
+      "National Highways — M60 Simister Island closures, November"
+    ],
+    [
+      "https://tfgm.com/travel-updates/live-departures/bus/41-middleton?no-script=true",
+      "TfGM — 41: Crescent Road stops not served"
+    ],
+    [
+      "https://www.nationalrail.co.uk/engineering-works/bamford-7-nov-20261107/",
+      "National Rail — Sheffield–Manchester engineering works, 7–8 Nov"
+    ],
+    [
+      "https://www.skysports.com/manchester-united-fixtures",
+      "Sky Sports — Man Utd fixtures (Roma Tue 3, Villa Sun 8)"
+    ],
+    [
+      "https://www.skysports.com/manchester-city-fixtures",
+      "Sky Sports — Man City fixtures (Leipzig Wed 4, Forest Sat 7)"
+    ],
+    [
+      "https://tfgm.com/plan-a-journey/events",
+      "TfGM — events calendar: Old Trafford, Co-op Live, AO Arena"
+    ],
+    [
+      "https://tfgm.com/bonfire-night-events-2026",
+      "TfGM — Bonfire Night 2026 travel"
+    ],
+    [
+      "https://tfgm.com/travel-updates/travel-alerts?active_tab=road",
+      "TfGM — road alerts: Alan Turing Way northbound closure"
+    ],
+    [
+      "https://tfgm.com/remembrance-sunday",
+      "TfGM — Remembrance Sunday, 8 Nov"
+    ],
+    [
+      "https://tfgm.com/manchester-christmas-markets",
+      "TfGM — Manchester Christmas Markets, 6 November – 22 December 2026"
+    ],
+    [
+      "https://www.manchestersfinest.com/christmas/manchester-christmas-markets-to-return-across-10-city-centre-locations-for-2026/",
+      "Manchester's Finest — Christmas Markets sites (11 Sep, secondary)"
+    ],
+    [
+      "https://www.visitmanchester.com/whats-on/whats-on-this-christmas-in-manchester/",
+      "Visit Manchester — what's on this Christmas (Skate Manchester, Festive Wheel)"
+    ],
+    [
+      "https://www.visitmanchester.com/ideas-and-inspiration/blog/post/bonfire-night-events-in-manchester-2026/",
+      "Visit Manchester — Bonfire Night 2026 (Heaton Park, Sat 7 Nov)"
+    ],
+    [
+      "https://iwhc.com/events/charlie-and-the-bhoys-event-7th-november/",
+      "Irish World Heritage Centre — Charlie and the Bhoys, Sat 7 Nov"
+    ],
+    [
+      "https://motgm.uk/events-themed.html",
+      "Museum of Transport — themed events (Buses by Twilight, Sat 14 Nov)"
+    ]
+  ]
+}
