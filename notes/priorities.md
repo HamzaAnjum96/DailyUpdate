@@ -94,7 +94,6 @@ manchester.gov.uk blocks automated fetching, so its roadworks and Mancunian Way 
 
 Area: Cheetham Hill and Cheetham (M8), Crumpsall, Strangeways and Red Bank, Broughton, Harpurhey and Heaton Park. These rank ahead of city-centre events, and smaller ones (a museum drop-in, a library session) can make the cut.
 
-- **Manchester Jewish Museum**, 190 Cheetham Hill Road. Free for M8 residents; closed Tuesdays. https://www.manchesterjewishmuseum.com/whats-on
 - **Museum of Transport**, Boyle Street, off Queens Road. Open Wednesdays, weekends and bank holidays. Dates are on https://motgm.uk/events-themed.html; the calendar page shows months only.
 - **Irish World Heritage Centre**, Irish Town Way, by Queens Road tram stop. https://iwhc.com/events/
 - **Manchester Fort Shopping Park**, Cheetham Hill Road. https://manchesterfort.co.uk/latest-news/
@@ -104,7 +103,7 @@ Area: Cheetham Hill and Cheetham (M8), Crumpsall, Strangeways and Red Bank, Brou
 - **Broughton Library / Salford Community Leisure.** https://salfordcommunityleisure.co.uk/whats-on/
 - **Heaton Park:** fireworks, the Northern Lights trail, races. Use Visit Manchester and the organisers' own pages; the council's park pages block fetching. Never use heatonpark.org.uk, which is now a spam site.
 - **Crumpsall Folk Club**, third Thursday of the month, The Cleveland, Crumpsall Lane. https://crumpsallfolkclub.co.uk/
-- **Cheetham Cultural Festival**, every year in mid-October (2026: 15–18 Oct). https://www.facebook.com/CheethamFest and the Jewish Museum's listings.
+- **Cheetham Cultural Festival**, every year in mid-October (2026: 15–18 Oct). https://www.facebook.com/CheethamFest
 - **Crowds that affect travel**, at the Etihad, Co-op Live, the AO Arena (by Strangeways and Red Bank) and the Christmas markets. https://tfgm.com/plan-a-journey/events
 
 ## Sales and markets
@@ -139,7 +138,6 @@ Checked 14 Nov 2026. These are leads: re-verify each one before it goes on a car
 - Northern Lights at Heaton Park: Thu 19 Nov – Thu 31 Dec, Gate 13 on Bury Old Road for tram and 135, car park off Sheepfoot Lane (£7.50, book ahead). Nightly times are only in an image on the official site. Neurodivergent evenings Wed 2 and Wed 9 Dec.
 - Heaton Park: Run Heaton Park Sun 29 Nov (unverified). The MoRun entry page (letsdothis.com) blocks fetching.
 - Museum of Transport: open Wed, Sat, Sun 10:00–16:30; Christmas Weekend 12–13 Dec.
-- Manchester Jewish Museum: open Mon and Wed–Sun 10:00–17:00; free for signed-up M8 residents. Next: song-writing group with Rayzl Thu 26 Nov 18:00, Long After the Labyrinth Sat 28 Nov 19:00.
 - Crumpsall Folk Club: next Thu 17 Dec (Underground Folk Collective).
 - Christmas Markets: Fri 6 Nov – Tue 22 Dec; Albert Square and Cathedral Gardens to Sun 3 Jan. Christmas Parade Sun 6 Dec. Opening hours still not on a fetchable page (manchester.gov.uk blocks fetching).
 - Black Friday Fri 27 Nov, Cyber Monday Mon 30 Nov. Amazon UK's Black Friday Week runs 19–30 Nov (aboutamazon.co.uk, updated 10 Nov). currys.co.uk blocks fetching.
