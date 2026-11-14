@@ -1,6 +1,6 @@
 {
   "week": 47,
-  "rev": "B",
+  "rev": "C",
   "start": "2026-11-15",
   "end": "2026-11-22",
   "checked": "2026-11-14",
@@ -129,6 +129,60 @@
       "mg_alt": "Diagram of the 10 Christmas Market sites, from Cathedral Gardens with the ice rink in the north to Albert Square with the big wheel in the south."
     },
     {
+      "type": "event",
+      "sub": "Heaton Park",
+      "short": "Northern Lights",
+      "tag": "TICKETED / LIGHT TRAIL",
+      "title": "Northern Lights trail opens at Heaton Park",
+      "chip": "From Thu 19 Nov · confirm times",
+      "body": "The Northern Lights trail opens at Heaton Park on Thursday 19 November and runs to Thursday 31 December, with a new Christmas Time Machine theme. Entry is timed, with off-peak tickets from £15.25. Car parking costs £7.50 and must be booked ahead. By tram or 135, use Gate 13 opposite Heaton Park tram stop; after 20:00 the 135 doesn't stop there.",
+      "when": "Thu 19 Nov → Thu 31 Dec",
+      "what": "Light trail · from £15.25",
+      "where": "Heaton Park · Gate 13 · M25 0DL",
+      "days": [
+        "2026-11-19",
+        "2026-11-20",
+        "2026-11-21",
+        "2026-11-22"
+      ],
+      "links": [
+        [
+          "https://northernlightsmanchester.com/plan-your-visit/opening-times/",
+          "Confirm times ↗"
+        ],
+        [
+          "https://northernlightsmanchester.com/plan-your-visit/directions/",
+          "Getting there ↗"
+        ]
+      ],
+      "src": [
+        10,
+        11,
+        12,
+        28
+      ],
+      "mg": {
+        "kind": "week",
+        "marks": [
+          {
+            "date": "2026-11-19",
+            "label": "Opens",
+            "sub": "Confirm times"
+          }
+        ],
+        "span": {
+          "from": "2026-11-19",
+          "to": "2026-12-31",
+          "label": "Nightly to 31 Dec"
+        }
+      },
+      "mg_caption": [
+        "CAL / HEATON PARK",
+        "Timed entry"
+      ],
+      "mg_alt": "Week strip with Thursday 19 November marked as opening night and a bar running past the week to 31 December."
+    },
+    {
       "type": "sale",
       "sub": "Markets",
       "short": "More markets",
@@ -183,60 +237,6 @@
         "Spinningfields · Trafford"
       ],
       "mg_alt": "Week strip with Friday 20 November marked for the makers' market preview and the Trafford Centre fair opening, and Saturday 21 and Sunday 22 for the makers' market."
-    },
-    {
-      "type": "event",
-      "sub": "Heaton Park",
-      "short": "Northern Lights",
-      "tag": "TICKETED / LIGHT TRAIL",
-      "title": "Northern Lights trail opens at Heaton Park",
-      "chip": "From Thu 19 Nov · confirm times",
-      "body": "The Northern Lights trail opens at Heaton Park on Thursday 19 November and runs to Thursday 31 December, with a new Christmas Time Machine theme. Entry is timed, with off-peak tickets from £15.25. Car parking costs £7.50 and must be booked ahead. By tram or 135, use Gate 13 opposite Heaton Park tram stop; after 20:00 the 135 doesn't stop there.",
-      "when": "Thu 19 Nov → Thu 31 Dec",
-      "what": "Light trail · from £15.25",
-      "where": "Heaton Park · Gate 13 · M25 0DL",
-      "days": [
-        "2026-11-19",
-        "2026-11-20",
-        "2026-11-21",
-        "2026-11-22"
-      ],
-      "links": [
-        [
-          "https://northernlightsmanchester.com/plan-your-visit/opening-times/",
-          "Confirm times ↗"
-        ],
-        [
-          "https://northernlightsmanchester.com/plan-your-visit/directions/",
-          "Getting there ↗"
-        ]
-      ],
-      "src": [
-        10,
-        11,
-        12,
-        30
-      ],
-      "mg": {
-        "kind": "week",
-        "marks": [
-          {
-            "date": "2026-11-19",
-            "label": "Opens",
-            "sub": "Confirm times"
-          }
-        ],
-        "span": {
-          "from": "2026-11-19",
-          "to": "2026-12-31",
-          "label": "Nightly to 31 Dec"
-        }
-      },
-      "mg_caption": [
-        "CAL / HEATON PARK",
-        "Timed entry"
-      ],
-      "mg_alt": "Week strip with Thursday 19 November marked as opening night and a bar running past the week to 31 December."
     },
     {
       "type": "event",
@@ -547,48 +547,6 @@
     },
     {
       "type": "event",
-      "sub": "Museum",
-      "short": "Jewish Museum recital",
-      "tag": "TICKETED / MUSIC",
-      "title": "Rayzl sings the archive at the Jewish Museum",
-      "chip": "Thu 19 Nov · 19:00–20:15",
-      "body": "Rayzl: Singing the Archive is a recital with a Q&A in the synagogue at Manchester Jewish Museum, 190 Cheetham Hill Road, on Thursday 19 November from 19:00 to 20:15. Doors and the café open at 18:00. Tickets are £12, or £10 for members and under-30s, and it's for ages 12 and over. Museum entry is free for M8 residents who sign up.",
-      "when": "Thu 19 Nov · 19:00–20:15",
-      "what": "Recital + Q&A · £12 · 12+",
-      "where": "Jewish Museum · Cheetham Hill Rd",
-      "days": [
-        "2026-11-19"
-      ],
-      "links": [
-        [
-          "https://www.manchesterjewishmuseum.com/event/rayzl-singing-the-archive/",
-          "Book ↗"
-        ]
-      ],
-      "src": [
-        27,
-        28
-      ],
-      "mg": {
-        "kind": "hours",
-        "title": "Thu 19 Nov · Manchester Jewish Museum",
-        "from": "19:00",
-        "to": "20:15",
-        "axis": [
-          17,
-          21
-        ],
-        "label": "Recital + Q&A",
-        "foot": "Doors + café 18:00 · £12 (£10) · 12+"
-      },
-      "mg_caption": [
-        "CAL / JEWISH MUSEUM",
-        "190 Cheetham Hill Rd"
-      ],
-      "mg_alt": "Time axis from 17:00 to 21:00 with the 19:00 to 20:15 recital highlighted."
-    },
-    {
-      "type": "event",
       "sub": "Music",
       "short": "Crumpsall Folk Club",
       "tag": "FOLK NIGHT / CRUMPSALL",
@@ -608,7 +566,7 @@
         ]
       ],
       "src": [
-        29
+        27
       ],
       "mg": {
         "kind": "count",
@@ -645,10 +603,10 @@
         ]
       ],
       "src": [
+        28,
+        29,
         30,
-        31,
-        32,
-        33
+        31
       ],
       "mg": {
         "kind": "week",
@@ -708,8 +666,8 @@
         ]
       ],
       "src": [
-        34,
-        35
+        32,
+        33
       ],
       "mg": {
         "kind": "week",
@@ -840,14 +798,6 @@
     [
       "https://www.creativetourist.com/event/funny-people-at-lowry/",
       "Creative Tourist — Funny People at the Lowry (secondary)"
-    ],
-    [
-      "https://www.manchesterjewishmuseum.com/event/rayzl-singing-the-archive/",
-      "Manchester Jewish Museum — Rayzl: Singing the Archive, Thu 19 Nov"
-    ],
-    [
-      "https://www.manchesterjewishmuseum.com/get-involved/m8members/",
-      "Manchester Jewish Museum — free entry for M8 residents"
     ],
     [
       "https://crumpsallfolkclub.co.uk/thursday-19th-november-crumpsall-folk-club-feat-johnny-campbell/",

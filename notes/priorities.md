@@ -8,7 +8,7 @@ These priorities shape the choices; they never appear on the deck. Card copy doe
 
 The brief is a what's-on guide first, with travel at the end.
 
-1. **Lead with the big things** people go to or plan around that week: seasonal sales (Black Friday, Boxing Day) and the Christmas Markets (that they're open, where every site is, and the hours). One of these takes the priority card (hazard band, cover teaser), not a travel item.
+1. **Lead with the big things** people go to or plan around that week: seasonal sales (Black Friday, Boxing Day), the Christmas Markets (that they're open, where every site is, and the hours) and big seasonal openings such as the Heaton Park light trail. One of these takes the priority card (hazard band, cover teaser), not a travel item.
 2. **Then events, and plenty of them.** They should be most of the deck: arena gigs, sport, theatre, concerts, exhibitions, makers' and festive markets, light trails and free festivals around Greater Manchester, plus the local events below. Group similar items on one card (a week's arena gigs, a venue's concerts) so more fit.
 3. **News** only when something changes for people that week.
 4. **Travel last, and short:**
