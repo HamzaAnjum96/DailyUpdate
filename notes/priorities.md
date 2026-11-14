@@ -4,11 +4,24 @@ Working notes for putting the weekly brief together: what to check first, what m
 
 These priorities shape the choices; they never appear on the deck. Card copy doesn't say who an item matters to or why it was picked: no "for Cheetham Hill", "your route", "local to you". Name stops, roads and venues only where the item's own facts need them. This file isn't published: the Pages workflow deploys only `index.html`, `templates.html`, `assets/` and `data/`.
 
+## Deck structure
+
+The brief is a what's-on guide first, with travel at the end.
+
+1. **Lead with the big things** people go to or plan around that week: seasonal sales (Black Friday, Boxing Day) and the Christmas Markets (that they're open, where every site is, and the hours). One of these takes the priority card (hazard band, cover teaser), not a travel item.
+2. **Then events, and plenty of them.** They should be most of the deck: arena gigs, sport, theatre, concerts, exhibitions, makers' and festive markets, light trails and free festivals around Greater Manchester, plus the local events below. Group similar items on one card (a week's arena gigs, a venue's concerts) so more fit.
+3. **News** only when something changes for people that week.
+4. **Travel last, and short:**
+   - **Buses get one card** covering every diversion, closure and missed stop on the routes below. A disruption gets its own bus card only if it stops buses or badly hits them at peak hours (a weekday, daytime closure of a main road or interchange).
+   - **Trams and trains:** one card at most, and only when lines or stations close or services change in a way people would plan around.
+   - **No motorway cards** unless a closure stops people getting into or out of the city (say, a full daytime closure with no practical diversion). Overnight slip, link or carriageway closures don't make the cut.
+   - **Event traffic** goes on the event's own card (Alan Turing Way on the football card), not on a separate traffic card.
+
 ## How to apply them
 
 1. Run the **weekly checks** below before the general research.
-2. Anything on these routes and roads, or at these venues, inside the brief's range is in by default, even if it's smaller than a citywide brief would usually carry. Drop it only if nothing changes for people travelling or attending.
-3. These items lead their section. The priority card (hazard band, cover teaser) goes to whichever item hits these routes hardest, unless something citywide is clearly bigger.
+2. Anything at the venues below, or on these routes and roads, inside the brief's range is in by default, even if it's smaller than a citywide brief would usually carry. Local events get their own cards. Local bus and road changes go on the single bus card. Drop an item only if nothing changes for people attending or travelling.
+3. Local events lead the events section, after the big citywide items.
 4. Ratings stay honest. IMPACT measures the disruption itself, not how much it matters here.
 5. When a citywide disruption leaves these routes running, say so in that card's copy as a plain network fact ("Bury line trams run as normal"). Don't make an "all clear" card.
 
