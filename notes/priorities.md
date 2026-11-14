@@ -109,21 +109,25 @@ Check:
 
 ## Known dates
 
-Checked 2 Nov 2026. These are leads: re-verify each one before it goes on a card, and prune past dates.
+Checked 14 Nov 2026. These are leads: re-verify each one before it goes on a card, and prune past dates.
 
-- Bury Old Road closed Mon 2 Nov 20:00 – Mon 23 Nov; the 135 and 97 are diverted. The 135 misses stops from St Monica's High School and Heaton Park tram stop to Walker Avenue (Kirkhams). TfGM gives no diversion route yet.
-- Crescent Road, Crumpsall: closed for repairs until Wed 31 Mar 2027 (no longer 19 Oct). The 41, 52, 53, 94 and 151 stay diverted; the 41 misses the Abraham Moss Centre stops.
+- Corporation Street (Miller Street to Todd Street) closed in one direction Sat 08:00 – Sun 21:00 every weekend to Sun 20 Dec. Into town, the 135 and 41 miss the Victoria Rail Station (NU), Printworks (NK) and High Street / Turner Street (NZ) stops; 59, 97, 98, 99 and others also divert. TfGM doesn't say which direction or the diversion route.
+- Bury Old Road: now an overnight closure, 20:00–06:00 nightly to Mon 23 Nov; the 135 and 97 divert at night and the 135 misses St Monica's to Walker Avenue, including Heaton Park tram stop.
+- Crumpsall Way inside North Manchester General Hospital: closed Sat 07:00 – Sun 15:30 every weekend to Sun 29 Nov; 41, 52, 53, 56, 94, 118, 149, 151 and 156 divert.
+- Crescent Road, Crumpsall: closed for repairs until Wed 31 Mar 2027; 41, 52, 53, 94 and 151 diverted.
 - Alan Turing Way: northbound closure near the Etihad since Sat 4 Apr 2026, until further notice; the 53 is diverted.
-- Great Cheetham Street East (A6010, Broughton): signals until 10 Nov.
-- Bury New Road, Prestwich: the stop opposite the Red Lion is closed until 9 Nov.
 - Victoria station: 59, 97, 98, 99 and others diverted away from the station until 31 Dec.
-- M60 J18 Simister Island: clockwise link to the M66 north shut overnight 21:00–06:00 to Tue 10 Nov; M66 northbound J4–J3 shut overnight Mon 9 Nov; the clockwise link to the M66 north again Fri 13 – Sun 15 Nov.
-- Lifts: Heaton Park Bury-bound lift being replaced (since 29 Jul); Besses o' th' Barn and Monsall lifts out (from 2 Nov).
-- Trams: the 19 Oct – 1 Nov works are finished and TfGM says no further tram changes are planned after the 2–4 Nov Exchange Square diversion.
-- Etihad: City v Fulham Sat 21 Nov 12:30. Old Trafford: check United fixtures each week (Sky Sports).
-- Co-op Live: Muse 12–13 Nov, Paul Heaton 14 Nov, Myles Smith 15 Nov, Enter Shikari 19 Nov, Good Charlotte 20 Nov, Hits Radio Live 21 Nov, Don Toliver 22 Nov. AO Arena: Noah Kahan 9–10 Nov, Gladiators 14–15 Nov (TfGM events page).
-- Museum of Transport: Buses by Twilight Sat 14 Nov (10:00–18:30, heritage bus 89 via Queens Road); Christmas Weekend 12–13 Dec.
-- Heaton Park: Northern Lights 19 Nov – 31 Dec; MoRun Sun 22 Nov; Run Heaton Park Sun 29 Nov.
-- Christmas Markets: Fri 6 Nov – Tue 22 Dec, more than 210 stalls on 10 sites; Albert Square and Cathedral Gardens to Sun 3 Jan. Christmas Parade Sun 6 Dec. Opening hours still not published on a fetchable page (manchester.gov.uk blocks fetching).
-- Black Friday Fri 27 Nov, Cyber Monday Mon 30 Nov. As of 2 Nov no retailer announcement could be verified (currys.co.uk blocks fetching), so there's nothing to card yet.
-- Unreachable on 2 Nov: Manchester Jewish Museum (503) and myf.org.uk (bot check). Try again next week.
+- Deansgate rail station closes from 20:00 on Fridays and 18:00 on Saturdays until the Christmas Markets end on 22 Dec (Northern).
+- Northern adds Sunday trains to Victoria from Sun 22 Nov (Bolton, Rochdale, Wigan via Atherton); more Clitheroe – Victoria Sunday trains from 13 Dec. Manchester Airport station works Sun 6 Dec.
+- M60 J18 Simister Island: no closures were listed past Fri 20 Nov when checked; recheck each week. 50mph limit through the works.
+- Lifts: Heaton Park Bury-bound lift being replaced (since 29 Jul); Monsall lift out (from 2 Nov). Besses o' th' Barn no longer listed on 14 Nov.
+- Etihad: City v Napoli Tue 24 Nov 20:00; Arsenal v City away Sun 29 Nov. Old Trafford: United v Brentford Sat 28 Nov 15:00.
+- Co-op Live: Anne Lapwood Wed 25 Nov. Check TfGM's events page for the rest.
+- Northern Lights at Heaton Park: Thu 19 Nov – Thu 31 Dec, Gate 13 on Bury Old Road for tram and 135, car park off Sheepfoot Lane (£7.50, book ahead). Nightly times are only in an image on the official site. Neurodivergent evenings Wed 2 and Wed 9 Dec.
+- Heaton Park: Run Heaton Park Sun 29 Nov (unverified). The MoRun entry page (letsdothis.com) blocks fetching.
+- Museum of Transport: open Wed, Sat, Sun 10:00–16:30; Christmas Weekend 12–13 Dec.
+- Manchester Jewish Museum: open Mon and Wed–Sun 10:00–17:00; free for signed-up M8 residents. Next: song-writing group with Rayzl Thu 26 Nov 18:00, Long After the Labyrinth Sat 28 Nov 19:00.
+- Crumpsall Folk Club: next Thu 17 Dec (Underground Folk Collective).
+- Christmas Markets: Fri 6 Nov – Tue 22 Dec; Albert Square and Cathedral Gardens to Sun 3 Jan. Christmas Parade Sun 6 Dec. Opening hours still not on a fetchable page (manchester.gov.uk blocks fetching).
+- Black Friday Fri 27 Nov, Cyber Monday Mon 30 Nov. Amazon UK's Black Friday Week runs 19–30 Nov (aboutamazon.co.uk, updated 10 Nov). currys.co.uk blocks fetching.
+- Ofgem announces the Jan–Mar 2027 price cap around 25 Nov (third-party sources only; Ofgem's own pages gave no date).

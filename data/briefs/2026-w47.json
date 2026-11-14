@@ -1,0 +1,362 @@
+{
+  "week": 47,
+  "rev": "A",
+  "start": "2026-11-15",
+  "end": "2026-11-22",
+  "checked": "2026-11-14",
+  "tz": "GMT",
+  "note": "Checked 14 November 2026. All times are GMT. Still to confirm: Northern Lights nightly entry times (published only as an image) and peak prices, and the diversion routes for Corporation Street, Bury Old Road and Crumpsall Way, which TfGM doesn't publish. TfGM doesn't say which direction of Corporation Street is closed; the stops it marks as not served are on the into-town side. The MoRun at Heaton Park (Sun 22 Nov) is left out because its entry page blocked fetching. Kick-offs can move for TV.",
+  "cards": [
+    {
+      "type": "transport",
+      "sub": "Bus",
+      "priority": true,
+      "headline": "SAT–SUN TO 20 DEC",
+      "short": "Corporation St",
+      "tag": "BUS / WEEKEND CLOSURE",
+      "title": "Corporation Street shut one way at weekends",
+      "meter": 3,
+      "body": "Corporation Street is closed in one direction between Miller Street and Todd Street from 08:00 on Saturday to 21:00 on Sunday every weekend until Sunday 20 December. The 135, 41, 59, 97, 98, 99 and other routes divert. Heading into town, the 135 and 41 don't call at the Victoria Rail Station, Printworks or High Street / Turner Street stops.",
+      "when": "Sat 08:00 → Sun 21:00 weekly",
+      "what": "One way shut · buses divert",
+      "where": "Corporation St · Miller–Todd St",
+      "days": ["2026-11-15", "2026-11-21", "2026-11-22"],
+      "links": [
+        ["https://tfgm.com/travel-updates/live-departures/bus/135-bury?no-script=true", "135 stops ↗"],
+        ["https://tfgm.com/travel-updates/travel-alerts?active_tab=bus", "Confirm diversion ↗"]
+      ],
+      "src": [1, 2, 3],
+      "mg": {
+        "kind": "route",
+        "rows": [
+          {
+            "name": "135 + 41 into town · weekends",
+            "stops": ["Cheetham Hill", "Victoria Stn", "Printworks", "Turner St", "Church St", "Picc Gdns"],
+            "closed": [[1, 4]]
+          }
+        ]
+      },
+      "mg_caption": ["DIA / CORPORATION ST", "Stops not served ▬"],
+      "mg_alt": "Route diagram of the 135 and 41 into town at weekends: the Victoria Rail Station, Printworks, Turner Street and Church Street stops are not served."
+    },
+    {
+      "type": "transport",
+      "sub": "Bus",
+      "short": "Bury Old Rd nights",
+      "tag": "BUS / OVERNIGHT CLOSURE",
+      "title": "Bury Old Road shut overnight to 23 Nov",
+      "meter": 2,
+      "body": "Bury Old Road now closes overnight only, from 20:00 to 06:00 every night until Monday 23 November. At those times the 135 and 97 divert, and the 135 doesn't call at stops from St Monica's High School and Heaton Park tram stop to Walker Avenue in Kirkhams. TfGM lists no changes to Bury line trams this week.",
+      "when": "Nightly 20:00–06:00 to Mon 23",
+      "what": "135 + 97 diverted at night",
+      "where": "Bury Old Rd · Heaton Pk–Kirkhams",
+      "days": "all",
+      "links": [
+        ["https://tfgm.com/travel-updates/live-departures/bus/135-piccadilly-gardens?no-script=true", "135 stops ↗"],
+        ["https://tfgm.com/travel-updates/travel-alerts?active_tab=bus", "Confirm diversion ↗"]
+      ],
+      "src": [4, 1, 3, 5],
+      "mg": {
+        "kind": "route",
+        "rows": [
+          {
+            "name": "135 · nightly 20:00–06:00",
+            "stops": ["Cheetham Hill", "St Monica's", "Heaton Pk", "Heywood Rd", "Walker Ave", "Whitefield"],
+            "closed": [[1, 4]],
+            "mark": 2,
+            "mark_label": "Tram"
+          }
+        ]
+      },
+      "mg_caption": ["DIA / 135", "Not served overnight ▬"],
+      "mg_alt": "Route diagram of the 135 on Bury Old Road: from 20:00 to 06:00 the stops from St Monica's through Heaton Park tram stop to Walker Avenue are not served."
+    },
+    {
+      "type": "transport",
+      "sub": "Bus",
+      "short": "Hospital buses",
+      "tag": "BUS / WEEKEND CLOSURE",
+      "title": "Hospital buses divert at weekends to 29 Nov",
+      "meter": 2,
+      "body": "Crumpsall Way inside North Manchester General Hospital closes from 07:00 on Saturday to 15:30 on Sunday each weekend until Sunday 29 November, so the 41, 52, 53, 94, 151 and other routes divert and miss some hospital stops. Crescent Road stays closed until 31 March 2027, keeping the same routes away from the Abraham Moss Centre stops.",
+      "when": "Sat 07:00 → Sun 15:30 weekly",
+      "what": "9 routes divert · stops missed",
+      "where": "NMGH · Crumpsall",
+      "days": ["2026-11-15", "2026-11-21", "2026-11-22"],
+      "links": [
+        ["https://tfgm.com/travel-updates/live-departures/bus/41-middleton?no-script=true", "41 stops ↗"],
+        ["https://tfgm.com/travel-updates/live-departures/bus/53-cheetham-hill?no-script=true", "53 stops ↗"]
+      ],
+      "src": [2, 6, 3],
+      "mg": {
+        "kind": "week",
+        "marks": [
+          {"date": "2026-11-15", "label": "Shut"},
+          {"date": "2026-11-21", "label": "Shut"},
+          {"date": "2026-11-22", "label": "Shut"}
+        ],
+        "span": {"from": "2026-07-20", "to": null, "label": "Crescent Road shut to 31 Mar 2027"}
+      },
+      "mg_caption": ["CAL / NMGH + CRESCENT RD", "41 · 52 · 53 · 94 · 151"],
+      "mg_alt": "Week strip with Sunday 15, Saturday 21 and Sunday 22 November marked for the hospital road closure, over a bar for the Crescent Road closure running to March 2027."
+    },
+    {
+      "type": "transport",
+      "sub": "Road",
+      "short": "M60 J18 overnight",
+      "tag": "MOTORWAY / OVERNIGHT",
+      "title": "M60 J18 link to the M66 shut overnight",
+      "meter": 2,
+      "body": "The free-flow link from the M60 clockwise at junction 18 to the M66 northbound is closed from 21:00 to 06:00 every night from Monday 16 to Friday 20 November. National Highways publishes a diversion map and says closures can change at short notice. A 50mph limit stays in place through the Simister Island works.",
+      "when": "Mon 16 → Fri 20 · 21:00–06:00",
+      "what": "Clockwise link to M66 N shut",
+      "where": "M60 J18 · Simister Island",
+      "days": ["2026-11-16", "2026-11-17", "2026-11-18", "2026-11-19", "2026-11-20"],
+      "links": [
+        [
+          "https://nationalhighways.co.uk/roads-and-travel/road-projects/m60-simister-island-closures-diversions-and-speed-restrictions/",
+          "Diversion map ↗"
+        ]
+      ],
+      "src": [7],
+      "mg": {
+        "kind": "junction",
+        "road": "M60",
+        "a": "J17",
+        "b": "J18",
+        "closed": "slip",
+        "slip": "M66 N",
+        "window": "21:00 → 06:00 · MON–FRI"
+      },
+      "mg_caption": ["DIA / M60-J18", "Overnight"],
+      "mg_alt": "Motorway diagram: the M60 clockwise free-flow link at junction 18 to the M66 northbound closed overnight Monday to Friday."
+    },
+    {
+      "type": "transport",
+      "sub": "Rail",
+      "short": "Deansgate station",
+      "tag": "RAIL / MARKET EVENINGS",
+      "title": "Deansgate station shuts on market evenings",
+      "meter": 2,
+      "body": "Deansgate rail station closes from 20:00 on Fridays and 18:00 on Saturdays while the Christmas Markets run, until 22 December. Use Piccadilly, Oxford Road or Victoria instead. On Sunday 22 November, buses replace trains between Blackburn and Clitheroe, Colne and Burnley Manchester Road, which affects Victoria to Clitheroe trains.",
+      "when": "Fri 20:00 · Sat 18:00 · weekly",
+      "what": "Station shut · use others",
+      "where": "Deansgate rail station",
+      "days": ["2026-11-20", "2026-11-21", "2026-11-22"],
+      "links": [["https://www.northernrailway.co.uk/service-updates/engineering", "Northern updates ↗"]],
+      "src": [8],
+      "mg": {
+        "kind": "week",
+        "marks": [
+          {"date": "2026-11-20", "label": "20:00"},
+          {"date": "2026-11-21", "label": "18:00"},
+          {"date": "2026-11-22", "label": "Buses", "sub": "Clitheroe"}
+        ]
+      },
+      "mg_caption": ["CAL / DEANSGATE", "Closes from"],
+      "mg_alt": "Week strip with Friday 20 November marked 20:00 and Saturday 21 marked 18:00 for the Deansgate station closures, and Sunday 22 marked for Clitheroe line replacement buses."
+    },
+    {
+      "type": "transport",
+      "sub": "Events",
+      "short": "Etihad + arenas",
+      "tag": "ROADS / EVENT CROWDS",
+      "title": "City host Fulham on a busy arena weekend",
+      "meter": 2,
+      "body": "City host Fulham at the Etihad at 12:30 on Saturday 21 November, and Co-op Live has Hits Radio Live the same day. Both arenas have events on Sunday 15, Thursday, Friday and Saturday, plus Tuesday at the AO Arena and Sunday 22 at Co-op Live. Alan Turing Way is still shut northbound by the Etihad, and TfGM expects delays.",
+      "when": "Sat 21 · 12:30 + arena nights",
+      "what": "City v Fulham · 10 arena events",
+      "where": "Etihad Campus · AO Arena",
+      "days": ["2026-11-15", "2026-11-17", "2026-11-19", "2026-11-20", "2026-11-21", "2026-11-22"],
+      "links": [
+        ["https://tfgm.com/plan-a-journey/events", "TfGM events ↗"],
+        ["https://tfgm.com/travel-updates/travel-alerts?active_tab=road", "Road alerts ↗"]
+      ],
+      "src": [9, 10, 11],
+      "mg": {
+        "kind": "week",
+        "marks": [
+          {"date": "2026-11-15", "label": "Arenas", "n": 2},
+          {"date": "2026-11-17", "label": "AO"},
+          {"date": "2026-11-19", "label": "Arenas", "n": 2},
+          {"date": "2026-11-20", "label": "Arenas", "n": 2},
+          {"date": "2026-11-21", "label": "City", "sub": "+ 2 arenas", "n": 3},
+          {"date": "2026-11-22", "label": "Co-op"}
+        ],
+        "span": {"from": "2026-04-04", "to": null, "label": "Alan Turing Way northbound shut since 4 Apr"}
+      },
+      "mg_caption": ["CAL / EVENT CROWDS", "Etihad · Co-op Live · AO"],
+      "mg_alt": "Week strip with arena events marked on Sunday 15, Tuesday 17, Thursday 19, Friday 20 and Sunday 22 November, and City v Fulham plus two arena events on Saturday 21, over a bar for the Alan Turing Way closure."
+    },
+    {
+      "type": "news",
+      "sub": "Rail",
+      "short": "More Sunday trains",
+      "tag": "RAIL / TIMETABLE CHANGE",
+      "title": "More Sunday trains to Victoria from 22 Nov",
+      "chip": "From Sun 22 Nov",
+      "body": "From Sunday 22 November, Northern adds 14 Sunday trains between Bolton and Manchester Victoria, 10 between Rochdale and Victoria, and 10 between Wigan North Western and Victoria via Atherton. Some extra trains will also run between Manchester Piccadilly and Hazel Grove. More Sunday trains between Clitheroe and Victoria follow from 13 December.",
+      "when": "From Sun 22 Nov",
+      "what": "34 extra Sunday trains",
+      "where": "Bolton · Rochdale · Wigan lines",
+      "days": ["2026-11-22"],
+      "links": [["https://www.northernrailway.co.uk/travel/amended-sunday-timetables", "Northern ↗"]],
+      "src": [12],
+      "mg": {
+        "kind": "count",
+        "value": "34",
+        "caption": "Extra Sunday trains to Victoria",
+        "sub": "Bolton 14 · Rochdale 10 · Wigan 10"
+      },
+      "mg_caption": ["CNT / NORTHERN", "Sundays from 22 Nov"],
+      "mg_alt": "Dot-matrix readout of 34, the number of extra Sunday trains to Manchester Victoria from 22 November."
+    },
+    {
+      "type": "sale",
+      "sub": "Online",
+      "short": "Amazon Black Friday",
+      "tag": "SALE / BLACK FRIDAY",
+      "title": "Amazon's Black Friday Week starts Thursday",
+      "chip": "Thu 19 → Mon 30 Nov",
+      "body": "Amazon UK's Black Friday Week runs from Thursday 19 to Monday 30 November, taking in Black Friday on 27 November and Cyber Monday on 30 November. You don't need Prime to shop the sale, but some daily deals are for Prime members only.",
+      "when": "Thu 19 → Mon 30 Nov",
+      "what": "Online sale · 12 days",
+      "where": "amazon.co.uk",
+      "days": ["2026-11-19", "2026-11-20", "2026-11-21", "2026-11-22"],
+      "links": [["https://www.aboutamazon.co.uk/news/retail/black-friday-everything-you-need-to-know", "Amazon UK ↗"]],
+      "src": [13],
+      "mg": {
+        "kind": "week",
+        "marks": [{"date": "2026-11-19", "label": "Starts"}],
+        "span": {"from": "2026-11-19", "to": "2026-11-30", "label": "Black Fri 27 · Cyber Mon 30"}
+      },
+      "mg_caption": ["CAL / BLACK FRIDAY", "Retailer's own dates"],
+      "mg_alt": "Week strip with Thursday 19 November marked as the start of Amazon's Black Friday Week, with a bar running past the week to 30 November."
+    },
+    {
+      "type": "event",
+      "sub": "Heaton Park",
+      "short": "Northern Lights",
+      "tag": "TICKETED / LIGHT TRAIL",
+      "title": "Northern Lights trail opens at Heaton Park",
+      "chip": "From Thu 19 Nov · confirm times",
+      "body": "The Northern Lights trail opens at Heaton Park on Thursday 19 November and runs to Thursday 31 December, with a new Christmas Time Machine theme. Entry is timed, with off-peak tickets from £15.25. Car parking costs £7.50 and must be booked ahead. By tram or 135, use Gate 13 opposite Heaton Park tram stop; after 20:00 the 135 doesn't stop there.",
+      "when": "Thu 19 Nov → Thu 31 Dec",
+      "what": "Light trail · from £15.25",
+      "where": "Heaton Park · Gate 13 · M25 0DL",
+      "days": ["2026-11-19", "2026-11-20", "2026-11-21", "2026-11-22"],
+      "links": [
+        ["https://northernlightsmanchester.com/plan-your-visit/opening-times/", "Confirm times ↗"],
+        ["https://northernlightsmanchester.com/plan-your-visit/directions/", "Getting there ↗"]
+      ],
+      "src": [14, 15, 16, 4],
+      "mg": {
+        "kind": "week",
+        "marks": [{"date": "2026-11-19", "label": "Opens", "sub": "Confirm times"}],
+        "span": {"from": "2026-11-19", "to": "2026-12-31", "label": "Nightly to 31 Dec"}
+      },
+      "mg_caption": ["CAL / HEATON PARK", "Timed entry"],
+      "mg_alt": "Week strip with Thursday 19 November marked as opening night and a bar running past the week to 31 December."
+    },
+    {
+      "type": "event",
+      "sub": "Museum",
+      "short": "Jewish Museum recital",
+      "tag": "TICKETED / MUSIC",
+      "title": "Rayzl sings the archive at the Jewish Museum",
+      "chip": "Thu 19 Nov · 19:00–20:15",
+      "body": "Rayzl: Singing the Archive is a recital with a Q&A in the synagogue at Manchester Jewish Museum, 190 Cheetham Hill Road, on Thursday 19 November from 19:00 to 20:15. Doors and the café open at 18:00. Tickets are £12, or £10 for members and under-30s, and it's for ages 12 and over. Museum entry is free for M8 residents who sign up.",
+      "when": "Thu 19 Nov · 19:00–20:15",
+      "what": "Recital + Q&A · £12 · 12+",
+      "where": "Jewish Museum · Cheetham Hill Rd",
+      "days": ["2026-11-19"],
+      "links": [["https://www.manchesterjewishmuseum.com/event/rayzl-singing-the-archive/", "Book ↗"]],
+      "src": [17, 18],
+      "mg": {
+        "kind": "hours",
+        "title": "Thu 19 Nov · Manchester Jewish Museum",
+        "from": "19:00",
+        "to": "20:15",
+        "axis": [17, 21],
+        "label": "Recital + Q&A",
+        "foot": "Doors + café 18:00 · £12 (£10) · 12+"
+      },
+      "mg_caption": ["CAL / JEWISH MUSEUM", "190 Cheetham Hill Rd"],
+      "mg_alt": "Time axis from 17:00 to 21:00 with the 19:00 to 20:15 recital highlighted."
+    },
+    {
+      "type": "event",
+      "sub": "Music",
+      "short": "Crumpsall Folk Club",
+      "tag": "FOLK NIGHT / CRUMPSALL",
+      "title": "Johnny Campbell at Crumpsall Folk Club",
+      "chip": "Thu 19 Nov · doors 19:30",
+      "body": "Sheffield singer Johnny Campbell headlines Crumpsall Folk Club at The Cleveland on Crumpsall Lane, opposite Crumpsall tram stop, on Thursday 19 November. Doors open at 19:30, floor spots start at 19:45 and the main act is on around 21:00. Entry is £5, £2 concessions or £10 solidarity, with proceeds to Rainbow Surprise.",
+      "when": "Thu 19 Nov · doors 19:30",
+      "what": "Folk night · £5 entry",
+      "where": "The Cleveland · Crumpsall Ln",
+      "days": ["2026-11-19"],
+      "links": [
+        ["https://crumpsallfolkclub.co.uk/thursday-19th-november-crumpsall-folk-club-feat-johnny-campbell/", "Event details ↗"]
+      ],
+      "src": [19],
+      "mg": {"kind": "count", "value": "£5", "caption": "Entry · £2 concessions", "sub": "Doors 19:30 · main act about 21:00"},
+      "mg_caption": ["PRC / FOLK CLUB", "Third Thursday"],
+      "mg_alt": "Dot-matrix readout of £5, the entry price, for Thursday 19 November with doors at 19:30."
+    }
+  ],
+  "sources": [
+    [
+      "https://tfgm.com/travel-updates/live-departures/bus/135-bury?no-script=true",
+      "TfGM — 135 from Bury: Corporation Street and Bury Old Road stops not served"
+    ],
+    [
+      "https://tfgm.com/travel-updates/live-departures/bus/41-middleton?no-script=true",
+      "TfGM — 41: Corporation Street, Crumpsall Way and Crescent Road alerts"
+    ],
+    [
+      "https://tfgm.com/travel-updates/travel-alerts?active_tab=bus",
+      "TfGM — bus alerts: Corporation Street, Bury Old Road, Crumpsall Way, Crescent Road"
+    ],
+    [
+      "https://tfgm.com/travel-updates/live-departures/bus/135-piccadilly-gardens?no-script=true",
+      "TfGM — 135 from Piccadilly Gardens: Bury Old Road overnight closure, 14–23 Nov"
+    ],
+    ["https://tfgm.com/travel-updates/travel-alerts?active_tab=tram", "TfGM — tram alerts: lifts only, no Bury line changes"],
+    [
+      "https://tfgm.com/travel-updates/live-departures/bus/53-cheetham-hill?no-script=true",
+      "TfGM — 53: Crumpsall Way, Crescent Road and Alan Turing Way alerts"
+    ],
+    [
+      "https://nationalhighways.co.uk/roads-and-travel/road-projects/m60-simister-island-closures-diversions-and-speed-restrictions/",
+      "National Highways — M60 Simister Island closures, 16–20 Nov"
+    ],
+    ["https://www.northernrailway.co.uk/service-updates/engineering", "Northern — engineering work and event notes (Deansgate, Clitheroe)"],
+    ["https://tfgm.com/plan-a-journey/events", "TfGM — events calendar: Etihad, Co-op Live, AO Arena"],
+    ["https://www.skysports.com/manchester-city-fixtures", "Sky Sports — Man City fixtures (Fulham Sat 21, 12:30)"],
+    ["https://tfgm.com/travel-updates/travel-alerts?active_tab=road", "TfGM — road alerts: Alan Turing Way northbound closure"],
+    ["https://www.northernrailway.co.uk/travel/amended-sunday-timetables", "Northern — extra Sunday trains from 22 Nov"],
+    [
+      "https://www.aboutamazon.co.uk/news/retail/black-friday-everything-you-need-to-know",
+      "Amazon UK — Black Friday Week 19–30 Nov (updated 10 Nov)"
+    ],
+    ["https://northernlightsmanchester.com/signup/", "Northern Lights Manchester — 19 Nov – 31 Dec 2026, Heaton Park"],
+    [
+      "https://northernlightsmanchester.com/plan-your-visit/directions/",
+      "Northern Lights Manchester — directions, parking and Gate 13"
+    ],
+    [
+      "https://www.visitmanchester.com/ideas-and-inspiration/blog/post/christmas-lights-in-manchester-2026/",
+      "Visit Manchester — Christmas lights 2026 (Northern Lights prices)"
+    ],
+    [
+      "https://www.manchesterjewishmuseum.com/event/rayzl-singing-the-archive/",
+      "Manchester Jewish Museum — Rayzl: Singing the Archive, Thu 19 Nov"
+    ],
+    ["https://www.manchesterjewishmuseum.com/get-involved/m8members/", "Manchester Jewish Museum — free entry for M8 residents"],
+    [
+      "https://crumpsallfolkclub.co.uk/thursday-19th-november-crumpsall-folk-club-feat-johnny-campbell/",
+      "Crumpsall Folk Club — Johnny Campbell, Thu 19 Nov"
+    ]
+  ]
+}
