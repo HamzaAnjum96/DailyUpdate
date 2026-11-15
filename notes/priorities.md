@@ -19,6 +19,7 @@ It's shared with family, so keep every card family-friendly. Don't use lingerie,
    - **Trams and trains:** one card at most, and only when lines or stations close or services change in a way people would plan around.
    - **No motorway cards** unless a closure stops people getting into or out of the city (say, a full daytime closure with no practical diversion). Overnight slip, link or carriageway closures don't make the cut.
    - **Event traffic** goes on the event's own card (Alan Turing Way on the football card), not on a separate traffic card.
+5. **Graphics should show the thing, not just the day.** Use `calendar` for runs that last weeks (light trails, markets, Black Friday), `map` for where things are (market sites), `schedule` when a card covers several items or towns across the week, `fixture` for a home match, and `count` for one striking number or price. Keep the plain `week` strip for a single dated item when nothing else fits.
 
 ## How to apply them
 

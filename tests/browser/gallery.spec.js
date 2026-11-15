@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
   await page.goto('/templates.html');
-  await expect(page.locator('.g-tpl')).toHaveCount(8);
+  await expect(page.locator('.g-tpl')).toHaveCount(12);
 });
 
 test('all examples render and the gallery fits a narrow screen', async ({ page }) => {

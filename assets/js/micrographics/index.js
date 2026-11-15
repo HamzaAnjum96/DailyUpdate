@@ -11,17 +11,21 @@
 // To add a template: copy the closest existing file, change meta.kind and render(),
 // and add it to the list below. templates.html shows it straight away.
 import * as bars from './bars.js';
+import * as calendar from './calendar.js';
 import * as clock from './clock.js';
 import * as count from './count.js';
+import * as fixture from './fixture.js';
 import * as hours from './hours.js';
 import * as junction from './junction.js';
+import * as map from './map.js';
 import * as route from './route.js';
+import * as schedule from './schedule.js';
 import * as target from './target.js';
 import * as week from './week.js';
 import { raw } from '../lib/markup.js';
 
 export const templates = Object.fromEntries(
-  [route, junction, week, hours, bars, count, clock, target].map((t) => [t.meta.kind, t]),
+  [route, junction, week, schedule, calendar, map, fixture, hours, bars, count, clock, target].map((t) => [t.meta.kind, t]),
 );
 
 export function renderMicrographic(mg, ctx) {

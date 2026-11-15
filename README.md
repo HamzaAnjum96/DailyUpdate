@@ -83,6 +83,10 @@ Each card's art window is a template from `assets/js/micrographics/`, filled fro
 | `route` | Tram, rail and bus closures, shuttles | `rows[]`: `name`, `stops[]`, `closed` `[[from, to]]`, `end`, `mark`, `mark_label` |
 | `junction` | Motorway closures | `road`, `a`, `b`, `closed` (`slip` / `clockwise` / `anticlockwise` / `both`), `slip`, `window` |
 | `week` | Dated events and matches, look-aheads | `marks[]` `{date, label, sub, n}`, `span` `{from, to or null, label}`, `ahead` `{date, label, sub}` |
+| `schedule` | Several items across the week, one row each | `rows[]`: `label`, `days` (dates or `"all"`), `note`, `more` |
+| `calendar` | Long runs and seasons: light trails, markets, sales | `months` (one or two `YYYY-MM`), `range` `{from, to, label}`, `marks[]` `{date, label}` |
+| `map` | Where things are: market sites, entrances | `points[]` `{x, y, label, hot, note, side}` on a 0–100 grid, `landmarks[]`, `north` |
+| `fixture` | A home match | `home`, `away`, `time`, `date`, `comp`, `venue` |
 | `hours` | One time window on one day | `title`, `from`, `to`, `axis` `[first hour, last hour]`, `label`, `foot` |
 | `bars` | A sale example | `was`, `now`, `item`, `pct` |
 | `count` | One headline number | `value`, `caption`, `sub` |

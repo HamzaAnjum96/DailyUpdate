@@ -1,11 +1,11 @@
 {
   "week": 47,
-  "rev": "E",
+  "rev": "F",
   "start": "2026-11-15",
   "end": "2026-11-22",
   "checked": "2026-11-14",
   "tz": "GMT",
-  "note": "Checked 14 November 2026. All times are GMT. Black Friday dates come from Amazon UK and the Trafford Centre; Argos, John Lewis, Currys, AO, Very and the Arndale blocked fetching. Christmas Markets hours come from DesignMyNight because the council's page blocks fetching. Lowry details come from Creative Tourist because the Lowry's site wouldn't load. Still to confirm: Northern Lights and Dunham Massey entry times, arena and theatre show times, and the bus diversion routes, which TfGM doesn't publish. Kick-offs can move for TV.",
+  "note": "Checked 14–15 November 2026. All times are GMT. Black Friday dates come from Amazon UK and the Trafford Centre; Argos, John Lewis, Currys, AO, Very and the Arndale blocked fetching. Christmas Markets hours come from DesignMyNight because the council's page blocks fetching, and the market map is a schematic, not to scale. Lowry details come from Creative Tourist because the Lowry's site wouldn't load. Still to confirm: Northern Lights and Dunham Massey entry times, show times, and the bus diversion routes, which TfGM doesn't publish. Kick-offs can move for TV.",
   "cards": [
     {
       "type": "sale",
@@ -41,28 +41,35 @@
         2
       ],
       "mg": {
-        "kind": "week",
+        "kind": "calendar",
+        "months": [
+          "2026-11"
+        ],
+        "range": {
+          "from": "2026-11-19",
+          "to": "2026-11-30",
+          "label": "Amazon"
+        },
         "marks": [
-          {
-            "date": "2026-11-19",
-            "label": "Amazon"
-          },
           {
             "date": "2026-11-20",
             "label": "Stores"
+          },
+          {
+            "date": "2026-11-27",
+            "label": "Black Fri"
+          },
+          {
+            "date": "2026-11-30",
+            "label": "Cyber Mon"
           }
-        ],
-        "span": {
-          "from": "2026-11-19",
-          "to": "2026-11-30",
-          "label": "Black Fri 27 · Cyber Mon 30"
-        }
+        ]
       },
       "mg_caption": [
         "CAL / BLACK FRIDAY",
-        "Retailers' own dates"
+        "November 2026"
       ],
-      "mg_alt": "Week strip with Thursday 19 November marked for the start of Amazon's Black Friday Week and Friday 20 for Trafford Centre store offers, with a bar running past the week to 30 November."
+      "mg_alt": "November calendar with Amazon's Black Friday Week filled in from 19 to 30 November, and 20 November (store offers), 27 November (Black Friday) and 30 November (Cyber Monday) picked out."
     },
     {
       "type": "sale",
@@ -93,39 +100,88 @@
         6
       ],
       "mg": {
-        "kind": "route",
-        "rows": [
+        "kind": "map",
+        "landmarks": [
           {
-            "name": "North · by Victoria",
-            "stops": [
-              "Cathedral Gdns",
-              "Exchange Sq",
-              "Corn Exchange",
-              "New Cath St",
-              "Market St"
-            ],
-            "mark": 0,
-            "mark_label": "Rink"
+            "x": 56,
+            "y": 2,
+            "label": "Victoria",
+            "side": "right"
           },
           {
-            "name": "South · to Albert Sq",
-            "stops": [
-              "St Ann's Sq",
-              "Exchange St",
-              "King St",
-              "Lincoln Sq",
-              "Albert Sq"
-            ],
-            "mark": 4,
-            "mark_label": "Wheel"
+            "x": 94,
+            "y": 50,
+            "label": "Piccadilly",
+            "side": "above"
+          }
+        ],
+        "points": [
+          {
+            "x": 40,
+            "y": 13,
+            "label": "Cathedral Gdns",
+            "hot": true,
+            "note": "Rink",
+            "side": "left"
+          },
+          {
+            "x": 58,
+            "y": 22,
+            "label": "Corn Exchange"
+          },
+          {
+            "x": 44,
+            "y": 32,
+            "label": "Exchange Sq",
+            "side": "left"
+          },
+          {
+            "x": 50,
+            "y": 42,
+            "label": "New Cathedral St"
+          },
+          {
+            "x": 64,
+            "y": 53,
+            "label": "Market St"
+          },
+          {
+            "x": 46,
+            "y": 58,
+            "label": "Exchange St",
+            "side": "left"
+          },
+          {
+            "x": 34,
+            "y": 66,
+            "label": "St Ann's Sq",
+            "side": "left"
+          },
+          {
+            "x": 42,
+            "y": 78,
+            "label": "King St"
+          },
+          {
+            "x": 22,
+            "y": 88,
+            "label": "Lincoln Sq",
+            "side": "left"
+          },
+          {
+            "x": 40,
+            "y": 98,
+            "label": "Albert Sq",
+            "hot": true,
+            "note": "Wheel"
           }
         ]
       },
       "mg_caption": [
-        "DIA / MARKET SITES",
-        "North to south · not to scale"
+        "MAP / MARKET SITES",
+        "Schematic · not to scale"
       ],
-      "mg_alt": "Diagram of the 10 Christmas Market sites, from Cathedral Gardens with the ice rink in the north to Albert Square with the big wheel in the south."
+      "mg_alt": "Schematic map of the 10 Christmas Market sites between Victoria in the north and Albert Square in the south, with the ice rink at Cathedral Gardens and the big wheel at Albert Square."
     },
     {
       "type": "event",
@@ -161,25 +217,22 @@
         10
       ],
       "mg": {
-        "kind": "week",
-        "marks": [
-          {
-            "date": "2026-11-19",
-            "label": "Opens",
-            "sub": "Confirm times"
-          }
+        "kind": "calendar",
+        "months": [
+          "2026-11",
+          "2026-12"
         ],
-        "span": {
+        "range": {
           "from": "2026-11-19",
           "to": "2026-12-31",
-          "label": "Nightly to 31 Dec"
+          "label": "Trail"
         }
       },
       "mg_caption": [
         "CAL / HEATON PARK",
-        "Timed entry"
+        "Timed entry · confirm times"
       ],
-      "mg_alt": "Week strip with Thursday 19 November marked as opening night and a bar running past the week to 31 December."
+      "mg_alt": "November and December calendars with the Northern Lights run filled in from 19 November to 31 December."
     },
     {
       "type": "sale",
@@ -213,21 +266,32 @@
         13
       ],
       "mg": {
-        "kind": "week",
-        "marks": [
+        "kind": "schedule",
+        "rows": [
           {
-            "date": "2026-11-20",
-            "label": "Preview",
-            "sub": "Fair opens",
-            "n": 2
+            "label": "PHM preview",
+            "days": [
+              "2026-11-20"
+            ],
+            "note": "17:00–20:00 · £10"
           },
           {
-            "date": "2026-11-21",
-            "label": "Market"
+            "label": "PHM makers mkt",
+            "days": [
+              "2026-11-21",
+              "2026-11-22"
+            ],
+            "note": "11:00–16:30 · free"
           },
           {
-            "date": "2026-11-22",
-            "label": "Market"
+            "label": "Trafford fair",
+            "days": [
+              "2026-11-20",
+              "2026-11-21",
+              "2026-11-22"
+            ],
+            "note": "To 3 Jan · + Haribo grotto",
+            "more": true
           }
         ]
       },
@@ -235,7 +299,7 @@
         "CAL / MARKETS",
         "Spinningfields · Trafford"
       ],
-      "mg_alt": "Week strip with Friday 20 November marked for the makers' market preview and the Trafford Centre fair opening, and Saturday 21 and Sunday 22 for the makers' market."
+      "mg_alt": "Schedule: the People's History Museum preview on Friday 20 November, its makers' market on Saturday 21 and Sunday 22, and the Trafford Centre Christmas fair from Friday 20, carrying on past the week."
     },
     {
       "type": "event",
@@ -268,25 +332,22 @@
         9
       ],
       "mg": {
-        "kind": "week",
-        "marks": [
-          {
-            "date": "2026-11-20",
-            "label": "Opens",
-            "sub": "Confirm times"
-          }
+        "kind": "calendar",
+        "months": [
+          "2026-11",
+          "2026-12"
         ],
-        "span": {
+        "range": {
           "from": "2026-11-20",
           "to": "2027-01-02",
-          "label": "Evenings to 2 Jan"
+          "label": "Trail"
         }
       },
       "mg_caption": [
         "CAL / DUNHAM MASSEY",
-        "National Trust · Altrincham"
+        "National Trust · confirm times"
       ],
-      "mg_alt": "Week strip with Friday 20 November marked as opening night and a bar running past the week to 2 January."
+      "mg_alt": "November and December calendars with the Dunham Massey Christmas trail filled in from 20 November, running on to 2 January."
     },
     {
       "type": "event",
@@ -325,27 +386,35 @@
         17
       ],
       "mg": {
-        "kind": "week",
-        "marks": [
+        "kind": "schedule",
+        "rows": [
           {
-            "date": "2026-11-19",
-            "label": "Bolton"
+            "label": "Bolton",
+            "days": [
+              "2026-11-19",
+              "2026-11-20",
+              "2026-11-21",
+              "2026-11-22"
+            ],
+            "note": "17:00–21:00 · town centre"
           },
           {
-            "date": "2026-11-20",
-            "label": "All 3",
-            "n": 3
+            "label": "Rochdale",
+            "days": [
+              "2026-11-20",
+              "2026-11-21",
+              "2026-11-22"
+            ],
+            "note": "17:00–20:00 · lights Sun"
           },
           {
-            "date": "2026-11-21",
-            "label": "All 3",
-            "n": 3
-          },
-          {
-            "date": "2026-11-22",
-            "label": "All 3",
-            "sub": "Lights on",
-            "n": 3
+            "label": "Wigan",
+            "days": [
+              "2026-11-20",
+              "2026-11-21",
+              "2026-11-22"
+            ],
+            "note": "Town centre · free"
           }
         ]
       },
@@ -353,7 +422,7 @@
         "CAL / LIGHT FESTIVALS",
         "Free · no booking"
       ],
-      "mg_alt": "Week strip with Thursday 19 November marked for Bolton and Friday 20 to Sunday 22 for all three festivals, with Rochdale's lights switched on on Sunday."
+      "mg_alt": "Schedule: Bolton from Thursday 19 to Sunday 22 November, 17:00 to 21:00; Rochdale and Wigan from Friday 20 to Sunday 22, with Rochdale 17:00 to 20:00 and its lights switched on on Sunday."
     },
     {
       "type": "event",
@@ -362,7 +431,7 @@
       "tag": "SPORT / EVENT TRAFFIC",
       "title": "City v Fulham and a busy arena week",
       "chip": "Sat 21 Nov · 12:30",
-      "body": "City host Fulham at the Etihad at 12:30 on Saturday 21 November. The arenas are busy too: Co-op Live has shows on Sunday 15, Thursday, Friday, Saturday and Sunday 22, and the AO Arena on Sunday 15, Tuesday, Friday and Saturday, plus Manchester Storm ice hockey on Thursday. Alan Turing Way is still shut northbound by the Etihad, and TfGM expects delays.",
+      "body": "City host Fulham at the Etihad at 12:30 on Saturday 21 November. The arenas are busy too: Co-op Live has shows on Sunday 15, Thursday, Friday, Saturday and Sunday 22, and the AO Arena on Sunday 15, Tuesday, Friday and Saturday, plus Manchester Storm ice hockey at 19:30 on Thursday. Alan Turing Way is still shut northbound by the Etihad, and TfGM expects delays.",
       "when": "Sat 21 Nov · 12:30",
       "what": "Football · arena event nights",
       "where": "Etihad Campus · AO Arena",
@@ -387,115 +456,230 @@
       "src": [
         18,
         19,
-        20
+        20,
+        21
       ],
       "mg": {
-        "kind": "week",
-        "marks": [
-          {
-            "date": "2026-11-15",
-            "label": "Arenas",
-            "n": 2
-          },
-          {
-            "date": "2026-11-17",
-            "label": "AO"
-          },
-          {
-            "date": "2026-11-19",
-            "label": "Arenas",
-            "n": 2
-          },
-          {
-            "date": "2026-11-20",
-            "label": "Arenas",
-            "n": 2
-          },
-          {
-            "date": "2026-11-21",
-            "label": "12:30",
-            "sub": "Fulham",
-            "n": 3
-          },
-          {
-            "date": "2026-11-22",
-            "label": "Co-op"
-          }
-        ],
-        "span": {
-          "from": "2026-04-04",
-          "to": null,
-          "label": "Alan Turing Way northbound shut"
-        }
+        "kind": "fixture",
+        "home": "Man City",
+        "away": "Fulham",
+        "time": "12:30",
+        "date": "Sat 21 Nov",
+        "comp": "Premier League",
+        "venue": "Etihad · Alan Turing Way NB shut"
       },
       "mg_caption": [
-        "CAL / SPORT + ARENAS",
-        "Etihad · Co-op Live · AO"
+        "FIX / ETIHAD",
+        "Arenas busy most nights"
       ],
-      "mg_alt": "Week strip with arena event nights marked on Sunday 15, Tuesday 17, Thursday 19, Friday 20 and Sunday 22 November, and City v Fulham at 12:30 plus two arena shows on Saturday 21, over a bar for the Alan Turing Way closure."
+      "mg_alt": "Match-day board: Man City v Fulham, Premier League, Saturday 21 November, kick-off 12:30 at the Etihad."
+    },
+    {
+      "type": "event",
+      "sub": "Football",
+      "short": "Women's football",
+      "tag": "SPORT / WOMEN'S FOOTBALL",
+      "title": "United and City Women both at home",
+      "chip": "Wed 18 · 19:00 / Sun 22 · 12:00",
+      "body": "United Women host Everton in the Players Cup at Leigh Sports Village at 19:00 on Wednesday 18 November. City Women play Tottenham Hotspur in the Women's Super League at the City Football Academy at 12:00 on Sunday 22 November. Kick-offs can move for TV.",
+      "when": "Wed 18 · 19:00 / Sun 22 · 12:00",
+      "what": "Players Cup · Super League",
+      "where": "Leigh Sports Village · CFA",
+      "days": [
+        "2026-11-18",
+        "2026-11-22"
+      ],
+      "links": [
+        [
+          "https://www.skysports.com/manchester-united-women-fixtures",
+          "United Women ↗"
+        ],
+        [
+          "https://www.skysports.com/manchester-city-women-fixtures",
+          "City Women ↗"
+        ]
+      ],
+      "src": [
+        22,
+        23
+      ],
+      "mg": {
+        "kind": "schedule",
+        "rows": [
+          {
+            "label": "Utd v Everton",
+            "days": [
+              "2026-11-18"
+            ],
+            "note": "19:00 · Leigh Sports Vill."
+          },
+          {
+            "label": "City v Spurs",
+            "days": [
+              "2026-11-22"
+            ],
+            "note": "12:00 · City Football Acad"
+          }
+        ]
+      },
+      "mg_caption": [
+        "CAL / WOMEN'S FOOTBALL",
+        "Home games"
+      ],
+      "mg_alt": "Schedule: United Women v Everton on Wednesday 18 November at 19:00 and City Women v Tottenham on Sunday 22 at 12:00."
     },
     {
       "type": "event",
       "sub": "Theatre",
-      "short": "Theatre + Lowry",
-      "tag": "THEATRE / CITY + SALFORD",
-      "title": "Christmas Carol Goes Wrong and more on stage",
-      "chip": "Tue 17 → Sun 22 · confirm times",
-      "body": "Christmas Carol Goes Wrong plays the Opera House from Tuesday 17 to Saturday 21 November, and comedian Josh Pugh is there on Sunday 22. At the Lowry, the National Theatre's Bacchae has public shows on Friday and Saturday for ages 15 and over, and the free Funny People exhibition opens on Saturday 21 November.",
-      "when": "Tue 17 → Sun 22 Nov",
-      "what": "Plays · comedy · free exhibition",
-      "where": "Opera House · Lowry",
+      "short": "Lowry + comedy",
+      "tag": "EXHIBITION + STAGE / SALFORD",
+      "title": "Funny People opens at the Lowry",
+      "chip": "Fri 20 → Sun 22 · confirm times",
+      "body": "The Lowry's free Funny People exhibition opens on Saturday 21 November and runs to 17 January. The National Theatre's Bacchae has its only public shows there on Friday and Saturday, for ages 15 and over. In the city centre, comedian Josh Pugh plays the Opera House on Sunday 22 November.",
+      "when": "Fri 20 → Sun 22 Nov",
+      "what": "Free exhibition · play · comedy",
+      "where": "Lowry · Opera House",
       "days": [
-        "2026-11-17",
-        "2026-11-18",
-        "2026-11-19",
         "2026-11-20",
         "2026-11-21",
         "2026-11-22"
       ],
       "links": [
         [
-          "https://www.atgtickets.com/venues/opera-house-manchester/whats-on/",
-          "Opera House ↗"
-        ],
-        [
           "https://www.creativetourist.com/event/funny-people-at-lowry/",
           "Funny People ↗"
+        ],
+        [
+          "https://www.atgtickets.com/venues/opera-house-manchester/whats-on/",
+          "Opera House ↗"
         ]
       ],
       "src": [
-        21,
-        22,
-        23
+        24,
+        25,
+        26
       ],
       "mg": {
-        "kind": "week",
-        "marks": [
+        "kind": "schedule",
+        "rows": [
           {
-            "date": "2026-11-20",
-            "label": "Bacchae"
+            "label": "Funny People",
+            "days": [
+              "2026-11-21",
+              "2026-11-22"
+            ],
+            "note": "Free · Lowry · to 17 Jan",
+            "more": true
           },
           {
-            "date": "2026-11-21",
-            "label": "Lowry",
-            "sub": "Funny People"
+            "label": "Bacchae",
+            "days": [
+              "2026-11-20",
+              "2026-11-21"
+            ],
+            "note": "National Theatre · 15+"
           },
           {
-            "date": "2026-11-22",
-            "label": "Comedy"
+            "label": "Josh Pugh",
+            "days": [
+              "2026-11-22"
+            ],
+            "note": "Comedy · Opera House"
           }
-        ],
-        "span": {
-          "from": "2026-11-17",
-          "to": "2026-11-21",
-          "label": "Christmas Carol Goes Wrong"
-        }
+        ]
       },
       "mg_caption": [
-        "CAL / THEATRE",
-        "Opera House · Lowry"
+        "CAL / STAGE + EXHIBITION",
+        "Lowry · Opera House"
       ],
-      "mg_alt": "Week strip with a bar from Tuesday 17 to Saturday 21 November for Christmas Carol Goes Wrong, Friday 20 marked for Bacchae, Saturday 21 for the Funny People opening at the Lowry and Sunday 22 for Josh Pugh's comedy show."
+      "mg_alt": "Schedule: Funny People at the Lowry from Saturday 21 November, carrying on past the week; Bacchae on Friday 20 and Saturday 21; Josh Pugh on Sunday 22."
+    },
+    {
+      "type": "event",
+      "sub": "Museum",
+      "short": "Museum of Transport",
+      "tag": "FAMILY / MUSEUM",
+      "title": "Museum of Transport: under-16s go free",
+      "chip": "Wed · Sat · Sun · 10:00–16:30",
+      "body": "The Museum of Transport on Boyle Street, Cheetham, is open on Wednesday, Saturday and Sunday from 10:00 to 16:30, with no need to book. Adult entry is £7.50 and students pay £6, while under-16s go free with an adult. Disabled visitors also go free. Charges can differ on event days.",
+      "when": "Wed · Sat · Sun · 10:00–16:30",
+      "what": "Buses and trams · £7.50 adults",
+      "where": "Boyle St · Cheetham · M8 8UW",
+      "days": [
+        "2026-11-15",
+        "2026-11-18",
+        "2026-11-21",
+        "2026-11-22"
+      ],
+      "links": [
+        [
+          "https://motgm.uk/visit-admission.html",
+          "Prices ↗"
+        ],
+        [
+          "https://motgm.uk/",
+          "Museum ↗"
+        ]
+      ],
+      "src": [
+        27,
+        28,
+        29
+      ],
+      "mg": {
+        "kind": "count",
+        "value": "£0",
+        "caption": "Under-16s with an adult",
+        "sub": "Adults £7.50 · Wed, Sat, Sun 10:00–16:30"
+      },
+      "mg_caption": [
+        "PRC / MUSEUM OF TRANSPORT",
+        "Boyle Street, Cheetham"
+      ],
+      "mg_alt": "Dot-matrix readout of £0, the price for under-16s with an adult; adults pay £7.50, open Wednesday, Saturday and Sunday 10:00 to 16:30."
+    },
+    {
+      "type": "event",
+      "sub": "Bury",
+      "ahead": true,
+      "short": "Santa Specials",
+      "tag": "FAMILY / LOOK-AHEAD",
+      "title": "Santa steam trains start from Bury next weekend",
+      "chip": "Look-ahead · Sat 28 Nov",
+      "body": "The East Lancashire Railway's Santa Special steam trains start on Saturday 28 and Sunday 29 November, running from Bury Bolton Street station. Tickets start at £25 for adults and £24.50 for children, booked in advance. A SEND family Santa Special also runs that weekend.",
+      "when": "From Sat 28 Nov",
+      "what": "Steam trains · from £24.50",
+      "where": "Bury Bolton Street station",
+      "links": [
+        [
+          "https://www.eastlancsrailway.org.uk/events-activities/santa-specials/",
+          "Book ↗"
+        ]
+      ],
+      "src": [
+        30
+      ],
+      "mg": {
+        "kind": "calendar",
+        "months": [
+          "2026-11"
+        ],
+        "marks": [
+          {
+            "date": "2026-11-28",
+            "label": "First trains"
+          },
+          {
+            "date": "2026-11-29",
+            "label": "+ SEND train"
+          }
+        ]
+      },
+      "mg_caption": [
+        "CAL / LOOK-AHEAD",
+        "Bury Bolton Street"
+      ],
+      "mg_alt": "November calendar with Saturday 28 and Sunday 29 November picked out as the first Santa Special weekend."
     },
     {
       "type": "transport",
@@ -521,40 +705,44 @@
       ],
       "src": [
         10,
-        24,
-        25,
-        26
+        31,
+        32,
+        33
       ],
       "mg": {
-        "kind": "week",
-        "marks": [
+        "kind": "schedule",
+        "rows": [
           {
-            "date": "2026-11-15",
-            "label": "Shut",
-            "n": 2
+            "label": "Corporation St",
+            "days": [
+              "2026-11-15",
+              "2026-11-21",
+              "2026-11-22"
+            ],
+            "note": "Sat 08:00 – Sun 21:00"
           },
           {
-            "date": "2026-11-21",
-            "label": "Shut",
-            "n": 2
+            "label": "Bury Old Rd",
+            "days": "all",
+            "note": "20:00–06:00 · to 23 Nov",
+            "more": true
           },
           {
-            "date": "2026-11-22",
-            "label": "Shut",
-            "n": 2
+            "label": "NMGH roads",
+            "days": [
+              "2026-11-15",
+              "2026-11-21",
+              "2026-11-22"
+            ],
+            "note": "Sat 07:00 – Sun 15:30"
           }
-        ],
-        "span": {
-          "from": "2026-11-14",
-          "to": "2026-11-23",
-          "label": "Bury Old Road shut 20:00–06:00 nightly"
-        }
+        ]
       },
       "mg_caption": [
         "CAL / BUSES",
         "135 · 41 · 52 · 53 · 94 · 97 · 151"
       ],
-      "mg_alt": "Week strip with Sunday 15, Saturday 21 and Sunday 22 November marked for the Corporation Street and hospital weekend closures, over a bar for the nightly Bury Old Road closure."
+      "mg_alt": "Schedule: Corporation Street shut one way on Sunday 15, Saturday 21 and Sunday 22 November; Bury Old Road shut every night; the hospital roads shut on the same weekend days."
     },
     {
       "type": "transport",
@@ -583,32 +771,41 @@
         ]
       ],
       "src": [
-        27,
-        28
+        34,
+        35
       ],
       "mg": {
-        "kind": "week",
-        "marks": [
+        "kind": "schedule",
+        "rows": [
           {
-            "date": "2026-11-20",
-            "label": "20:00"
+            "label": "Deansgate shut",
+            "days": [
+              "2026-11-20",
+              "2026-11-21"
+            ],
+            "note": "Fri from 20:00 · Sat 18:00"
           },
           {
-            "date": "2026-11-21",
-            "label": "18:00"
+            "label": "Extra Sun trains",
+            "days": [
+              "2026-11-22"
+            ],
+            "note": "+34 to Victoria"
           },
           {
-            "date": "2026-11-22",
-            "label": "+34",
-            "sub": "Sun trains"
+            "label": "Clitheroe buses",
+            "days": [
+              "2026-11-22"
+            ],
+            "note": "Blackburn – Clitheroe"
           }
         ]
       },
       "mg_caption": [
         "CAL / RAIL",
-        "Deansgate closes from"
+        "Northern"
       ],
-      "mg_alt": "Week strip with Friday 20 November marked 20:00 and Saturday 21 marked 18:00 for the Deansgate station closures, and Sunday 22 marked for 34 extra Sunday trains."
+      "mg_alt": "Schedule: Deansgate station shut on Friday 20 and Saturday 21 November evenings; 34 extra Sunday trains to Victoria and replacement buses on the Clitheroe line on Sunday 22."
     }
   ],
   "sources": [
@@ -693,8 +890,20 @@
       "TfGM — road alerts: Alan Turing Way northbound closure"
     ],
     [
+      "https://www.manchesterstorm.com/game-centre/fixtures/primary/full",
+      "Manchester Storm — fixtures (Fife Flyers, Thu 19 Nov, 19:30)"
+    ],
+    [
+      "https://www.skysports.com/manchester-united-women-fixtures",
+      "Sky Sports — Man Utd Women fixtures (Everton, Wed 18 Nov, 19:00)"
+    ],
+    [
+      "https://www.skysports.com/manchester-city-women-fixtures",
+      "Sky Sports — Man City Women fixtures (Spurs, Sun 22 Nov, 12:00)"
+    ],
+    [
       "https://www.atgtickets.com/venues/opera-house-manchester/whats-on/",
-      "ATG — Opera House Manchester listings"
+      "ATG — Opera House Manchester listings (Josh Pugh, Sun 22 Nov)"
     ],
     [
       "https://www.creativetourist.com/event/bacchae/",
@@ -703,6 +912,22 @@
     [
       "https://www.creativetourist.com/event/funny-people-at-lowry/",
       "Creative Tourist — Funny People at the Lowry (secondary)"
+    ],
+    [
+      "https://motgm.uk/",
+      "Museum of Transport Greater Manchester — open Wednesdays and weekends"
+    ],
+    [
+      "https://motgm.uk/visit-admission.html",
+      "Museum of Transport — admission prices"
+    ],
+    [
+      "https://motgm.uk/visit-opening.html",
+      "Museum of Transport — opening times"
+    ],
+    [
+      "https://www.eastlancsrailway.org.uk/events-activities/santa-specials/",
+      "East Lancashire Railway — Santa Specials from 28 Nov"
     ],
     [
       "https://tfgm.com/travel-updates/live-departures/bus/135-bury?no-script=true",

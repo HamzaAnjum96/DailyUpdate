@@ -99,3 +99,38 @@ test('hours rejects impossible windows and axes', () => {
     assert.ok(checkMicrographic({ ...ok, ...bad }, ctx).length, JSON.stringify(bad));
   }
 });
+
+test('schedule keeps rows inside the week strip and notes short', () => {
+  const row = { label: 'Bolton', days: ['2026-10-22'], note: '17:00–21:00' };
+  assert.deepEqual(checkMicrographic({ kind: 'schedule', rows: [row] }, ctx), []);
+  assert.match(checkMicrographic({ kind: 'schedule', rows: [{ ...row, days: ['2026-10-26'] }] }, ctx).join(' '), /outside the week strip/);
+  assert.match(checkMicrographic({ kind: 'schedule', rows: [{ ...row, note: 'x'.repeat(27) }] }, ctx).join(' '), /up to 26/);
+  assert.match(checkMicrographic({ kind: 'schedule', rows: Array(5).fill(row) }, ctx).join(' '), /fits 4/);
+  for (const rows of [null, [], [null], [{ days: 'all' }]]) assert.ok(checkMicrographic({ kind: 'schedule', rows }, ctx).length);
+});
+
+test('calendar rejects bad months and keys that would not fit', () => {
+  assert.ok(checkMicrographic({ kind: 'calendar', months: ['2026-13'], marks: [{ date: '2026-10-25' }] }, ctx).length);
+  assert.ok(checkMicrographic({ kind: 'calendar', months: ['2026-11', '2026-10'], marks: [{ date: '2026-10-25' }] }, ctx).length);
+  assert.match(checkMicrographic({ kind: 'calendar', months: ['2026-11'] }, ctx).join(' '), /range or marks/);
+  assert.match(checkMicrographic({ kind: 'calendar', months: ['2026-11'], range: { from: '2026-11-30', to: '2026-11-01' } }, ctx).join(' '), /on or after/);
+  const long = { kind: 'calendar', months: ['2026-11', '2026-12'], range: { from: '2026-11-20', to: '2027-01-02', label: 'A very long trail name' }, marks: [{ date: '2026-12-24', label: 'Another long label' }] };
+  assert.match(checkMicrographic(long, ctx).join(' '), /too long/);
+});
+
+test('map rejects off-grid points and overlapping labels', () => {
+  const p = { x: 50, y: 50, label: 'Albert Sq' };
+  assert.deepEqual(checkMicrographic({ kind: 'map', points: [p] }, ctx), []);
+  assert.match(checkMicrographic({ kind: 'map', points: [{ ...p, x: 120 }] }, ctx).join(' '), /0 to 100/);
+  assert.match(checkMicrographic({ kind: 'map', points: [p, { ...p, label: 'King St', y: 51 }] }, ctx).join(' '), /overlap/);
+  assert.match(checkMicrographic({ kind: 'map', points: [{ ...p, x: 99 }] }, ctx).join(' '), /runs off/);
+  assert.match(checkMicrographic({ kind: 'map', points: [{ ...p, side: 'up' }] }, ctx).join(' '), /side/);
+});
+
+test('fixture needs two short team names and a 24-hour kick-off', () => {
+  const ok = { kind: 'fixture', home: 'Man City', away: 'Fulham', time: '12:30' };
+  assert.deepEqual(checkMicrographic(ok, ctx), []);
+  assert.match(checkMicrographic({ ...ok, time: '12.30pm' }, ctx).join(' '), /HH:MM/);
+  assert.match(checkMicrographic({ ...ok, away: 'Wolverhampton Wanderers' }, ctx).join(' '), /abbreviate/);
+  assert.match(checkMicrographic({ ...ok, home: '' }, ctx).join(' '), /home is required/);
+});
