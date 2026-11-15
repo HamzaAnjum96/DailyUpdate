@@ -1,11 +1,11 @@
 {
   "week": 47,
-  "rev": "C",
+  "rev": "D",
   "start": "2026-11-15",
   "end": "2026-11-22",
   "checked": "2026-11-14",
   "tz": "GMT",
-  "note": "Checked 14 November 2026. All times are GMT. Black Friday dates come from Amazon UK and the Trafford Centre; Argos, John Lewis, Currys, AO, Very and the Arndale blocked fetching. Christmas Markets hours come from DesignMyNight because the council's page blocks fetching. Lowry details come from Creative Tourist because the Lowry's site wouldn't load. Still to confirm: Northern Lights nightly entry times, arena and theatre show times, and the bus diversion routes, which TfGM doesn't publish. Kick-offs can move for TV.",
+  "note": "Checked 14 November 2026. All times are GMT. Black Friday dates come from Amazon UK and the Trafford Centre; Argos, John Lewis, Currys, AO, Very and the Arndale blocked fetching. Christmas Markets hours come from DesignMyNight because the council's page blocks fetching. Lowry details come from Creative Tourist because the Lowry's site wouldn't load. Still to confirm: Northern Lights and Dunham Massey entry times, arena and theatre show times, and the bus diversion routes, which TfGM doesn't publish. Kick-offs can move for TV.",
   "cards": [
     {
       "type": "sale",
@@ -156,10 +156,10 @@
         ]
       ],
       "src": [
-        10,
-        11,
-        12,
-        28
+        7,
+        8,
+        9,
+        10
       ],
       "mg": {
         "kind": "week",
@@ -209,9 +209,9 @@
         ]
       ],
       "src": [
-        7,
-        8,
-        9
+        11,
+        12,
+        13
       ],
       "mg": {
         "kind": "week",
@@ -237,6 +237,57 @@
         "Spinningfields · Trafford"
       ],
       "mg_alt": "Week strip with Friday 20 November marked for the makers' market preview and the Trafford Centre fair opening, and Saturday 21 and Sunday 22 for the makers' market."
+    },
+    {
+      "type": "event",
+      "sub": "Dunham Massey",
+      "short": "Dunham Massey",
+      "tag": "TICKETED / LIGHT TRAIL",
+      "title": "Christmas at Dunham Massey opens Friday",
+      "chip": "From Fri 20 Nov · confirm times",
+      "body": "The National Trust's after-dark Christmas trail at Dunham Massey opens on Friday 20 November and runs to Saturday 2 January. Off-peak tickets start at £19.50 for adults and £13 for children. Inside the house, a shorter Christmas route, A Trail of Tails, runs from 20 November to 24 December. Dunham Massey is on Woodhouse Lane, Altrincham, and the 280 bus runs from Altrincham.",
+      "when": "Fri 20 Nov → Sat 2 Jan",
+      "what": "Light trail · from £19.50",
+      "where": "Dunham Massey · Altrincham",
+      "days": [
+        "2026-11-20",
+        "2026-11-21",
+        "2026-11-22"
+      ],
+      "links": [
+        [
+          "https://www.nationaltrust.org.uk/visit/cheshire-greater-manchester/dunham-massey",
+          "National Trust ↗"
+        ],
+        [
+          "https://www.visitmanchester.com/ideas-and-inspiration/blog/post/christmas-lights-in-manchester-2026/",
+          "Prices ↗"
+        ]
+      ],
+      "src": [
+        14,
+        9
+      ],
+      "mg": {
+        "kind": "week",
+        "marks": [
+          {
+            "date": "2026-11-20",
+            "label": "Opens",
+            "sub": "Confirm times"
+          }
+        ],
+        "span": {
+          "from": "2026-11-20",
+          "to": "2027-01-02",
+          "label": "Evenings to 2 Jan"
+        }
+      },
+      "mg_caption": [
+        "CAL / DUNHAM MASSEY",
+        "National Trust · Altrincham"
+      ],
+      "mg_alt": "Week strip with Friday 20 November marked as opening night and a bar running past the week to 2 January."
     },
     {
       "type": "event",
@@ -270,9 +321,9 @@
         ]
       ],
       "src": [
-        13,
-        14,
-        15
+        15,
+        16,
+        17
       ],
       "mg": {
         "kind": "week",
@@ -307,15 +358,15 @@
     },
     {
       "type": "event",
-      "sub": "Gigs",
-      "short": "Arena gigs",
-      "tag": "GIGS / CO-OP LIVE + AO ARENA",
-      "title": "Nine arena shows this week",
-      "chip": "Sun 15 → Sun 22 · confirm times",
-      "body": "Co-op Live has Myles Smith on Sunday 15 November, Enter Shikari on Thursday, Good Charlotte on Friday, Hits Radio Live on Saturday and Don Toliver on Sunday 22. The AO Arena has Gladiators on Sunday 15, beabadoobee on Tuesday, Shinedown on Friday and Fontaines D.C. on Saturday. Check start times with each venue.",
-      "when": "Sun 15 → Sun 22 Nov",
-      "what": "9 shows · 2 arenas",
-      "where": "Co-op Live · AO Arena",
+      "sub": "Sport",
+      "short": "City + arenas",
+      "tag": "SPORT / EVENT TRAFFIC",
+      "title": "City v Fulham and a busy arena week",
+      "chip": "Sat 21 Nov · 12:30",
+      "body": "City host Fulham at the Etihad at 12:30 on Saturday 21 November. The arenas are busy too: Co-op Live has shows on Sunday 15, Thursday, Friday, Saturday and Sunday 22, and the AO Arena on Sunday 15, Tuesday, Friday and Saturday, plus Manchester Storm ice hockey on Thursday. Alan Turing Way is still shut northbound by the Etihad, and TfGM expects delays.",
+      "when": "Sat 21 Nov · 12:30",
+      "what": "Football · arena event nights",
+      "where": "Etihad Campus · AO Arena",
       "days": [
         "2026-11-15",
         "2026-11-17",
@@ -326,19 +377,25 @@
       ],
       "links": [
         [
+          "https://tfgm.com/getting-to-the-etihad",
+          "Getting there ↗"
+        ],
+        [
           "https://tfgm.com/plan-a-journey/events",
           "TfGM events ↗"
         ]
       ],
       "src": [
-        16
+        18,
+        19,
+        20
       ],
       "mg": {
         "kind": "week",
         "marks": [
           {
             "date": "2026-11-15",
-            "label": "Both",
+            "label": "Arenas",
             "n": 2
           },
           {
@@ -347,78 +404,23 @@
           },
           {
             "date": "2026-11-19",
-            "label": "Co-op"
+            "label": "Arenas",
+            "n": 2
           },
           {
             "date": "2026-11-20",
-            "label": "Both",
+            "label": "Arenas",
             "n": 2
-          },
-          {
-            "date": "2026-11-21",
-            "label": "Both",
-            "n": 2
-          },
-          {
-            "date": "2026-11-22",
-            "label": "Co-op"
-          }
-        ]
-      },
-      "mg_caption": [
-        "CAL / ARENAS",
-        "Co-op Live · AO Arena"
-      ],
-      "mg_alt": "Week strip with arena shows marked on Sunday 15, Tuesday 17, Thursday 19, Friday 20, Saturday 21 and Sunday 22 November, with both arenas busy on Sunday 15, Friday and Saturday."
-    },
-    {
-      "type": "event",
-      "sub": "Sport",
-      "short": "City v Fulham",
-      "tag": "SPORT / ETIHAD",
-      "title": "City host Fulham on Saturday lunchtime",
-      "chip": "Sat 21 Nov · 12:30",
-      "body": "City host Fulham in the Premier League at the Etihad at 12:30 on Saturday 21 November, and Manchester Storm play Fife Flyers at the AO Arena on Thursday. United are away at Liverpool at 16:30 on Sunday. Alan Turing Way is still shut northbound by the Etihad, and TfGM expects delays. Kick-offs can move for TV.",
-      "when": "Sat 21 Nov · 12:30",
-      "what": "Premier League · ice hockey",
-      "where": "Etihad Stadium · AO Arena",
-      "days": [
-        "2026-11-19",
-        "2026-11-21",
-        "2026-11-22"
-      ],
-      "links": [
-        [
-          "https://tfgm.com/getting-to-the-etihad",
-          "Getting there ↗"
-        ],
-        [
-          "https://www.skysports.com/manchester-city-fixtures",
-          "Fixtures ↗"
-        ]
-      ],
-      "src": [
-        17,
-        18,
-        16,
-        19
-      ],
-      "mg": {
-        "kind": "week",
-        "marks": [
-          {
-            "date": "2026-11-19",
-            "label": "Storm"
           },
           {
             "date": "2026-11-21",
             "label": "12:30",
-            "sub": "Fulham"
+            "sub": "Fulham",
+            "n": 3
           },
           {
             "date": "2026-11-22",
-            "label": "16:30",
-            "sub": "Utd away"
+            "label": "Co-op"
           }
         ],
         "span": {
@@ -428,63 +430,10 @@
         }
       },
       "mg_caption": [
-        "CAL / SPORT",
-        "Kick-offs can move for TV"
+        "CAL / SPORT + ARENAS",
+        "Etihad · Co-op Live · AO"
       ],
-      "mg_alt": "Week strip with Thursday 19 November marked for Manchester Storm, Saturday 21 for City v Fulham at 12:30 and Sunday 22 for United away at 16:30, over a bar for the Alan Turing Way closure."
-    },
-    {
-      "type": "event",
-      "sub": "Concerts",
-      "short": "Bridgewater Hall",
-      "tag": "CONCERTS / BRIDGEWATER HALL",
-      "title": "Hallé and classics at the Bridgewater Hall",
-      "chip": "Thu 19 · Sat 21 · Sun 22",
-      "body": "The Hallé plays Stravinsky's The Firebird at 19:30 on Thursday 19 November, from £18.50, and Elvis: Viva Las Vegas at 19:30 on Saturday. Classical Spectacular follows at 15:00 on Sunday 22 November, with tickets from £30.25 to £51.25 including the booking fee. The hall is on Lower Mosley Street.",
-      "when": "Thu 19 · Sat 21 · Sun 22 Nov",
-      "what": "3 concerts · from £18.50",
-      "where": "Bridgewater Hall · M2 3WS",
-      "days": [
-        "2026-11-19",
-        "2026-11-21",
-        "2026-11-22"
-      ],
-      "links": [
-        [
-          "https://www.bridgewater-hall.co.uk/whats-on/",
-          "What's on ↗"
-        ]
-      ],
-      "src": [
-        20,
-        21,
-        22
-      ],
-      "mg": {
-        "kind": "week",
-        "marks": [
-          {
-            "date": "2026-11-19",
-            "label": "19:30",
-            "sub": "Firebird"
-          },
-          {
-            "date": "2026-11-21",
-            "label": "19:30",
-            "sub": "Elvis"
-          },
-          {
-            "date": "2026-11-22",
-            "label": "15:00",
-            "sub": "Classics"
-          }
-        ]
-      },
-      "mg_caption": [
-        "CAL / BRIDGEWATER HALL",
-        "Lower Mosley Street"
-      ],
-      "mg_alt": "Week strip with Thursday 19 November marked 19:30 Firebird, Saturday 21 marked 19:30 Elvis and Sunday 22 marked 15:00 Classical Spectacular."
+      "mg_alt": "Week strip with arena event nights marked on Sunday 15, Tuesday 17, Thursday 19, Friday 20 and Sunday 22 November, and City v Fulham at 12:30 plus two arena shows on Saturday 21, over a bar for the Alan Turing Way closure."
     },
     {
       "type": "event",
@@ -492,17 +441,18 @@
       "short": "Theatre + Lowry",
       "tag": "THEATRE / CITY + SALFORD",
       "title": "Christmas Carol Goes Wrong and more on stage",
-      "chip": "Tue 17 → Sat 21 · confirm times",
-      "body": "Christmas Carol Goes Wrong plays the Opera House from Tuesday 17 to Saturday 21 November, and CATS ends its run at the Palace Theatre on Saturday. At the Lowry, the National Theatre's Bacchae has public shows on Friday and Saturday for ages 15 and over, and the free Funny People exhibition opens on Saturday 21 November.",
-      "when": "Tue 17 → Sat 21 Nov",
-      "what": "3 shows · 1 free exhibition",
-      "where": "Opera House · Palace · Lowry",
+      "chip": "Tue 17 → Sun 22 · confirm times",
+      "body": "Christmas Carol Goes Wrong plays the Opera House from Tuesday 17 to Saturday 21 November, and comedian Josh Pugh is there on Sunday 22. At the Lowry, the National Theatre's Bacchae has public shows on Friday and Saturday for ages 15 and over, and the free Funny People exhibition opens on Saturday 21 November.",
+      "when": "Tue 17 → Sun 22 Nov",
+      "what": "Plays · comedy · free exhibition",
+      "where": "Opera House · Lowry",
       "days": [
         "2026-11-17",
         "2026-11-18",
         "2026-11-19",
         "2026-11-20",
-        "2026-11-21"
+        "2026-11-21",
+        "2026-11-22"
       ],
       "links": [
         [
@@ -515,10 +465,9 @@
         ]
       ],
       "src": [
-        23,
-        24,
-        25,
-        26
+        21,
+        22,
+        23
       ],
       "mg": {
         "kind": "week",
@@ -529,8 +478,12 @@
           },
           {
             "date": "2026-11-21",
-            "label": "CATS",
-            "sub": "Last show"
+            "label": "Lowry",
+            "sub": "Funny People"
+          },
+          {
+            "date": "2026-11-22",
+            "label": "Comedy"
           }
         ],
         "span": {
@@ -541,44 +494,9 @@
       },
       "mg_caption": [
         "CAL / THEATRE",
-        "Opera House · Palace · Lowry"
+        "Opera House · Lowry"
       ],
-      "mg_alt": "Week strip with a bar from Tuesday 17 to Saturday 21 November for Christmas Carol Goes Wrong, Friday 20 marked for Bacchae and Saturday 21 for the last CATS show."
-    },
-    {
-      "type": "event",
-      "sub": "Music",
-      "short": "Crumpsall Folk Club",
-      "tag": "FOLK NIGHT / CRUMPSALL",
-      "title": "Johnny Campbell at Crumpsall Folk Club",
-      "chip": "Thu 19 Nov · doors 19:30",
-      "body": "Sheffield singer Johnny Campbell headlines Crumpsall Folk Club at The Cleveland on Crumpsall Lane, opposite Crumpsall tram stop, on Thursday 19 November. Doors open at 19:30, floor spots start at 19:45 and the main act is on around 21:00. Entry is £5, £2 concessions or £10 solidarity, with proceeds to Rainbow Surprise.",
-      "when": "Thu 19 Nov · doors 19:30",
-      "what": "Folk night · £5 entry",
-      "where": "The Cleveland · Crumpsall Ln",
-      "days": [
-        "2026-11-19"
-      ],
-      "links": [
-        [
-          "https://crumpsallfolkclub.co.uk/thursday-19th-november-crumpsall-folk-club-feat-johnny-campbell/",
-          "Event details ↗"
-        ]
-      ],
-      "src": [
-        27
-      ],
-      "mg": {
-        "kind": "count",
-        "value": "£5",
-        "caption": "Entry · £2 concessions",
-        "sub": "Doors 19:30 · main act about 21:00"
-      },
-      "mg_caption": [
-        "PRC / FOLK CLUB",
-        "Third Thursday"
-      ],
-      "mg_alt": "Dot-matrix readout of £5, the entry price, for Thursday 19 November with doors at 19:30."
+      "mg_alt": "Week strip with a bar from Tuesday 17 to Saturday 21 November for Christmas Carol Goes Wrong, Friday 20 marked for Bacchae, Saturday 21 for the Funny People opening at the Lowry and Sunday 22 for Josh Pugh's comedy show."
     },
     {
       "type": "transport",
@@ -603,10 +521,10 @@
         ]
       ],
       "src": [
-        28,
-        29,
-        30,
-        31
+        10,
+        24,
+        25,
+        26
       ],
       "mg": {
         "kind": "week",
@@ -666,8 +584,8 @@
         ]
       ],
       "src": [
-        32,
-        33
+        27,
+        28
       ],
       "mg": {
         "kind": "week",
@@ -720,6 +638,22 @@
       "Visit Manchester — what's on this Christmas"
     ],
     [
+      "https://northernlightsmanchester.com/signup/",
+      "Northern Lights Manchester — 19 Nov – 31 Dec 2026, Heaton Park"
+    ],
+    [
+      "https://northernlightsmanchester.com/plan-your-visit/directions/",
+      "Northern Lights Manchester — directions, parking and Gate 13"
+    ],
+    [
+      "https://www.visitmanchester.com/ideas-and-inspiration/blog/post/christmas-lights-in-manchester-2026/",
+      "Visit Manchester — Christmas lights 2026 (Northern Lights and Dunham Massey prices)"
+    ],
+    [
+      "https://tfgm.com/travel-updates/live-departures/bus/135-piccadilly-gardens?no-script=true",
+      "TfGM — 135 from Piccadilly Gardens: Bury Old Road overnight closure"
+    ],
+    [
       "https://phm.org.uk/",
       "People's History Museum — Winter Makers Market, 20–22 Nov"
     ],
@@ -732,16 +666,8 @@
       "Trafford Centre — Christmas Fair and Markets, Haribo grotto"
     ],
     [
-      "https://northernlightsmanchester.com/signup/",
-      "Northern Lights Manchester — 19 Nov – 31 Dec 2026, Heaton Park"
-    ],
-    [
-      "https://northernlightsmanchester.com/plan-your-visit/directions/",
-      "Northern Lights Manchester — directions, parking and Gate 13"
-    ],
-    [
-      "https://www.visitmanchester.com/ideas-and-inspiration/blog/post/christmas-lights-in-manchester-2026/",
-      "Visit Manchester — Christmas lights 2026"
+      "https://www.nationaltrust.org.uk/visit/cheshire-greater-manchester/dunham-massey",
+      "National Trust — Dunham Massey: Christmas at Dunham Massey, A Trail of Tails"
     ],
     [
       "https://www.bolton.gov.uk/news/article/2134/put-big-light-on-2026-set-to-illuminate-bolton-this-november",
@@ -756,40 +682,20 @@
       "Light Night Wigan 2026, 20–22 Nov"
     ],
     [
-      "https://tfgm.com/plan-a-journey/events",
-      "TfGM — events calendar: Co-op Live, AO Arena, Etihad"
-    ],
-    [
       "https://www.skysports.com/manchester-city-fixtures",
       "Sky Sports — Man City fixtures (Fulham Sat 21, 12:30)"
     ],
     [
-      "https://www.skysports.com/manchester-united-fixtures",
-      "Sky Sports — Man Utd fixtures (Liverpool away Sun 22, 16:30)"
+      "https://tfgm.com/plan-a-journey/events",
+      "TfGM — events calendar: Etihad, Co-op Live, AO Arena"
     ],
     [
       "https://tfgm.com/travel-updates/travel-alerts?active_tab=road",
       "TfGM — road alerts: Alan Turing Way northbound closure"
     ],
     [
-      "https://www.bridgewater-hall.co.uk/whats-on/",
-      "Bridgewater Hall — what's on"
-    ],
-    [
-      "https://www.bridgewater-hall.co.uk/whats-on/classical-spectacular-221126/",
-      "Bridgewater Hall — Classical Spectacular, Sun 22 Nov"
-    ],
-    [
-      "https://www.creativetourist.com/event/stravinskys-the-firebird/",
-      "Creative Tourist — The Firebird (price)"
-    ],
-    [
       "https://www.atgtickets.com/venues/opera-house-manchester/whats-on/",
       "ATG — Opera House Manchester listings"
-    ],
-    [
-      "https://www.atgtickets.com/venues/palace-theatre-manchester/whats-on/",
-      "ATG — Palace Theatre Manchester listings"
     ],
     [
       "https://www.creativetourist.com/event/bacchae/",
@@ -798,14 +704,6 @@
     [
       "https://www.creativetourist.com/event/funny-people-at-lowry/",
       "Creative Tourist — Funny People at the Lowry (secondary)"
-    ],
-    [
-      "https://crumpsallfolkclub.co.uk/thursday-19th-november-crumpsall-folk-club-feat-johnny-campbell/",
-      "Crumpsall Folk Club — Johnny Campbell, Thu 19 Nov"
-    ],
-    [
-      "https://tfgm.com/travel-updates/live-departures/bus/135-piccadilly-gardens?no-script=true",
-      "TfGM — 135 from Piccadilly Gardens: Bury Old Road overnight closure"
     ],
     [
       "https://tfgm.com/travel-updates/live-departures/bus/135-bury?no-script=true",

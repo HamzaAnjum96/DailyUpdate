@@ -9,7 +9,8 @@ These priorities shape the choices; they never appear on the deck. Card copy doe
 The brief is a what's-on guide first, with travel at the end.
 
 1. **Lead with the big things** people go to or plan around that week: seasonal sales (Black Friday, Boxing Day), the Christmas Markets (that they're open, where every site is, and the hours) and big seasonal openings such as the Heaton Park light trail. One of these takes the priority card (hazard band, cover teaser), not a travel item.
-2. **Then events, and plenty of them.** They should be most of the deck: arena gigs, sport, theatre, concerts, exhibitions, makers' and festive markets, light trails and free festivals around Greater Manchester, plus the local events below. Group similar items on one card (a week's arena gigs, a venue's concerts) so more fit.
+2. **Then events, and plenty of them.** They should be most of the deck: sport, theatre, comedy, exhibitions, makers' and festive markets, light trails and free festivals around Greater Manchester, plus the local events below. Group similar items on one card (a venue's shows, a weekend's markets) so more fit.
+   - **No music events.** Gigs, concerts, club and folk nights and musicals don't get cards. Only their traffic goes in, on the sport card for the same venue (Co-op Live with the Etihad, the AO Arena with Manchester Storm) or on a travel card.
 3. **News** only when something changes for people that week.
 4. **Travel last, and short:**
    - **Buses get one card** covering every diversion, closure and missed stop on the routes below. A disruption gets its own bus card only if it stops buses or badly hits them at peak hours (a weekday, daytime closure of a main road or interchange).
@@ -95,14 +96,13 @@ manchester.gov.uk blocks automated fetching, so its roadworks and Mancunian Way 
 Area: Cheetham Hill and Cheetham (M8), Crumpsall, Strangeways and Red Bank, Broughton, Harpurhey and Heaton Park. These rank ahead of city-centre events, and smaller ones (a museum drop-in, a library session) can make the cut.
 
 - **Museum of Transport**, Boyle Street, off Queens Road. Open Wednesdays, weekends and bank holidays. Dates are on https://motgm.uk/events-themed.html; the calendar page shows months only.
-- **Irish World Heritage Centre**, Irish Town Way, by Queens Road tram stop. https://iwhc.com/events/
+- **Irish World Heritage Centre**, Irish Town Way, by Queens Road tram stop. Non-music events only. https://iwhc.com/events/
 - **Manchester Fort Shopping Park**, Cheetham Hill Road. https://manchesterfort.co.uk/latest-news/
 - **Abraham Moss Library & Leisure Centre**, Crescent Road. This is the local library, since Cheetham Hill has none open. https://www.better.org.uk/leisure-centre/manchester/abraham-moss/news
 - **North City Family and Fitness Centre**, Harpurhey. https://www.better.org.uk/leisure-centre/manchester/north-city/news
 - **Manchester Libraries blog** for north Manchester branch posts (Abraham Moss, North City). https://manclibraries.blog/
 - **Broughton Library / Salford Community Leisure.** https://salfordcommunityleisure.co.uk/whats-on/
 - **Heaton Park:** fireworks, the Northern Lights trail, races. Use Visit Manchester and the organisers' own pages; the council's park pages block fetching. Never use heatonpark.org.uk, which is now a spam site.
-- **Crumpsall Folk Club**, third Thursday of the month, The Cleveland, Crumpsall Lane. https://crumpsallfolkclub.co.uk/
 - **Cheetham Cultural Festival**, every year in mid-October (2026: 15–18 Oct). https://www.facebook.com/CheethamFest
 - **Crowds that affect travel**, at the Etihad, Co-op Live, the AO Arena (by Strangeways and Red Bank) and the Christmas markets. https://tfgm.com/plan-a-journey/events
 
@@ -134,11 +134,10 @@ Checked 14 Nov 2026. These are leads: re-verify each one before it goes on a car
 - M60 J18 Simister Island: no closures were listed past Fri 20 Nov when checked; recheck each week. 50mph limit through the works.
 - Lifts: Heaton Park Bury-bound lift being replaced (since 29 Jul); Monsall lift out (from 2 Nov). Besses o' th' Barn no longer listed on 14 Nov.
 - Etihad: City v Napoli Tue 24 Nov 20:00; Arsenal v City away Sun 29 Nov. Old Trafford: United v Brentford Sat 28 Nov 15:00.
-- Co-op Live: Anne Lapwood Wed 25 Nov. Check TfGM's events page for the rest.
+- Co-op Live: Anne Lapwood Wed 25 Nov. Check TfGM's events page for the rest (for event traffic only, not cards).
 - Northern Lights at Heaton Park: Thu 19 Nov – Thu 31 Dec, Gate 13 on Bury Old Road for tram and 135, car park off Sheepfoot Lane (£7.50, book ahead). Nightly times are only in an image on the official site. Neurodivergent evenings Wed 2 and Wed 9 Dec.
 - Heaton Park: Run Heaton Park Sun 29 Nov (unverified). The MoRun entry page (letsdothis.com) blocks fetching.
 - Museum of Transport: open Wed, Sat, Sun 10:00–16:30; Christmas Weekend 12–13 Dec.
-- Crumpsall Folk Club: next Thu 17 Dec (Underground Folk Collective).
 - Christmas Markets: Fri 6 Nov – Tue 22 Dec; Albert Square and Cathedral Gardens to Sun 3 Jan. Christmas Parade Sun 6 Dec. Opening hours still not on a fetchable page (manchester.gov.uk blocks fetching).
 - Black Friday Fri 27 Nov, Cyber Monday Mon 30 Nov. Amazon UK's Black Friday Week runs 19–30 Nov (aboutamazon.co.uk, updated 10 Nov). currys.co.uk blocks fetching.
 - Ofgem announces the Jan–Mar 2027 price cap around 25 Nov (third-party sources only; Ofgem's own pages gave no date).
