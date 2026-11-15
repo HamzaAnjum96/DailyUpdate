@@ -1,6 +1,6 @@
 {
   "week": 47,
-  "rev": "D",
+  "rev": "E",
   "start": "2026-11-15",
   "end": "2026-11-22",
   "checked": "2026-11-14",
@@ -16,12 +16,11 @@
       "tag": "SALES / BLACK FRIDAY",
       "title": "Black Friday deals start this week",
       "chip": "Thu 19 → Mon 30 Nov",
-      "body": "Black Friday is on Friday 27 November, but the deals start this week. Amazon UK's Black Friday Week runs from Thursday 19 to Monday 30 November; you don't need Prime, though some deals are Prime-only. At the Trafford Centre, Boux Avenue has 20% off full-price items from Monday 16 November, and Lindt opens its offers to everyone from Friday 20 November.",
+      "body": "Black Friday is on Friday 27 November, but the deals start this week. Amazon UK's Black Friday Week runs from Thursday 19 to Monday 30 November; you don't need Prime, though some deals are Prime-only. At the Trafford Centre, Lindt opens its Black Friday offers to everyone from Friday 20 November, and Pureseoul takes 15% off everything from the same day.",
       "when": "Thu 19 → Mon 30 Nov",
       "what": "Black Friday Week · store offers",
       "where": "Online · Trafford Centre",
       "days": [
-        "2026-11-16",
         "2026-11-19",
         "2026-11-20",
         "2026-11-21",
@@ -45,12 +44,12 @@
         "kind": "week",
         "marks": [
           {
-            "date": "2026-11-16",
-            "label": "Stores"
-          },
-          {
             "date": "2026-11-19",
             "label": "Amazon"
+          },
+          {
+            "date": "2026-11-20",
+            "label": "Stores"
           }
         ],
         "span": {
@@ -63,7 +62,7 @@
         "CAL / BLACK FRIDAY",
         "Retailers' own dates"
       ],
-      "mg_alt": "Week strip with Monday 16 November marked for the first Trafford Centre store offers and Thursday 19 for the start of Amazon's Black Friday Week, with a bar running past the week to 30 November."
+      "mg_alt": "Week strip with Thursday 19 November marked for the start of Amazon's Black Friday Week and Friday 20 for Trafford Centre store offers, with a bar running past the week to 30 November."
     },
     {
       "type": "sale",

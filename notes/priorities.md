@@ -8,6 +8,8 @@ These priorities shape the choices; they never appear on the deck. Card copy doe
 
 The brief is a what's-on guide first, with travel at the end.
 
+It's shared with family, so keep every card family-friendly. Don't use lingerie, adult or alcohol-led brands as sale examples, or nights out aimed at drinking; pick a different retailer or event.
+
 1. **Lead with the big things** people go to or plan around that week: seasonal sales (Black Friday, Boxing Day), the Christmas Markets (that they're open, where every site is, and the hours) and big seasonal openings such as the Heaton Park light trail. One of these takes the priority card (hazard band, cover teaser), not a travel item.
 2. **Then events, and plenty of them.** They should be most of the deck: sport, theatre, comedy, exhibitions, makers' and festive markets, light trails and free festivals around Greater Manchester, plus the local events below. Group similar items on one card (a venue's shows, a weekend's markets) so more fit.
    - **No music events.** Gigs, concerts, club and folk nights and musicals don't get cards. Only their traffic goes in, on the sport card for the same venue (Co-op Live with the Etihad, the AO Arena with Manchester Storm) or on a travel card.
